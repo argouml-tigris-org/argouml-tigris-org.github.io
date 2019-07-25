@@ -1,0 +1,529 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<!-- $Id$ -->
+  
+  <meta http-equiv="Content-Type" content="text/html;CHARSET=iso-8859-1">
+
+  
+  <title>ArgoUML Features</title>
+</head>
+
+
+
+
+<body bgcolor="#ffffff">
+
+
+<h2>Fonctionnalit&eacute;s d'ArgoUML</h2>
+<p>ArgoUML fournit les fonctionnalit&eacute;s suivantes. Chaque
+fonctionnalit&eacute; est d&eacute;crite bri&egrave;vement plus bas.</p>
+
+
+<ul>
+
+  <li><a href="#Diagrams">Tous les&nbsp;types de Diagrammes UML 1.4 support&eacute;s</a></li>
+
+  <li><a href="#crossplatform">Ind&eacute;pendant de la plateforme: Java 1.4+</a></li>
+
+  <li><a href="#install">Cliquer et lancer! avec Java Web Start</a></li>
+
+  <li><a href="#Standard">M&eacute;tamod&egrave;le standard UML 1.4</a></li>
+
+  <li><a href="#XMI">Support de XMI</a></li>
+
+  <li><a href="#Export">Exportation des&nbsp;Diagrames aux formats GIF, PNG, PS, EPS, PGML et SVG</a></li>
+
+  <li><a href="#i18n">Disponible en sept langues - EN, DE, ES, RU, FR, NB, CN</a></li>
+
+  <li><a href="#Editing">Edition avanc&eacute;e de diagrammes et Zoom</a></li>
+
+  <li><a href="#OCL">Support d'OCL</a></li>
+
+  <li><a href="#codegen">G&eacute;n&eacute;ration de code</a></li>
+
+  <li><a href="#reveng">R&eacute;tro-ing&eacute;nierie / Import de fichiers Jar/class</a></li>
+
+  <li>Support Cognitif
+  
+    <ul>
+
+    <li>R&eacute;flexion en action
+    
+        <ul>
+
+      <li><a href="#critics">Critiques de conception</a></li>
+
+      <li><a href="#corrective">Automatisation des corrections (partiellement impl&eacute;ment&eacute;)</a></li>
+
+      <li><a href="#todolist">Liste de "Penses-b&ecirc;tes"</a></li>
+
+      <!-- <LI><A HREF="#checklists">Checklists</A> -->
+      <li><a href="#usermodel">Mod&egrave;le d'utilisation (partiellement impl&eacute;ment&eacute;)</a></li>
+
+    
+        </ul>
+
+    </li>
+
+    <li>Conception opportuniste
+    
+        <ul>
+
+      <li><a href="#todolist">Liste de "Penses-b&ecirc;tes"</a></li>
+
+      <li><a href="#checklists">Liste de v&eacute;rifications</a></li>
+
+      <!-- <LI><A HREF="#wbs">Work Breakdown Structure (future)</A> -->
+    
+        </ul>
+
+    </li>
+
+    <li>Compr&eacute;hension et r&eacute;solution de probl&egrave;mes
+    
+        <ul>
+
+      <li><a href="#navigation">Perspectives Explorateur</a></li>
+
+      <li><a href="#views">Vues multiples, enchevetr&eacute;es</a></li>
+
+      <!-- LI><A HREF="#reps">Alternative Design Representations: Graphs, Text, or Table</A-->
+      <!-- <LI><A HREF="#layout">Model-based Graph Layout (future)</A> -->
+    
+        </ul>
+
+    </li>
+
+  
+    </ul>
+
+  <!-- <LI>Customization
+  <UL>
+    <LI><A HREF="#usermodeledit">Customizable User Model (partially implemented)</A>
+    <LI><A HREF="#processmodel">Customizable Process Model (partially implemented)</A>
+    <LI><A HREF="#criticeditor">Critic Editor (future)</A>
+    <LI><A HREF="#checklisteditor">Checklist Editor (future)</A>
+    <LI><A HREF="#autoeditor">Corrective Automation Editor (future)</A>
+    <LI><A HREF="#naveditor">Navigational Perspective Editor</A>
+  </UL> -->
+  </li>
+</ul>
+
+
+<p>
+
+
+
+</p>
+<h3><a name="install">Installation avec Java Web Start</a></h3>
+
+<p>Le site web d'ArgoUML fournit une installation facile avec Java Web Start.</p>
+
+
+<h3><a name="crossplatform">Ex&eacute;cutable sur toute plateforme compatible Java1.4 ou Java5</a></h3>
+
+<p>ArgoUML est enti&eacute;rement &eacute;crit en Java et utilise les Java Foundation 
+Classes. Cela permet &agrave; ArgoUML de fonctionner sur pratiquement n'importe quelle plateforme.</p>
+
+
+<h3><a name="Standard">M&eacute;tamod&egrave;le Standard UML</a></h3>
+
+<p>ArgoUML est compatible avec le standard de l'<a href="http://www.omg.org">OMG</a>UML
+1.4. L'entrep&ocirc;t de mod&egrave;les central est une
+impl&eacute;mentation de Java Metadata Interface (JMI) qui supporte
+directement MOF et utilise une version informatique de la
+sp&eacute;cification UML 1.4 fournie par l'OMG. </p>
+
+
+<h3><a name="Diagrams">Support des Diagrammes UML</a></h3>
+
+<p>ArgoUML utilise&nbsp;<a href="http://gef.tigris.org/">GEF</a>, le
+kit d'&eacute;dition de graphes de l'UCI pour &eacute;dtier les
+diagrammes UML. Les types de diagrammes suivant sont support&eacute;s:</p>
+
+      
+<ul>
+
+        <li>diagramme de Classes</li>
+
+        <li>diagramme d'Etats</li>
+
+        <li>diagramme d'Activit&eacute;</li>
+
+        <li>diagramme de Cas d'Utilisation</li>
+
+        <li>diagramme de Collaboration</li>
+
+        <li>diagramme de D&eacute;ploiement (inclus les diagrammes d'Objets et de Composants en un seul)</li>
+
+        <li>diagramme de S&eacute;quence </li>
+
+      
+</ul>
+
+
+<h3><a name="XMI">Support de XMI</a></h3>
+
+<p>XMI est un format XML pour l'&eacute;change entre outils UML.
+ArgoUML l'utilise comme format standard de sauvegarde de fa&ccedil;on
+&agrave; faciliter l'&eacute;change avec les autres outils UML et
+s&eacute;curiser la compatibilit&eacute; avec des formats ouverts.
+Ainsi, exporter le mod&egrave;le en XMI est possible. XMI version 1.0
+&eacute;tait utilis&eacute; pour UML 1.3. ArgoUML 0.20 importe XMI 1.0
+(en convertissant UML 1.3 en UML 1.4). Et ArgoUML importe les formats
+UML1.4 tels que XMI 1.1 &amp; 1.2, mais &eacute;crit seulement du XMI
+1.2. </p>
+
+
+<h3><a name="Export">Nombreux formats d'export des diagrammes</a></h3>
+
+<p>Les diagrammes peuvent &ecirc;tre sauvegard&eacute;s en GIF, PNG, PostScript, Encapsulated PS, PGML et SVG.</p>
+
+
+<h3><a name="i18n">Internationalisation</a></h3>
+
+
+<p>ArgoUML est internationnalis&eacute; en Anglais Am&eacute;ricain, Anglais Britannique,
+        Fran&ccedil;ais, Allemand, Espagnol,  Russe,
+	Norv&eacute;gien Bokm&aring;l et Chinois.
+Le Portuguais et le Catalan sont aussi consid&eacute;r&eacute;s.</p>
+
+
+<h3><a name="Editing">Edition de Diagrammes</a></h3>
+
+<p>ArgoUML supporte de nombreuses fonctionnalit&eacute;s
+d'&eacute;dition de diagrammes pour vous aider &agrave; &eacute;diter
+vos diagrammes UML.</p>
+
+
+<h3><a name="OCL">Support OCL</a></h3>
+
+<p>ArgoUML permet de mod&eacute;liser des contraintes sur les Classes et Attributs UML. La <a href="http://dresden-ocl.sourceforge.net">Dresden OCL toolkit </a>&nbsp;permet
+&agrave;&nbsp;ArgoUML d'effectuer une v&eacute;rification del a syntaxe
+et des types utilis&eacute;s dans les contraintes. Le support d'OCL a
+&eacute;t&eacute; fournit et d&eacute;velopp&eacute; par
+l'Universit&eacute; Technique de Dresde, merci!<!-- It also is able to generate Java-code from OCL-Constraints.
+            [check this] -->
+          </p>
+
+
+<h3><a name="codegen">G&eacute;n&eacute;ration de code</a></h3>
+
+
+<p>ArgoUML fournit un framework de g&eacute;n&eacute;ration de code
+modulaire. Actuellement Java est fourni par d&eacute;fault et il existe
+des modules pour C++, C# et PHP. La g&eacute;n&eacute;ration de code
+Java fonctionne de pair avec la r&eacute;tro-ing&eacute;nierie Java
+pour fournir des fonctions basiques de "round-trip engineering".</p>
+
+
+<h3><a name="reveng">R&eacute;tro-ing&eacute;nierie</a></h3>
+
+<p>ArgoUML fournit un framework de r&eacute;tro-ing&eacute;nierie
+modulaire. Actuellement, le langage Java est support&eacute; par
+d&eacute;faut et il existe des modules pour l'importation de fichiers
+Java JAR et class..</p>
+
+
+<h3><a name="critics">Critiques de conception</a></h3>
+
+<p>Les critiques de conception sont des agents simples qui
+s'ex&eacute;cutent en continue dans une file d'ex&eacute;cution en
+arri&egrave;re plan. Ils analysent la conception pendant que le
+concepteur travaille et sugg&eacute;rent de possibles
+am&eacute;liorations. Ces suggestions vont de l'indication d'erreurs de
+syntaxe, &agrave; des pense-b&ecirc;tes pour retourner &agrave; des
+endroits du mod&egrave;le qui ne sont pas termin&eacute;s, des conseils
+de styles, ou des conseils de concepteurs&nbsp;experts. De nombreuses
+critiques permettent d'am&eacute;liorer automatiquement la conception.
+Les critiques sont control&eacute;es, de fa&ccedil;on &agrave; ce que
+leurs suggestions soient pertinentes et li&eacute;es &agrave; la
+t&acirc;che courante, bas&eacute;es sur le mod&egrave;le d'utilisation
+d'Argo. Les critiques n'interrompent jamais le concepteur, &agrave; la
+place&nbsp;les suggestions sont affich&eacute;es dans la liste des
+"Penses-B&ecirc;tes".
+</p>
+
+
+<h3><a name="corrective">Automatisation des Corrections (partiellement impl&eacute;ment&eacute;)</a></h3>
+
+<p>Les critiques identifient des probl&egrave;mes sp&eacute;cifiques
+dans la conception et peuvent proposer des solutions sp&eacute;cifiques
+sous la formes de dialogues ou autres aides &agrave; la correction. Ces
+automatisations permettent d'am&eacute;liorer la conception plus
+rapidement et plus s&ucirc;rement que si les corrections &eacute;taient
+faites manuellement. Aussi cela permet aux concepteurs de ne pas avoir
+&agrave; se souvenir de la fa&ccedil;on dont on utilise l'outil pour
+effectuer le changement.
+</p>
+
+
+
+<h3><a name="todolist">Liste de "Penses-B&ecirc;tes"</a></h3>
+
+<p>Une des difficult&eacute;s &agrave; laquelle les concepteurs font
+face est de garder la trace des milliers de d&eacute;tails de leurs
+t&acirc;ches. Il est tr&egrave;s facile de sauter une &eacute;tape dans
+le processus de conception, laaissant des parties du mod&egrave;le
+non-sp&eacute;cifi&eacute;es, ou de faire une erreur qui
+n&eacute;cessite une r&eacute;vision. Argo fournit au concepteur une
+interface sous forme de liste de "Penses-B&ecirc;tes" qui
+pr&eacute;sente les actions de mani&egrave;re organis&eacute;e. Ces
+actions peuvent &ecirc;tre des suggestions des critiques, des
+penses-b&ecirc;tes rappelant de terminer certaines &eacute;tapes du
+processus de mod&eacute;lisation, ou des notes personnelles
+entr&eacute;es par le concepteur. Le contr&ocirc;le de choix au sommet
+du panneau de la liste des "Penses-B&ecirc;tes" permet au concepteur
+d'organiser les actions de diff&eacute;rents mani&egrave;res: par
+priorit&eacute;, par type de d&eacute;cision, par &eacute;l&eacute;ment
+du mod&eacute;le concern&eacute;, etc. Les actions sont affich&eacute;s
+dans toutes les cat&eacute;gories dont ils font partie. La liste des
+"Penses-B&ecirc;tes" peut aussi &ecirc;tre vue comme une liste plate.
+</p>
+
+
+<h3><a name="usermodel">Mod&egrave;le d'Utilisation (partiellement impl&eacute;ment&eacute;)</a></h3>
+
+<p>Le mod&egrave;le d'utilisation d'Argo maintient des informations sur
+le concepteur et utilise cette information pour rendre l'outil plus
+utile. Une fa&ccedil;on dont cela est fait, est en contr&ocirc;lant les
+critiques de fa&ccedil;on a ce que seules les critiques pertinentes et
+relatives &agrave; la t&acirc;che courante puissent &eacute;mettre des
+suggestions. Dans le future, les aides &agrave; la correction
+automatis&eacute;es et les explications fournies par les critiques
+pourront aussi &ecirc;tre ajust&eacute;es en fonction du concepteur.
+</p>
+
+
+<p>Le mod&egrave;le d'utilisation Argo's est comporte les &eacute;l&eacute;ments suivants:</p>
+
+
+      
+<ul>
+
+
+        <li>Model D&eacute;cisonnel: Liste les types de
+d&eacute;cisions qui doivent &ecirc;tre prises lors de conceptions
+orient&eacute;es objets. Chaque d&eacute;cision est associ&eacute;e
+&agrave; un niveau d'int&eacute;r&ecirc;t qui peut varier entre 0 et 5.
+Une critique ne peut pas &ecirc;tre active si l'int&eacute;r&ecirc;t du
+concepteur pour le type de d&eacute;cision auquel elle est li&eacute;e
+est de 0. </li>
+  <li>Model d'Objectifs (partiellement implement&eacute;):
+Pr&eacute;sente une liste de questions li&eacute;e aux objectifs du
+projet de conception. Les critiques qui supportent les objectifs actifs
+peuvent &eacute;mettre des suggestions. </li>
+  <li>Mod&egrave;le de D&eacute;coupage du travail en t&acirc;ches
+(future): Liste les t&acirc;ches qui doivent &ecirc;tre
+effectu&eacute;s lorsque l'on fait de la conception
+ori&eacute;nt&eacute;e objet. Chaque t&acirc;che est associ&eacute;e
+&agrave; une niveau d'activit&eacute; et plusieurs d&eacute;cisions. Ce
+mod&egrave;le sert au concepteur de ressource lorsqu'il doit
+d&eacute;cider de la t&acirc;che suivante. </li>
+  <li>Mod&egrave;le de Talent (future): Chaque concepteur a ses propres
+forces et faiblesses. Le mod&egrave;le de talent d'Argo permet de
+suivre le niveau de connaissance rapport&eacute; par le concepteur pour
+chaque probl&egrave;me et domaine de solution. Le temps estim&eacute;
+pour r&eacute;gler un probl&egrave;me trouv&eacute; par une critique
+est fonction de la connaissance par le concepteur des concepts du
+domaine, des techniques de conception et des fonctionnalit&eacute;s de
+l'outil. </li>
+</ul>
+
+
+<h3><a name="checklists">Liste de v&eacute;rifications</a></h3>
+
+<p>Les listes de v&eacute;rifications (checklists) sont couramment
+utilis&eacute;es dans les r&eacute;unions de revue de conception, en
+partie parce qu'elles rappellent aux concepteurs de couvrir tous les
+d&eacute;tails de la conceptions et d'&eacute;viter les erreurs de
+conception communs. Argo fournit des listes de v&eacute;rification qui
+servent le m&ecirc;me objectif, mais ont de nombreux avantages sur les
+traditionnelles et passives listes imprim&eacute;es:
+</p>
+
+      
+<ul>
+
+
+        <li>Les listes de v&eacute;rification d'Argo sont
+sp&eacute;cifiques &agrave; l'&eacute;l&eacute;ment de
+mod&eacute;lisation s&eacute;lectionn&eacute;. Chaque type
+d'&eacute;l&eacute;ment de mod&eacute;lisation (ex: Classes, Attribut,
+Operation, Association) a sa propre liste de v&eacute;rifications. </li>
+  <li>Les v&eacute;rifications non-pertinentes sont automatiquement enlev&eacute;es de la liste.</li>
+  <li>Le texte de la liste de v&eacute;rification est sp&eacute;cifique
+&agrave; l'&eacute;l&eacute;ment de mod&eacute;lisation en cours de
+revue. Par exemple, Argo utilise les noms d'&eacute;l&eacute;ments
+&agrave; la place des pronoms qui auraient &eacute;t&eacute;
+utilis&eacute;s sur une liste imprim&eacute;e. </li>
+  <li>(future) Les &eacute;l&eacute;ments de la liste de
+v&eacute;rification peuvent fournir au concepteur des dialogues pour
+l'aider &agrave; compl&eacute;ter une modification de la conception.
+Par exemple l'&eacute;lement de v&eacute;rification "L'attribut Age
+devrait &ecirc;tre d&eacute;plac&eacute; dans une des super-classes de
+Personne (par ex. Animal)" pourrait lancer un dialogue pour aider
+&agrave; d&eacute;placer l'attribut plus haut dans la hi&eacute;rarchie
+de classes. </li>
+</ul>
+
+
+<p>Les listes de v&eacute;rification sont assez semblables aux
+critiques (en fait, elles partagent la m&ecirc;me
+impl&eacute;mentation), cependant elles diff&egrave;rent dans le
+degr&eacute; de sp&eacute;cificit&eacute; tellement que nous avons le
+sentiment qu'elles doivent &ecirc;tre pr&eacute;sent&eacute;es
+s&eacute;par&eacute;ment aux concepteurs. Les critiques recherchent des
+probl&egrave;mes tr&egrave;s sp&eacute;cifiques et fournissent des
+solutions sp&eacute;cifiques lorsque ce type de probl&egrave;me est
+d&eacute;tect&eacute;. Le concepteur doit toujours faire la
+d&eacute;cision finale quel que soit le changement de conception, mais
+la critique peut automatiser la plupart de l'analyse et du travail. A
+contrario, les &eacute;l&eacute;ments de v&eacute;rification sont plus
+g&eacute;n&eacute;raux et vagues, ils sont utilis&eacute;s comme
+penses-b&ecirc;tes pour le concepteur, mais c'est au concepteur de
+faire la plus grande part de l'analyse et du travail.
+</p>
+
+
+<!-- Checklists are easier to author (see <A
+      HREF="#checklisteditor">below</A>), and useful checklist items
+      can be upgraded to critics if appropriate.
+-->
+
+<!--
+<h3><A NAME="wbs">Work Breakdown Structure (future)</A></h3>
+This feature is not described yet.
+-->
+
+<h3><a name="navigation">Perspectives Explorateur</a></h3>
+
+<p>ArgoUML, comme la plupart des outils, fournit une vue arborescente
+pour permettre au concepteur d'acc&eacute;der aux diff&eacute;rentes
+parties de son projet de mod&eacute;lisation. A la diff&eacute;rence
+des autres outils, Argo fournit au concepteur un jeu de vues
+arborescentes alternatives beaucoup plus vaste, et permet de configurer
+totalement la vue arborescente en combinant plus de 65 r&egrave;gles de
+perspectives en autant de vues que d&eacute;sir&eacute;.
+</p>
+
+
+<!-- , and provides a language for designers to <A
+      HREF="#naveditor">customize</A> those perspectives or add new
+      ones. -->
+
+<h3><a name="views">Vues Multiples et Enchevetr&eacute;es</a></h3>
+
+<p>Les conceptions complexes sont faites de centaines
+d'&eacute;l&eacute;ments li&eacute;es les uns aux autres par de
+complexes relations. Les concepteurs sont mieux &agrave; m&ecirc;me de
+comprendre le mod&egrave;le et d'effectuer des changements quand ils
+peuvent voir les &eacute;l&eacute;ments et&nbsp;relations mises en jeu
+dans certains probl&egrave;mes de conception. Un simple diagramme ne
+permet pas de clarifier tous les probl&egrave;mes de conception. A la
+place, de multiples diagrammes et autres pr&eacute;sentations doivent
+&ecirc;tre utilis&eacute;s.
+</p>
+
+
+<p> ArgoUML autorise de multiples repr&eacute;sentations graphiques du
+m&ecirc;me &eacute;l&eacute;ment de conception &agrave; &ecirc;tre
+utilis&eacute;es dans diff&eacute;rents diagrammes. En ce sens les vues
+sont enchevetr&eacute;es.
+</p>
+
+<p>ArgoUML a 4 vues principales: Explorateur, Diagramme, D&eacute;tails, Critiques.</p>
+
+
+<!-- 
+<h3><A NAME="reps">Alternative Design Representations:
+Graphs,
+Text, or
+Table</A>
+</h3>
+
+Diagrams are the main way of presenting object-oriented
+        designs. Argo can also provide tabular presentations of the
+        design and textual presentations in the form of source code,
+and (future) English language explanations.
+Argo allows
+        (future) editing in any of these presentations, and all of
+        them are kept consistent.
+-->
+<!--
+<h3><A NAME="layout">Model-based Graph Layout (future)</A></h3>
+
+In the future, we will investigate issues of graph
+        layout. Much of the previous work on graph layout is motivated
+        by very simple understandings of the cognitive needs of
+        designers. For example, a graph is considered more readable if
+        it has fewer edge crossings. These layout techniques typically
+        do not take into account the conventions of the problem or
+        solution domains or the task at hand. For example, if a
+        designer is interested in memory allocation, he or she might
+        benefit from seeing part of the class hierarchy laid out as a
+        scatter plot with object size on one axis and expected number
+        of instances on another axis. Or the size of the class icon
+        could be used to indicate memory cost, while its color
+        indicates expected lifetime. An infinite number of
+        presentations are possible and the designer should be able to
+        choose one that supports the task at hand, and then move on to
+        another task and a new visualization.
+
+-->
+<!--
+<h3><A NAME="usermodeledit">Customizable User Model (partially implemented)</A></h3>
+Designers can add new items to each part of Argo's user model.
+
+-->
+<!--
+<h3><A NAME="processmodel">Customizable Process Model (partially implemented)</A></h3>
+Designers can add new tasks to Argo's process model.
+
+-->
+<!--
+<h3><A NAME="criticeditor">Critic Editor (future)</A></h3>
+Critics can be represented as a network of predicates and actions. An upcoming version
+      of Argo will include a diagram editor for authoring critics.
+
+-->
+<!--
+<h3><A NAME="checklisteditor">Checklist Editor (future)</A><h3>
+Checklists are made up of short pieces of text that serve to
+        remind the designer to address specific issues or common
+problems.
+Additional program logic can be used to customize
+        the item to the design element at hand. An upcoming version of
+        Argo will support authoring checklist items that contain only
+        text.
+
+-->
+<!--
+<h3><A NAME="autoeditor"></A><B>Corrective Automation Editor (future)</A></h3>
+Critics may offer corrective automations once a specific
+problem has been detected.
+In an upcoming version of ArgoUML,
+        designers will be able to author these corrective automations
+        using the same graphical editor used to author critics.
+-->
+<!--
+
+<h3><A NAME="naveditor">Navigational Perspective Editor</A></h3>
+The current version of ArgoUML provides over a dozen different
+        navigational perspectives and a simple editor to customize
+        these perspectives or author new ones. Each navigational
+        perspective is made up of a set of rules. Each rule defines
+        the possible children of a given design element. When rules
+        are combined they yield the union of the children produced by
+        each rule. About 20 rules are available for designers to use
+        in navigational perspectives. A simple dialog box allows
+        designers to specify the rules that make up each
+        perspective.
+-->
+
+<hr align="center">
+<p>Back to <a href="index.html">ArgoUML Home</a></p>
+
+</body>
+</html>
