@@ -1,0 +1,746 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+                 
+ 
+ <head>
+ <style type="text/css"> /* <![CDATA[ */
+ @import "../branding/css/tigris.css";
+ @import "../branding/css/inst.css";
+ /* ]]> */</style>
+ <link rel="stylesheet" type="text/css" href="../branding/css/print.css" media="print" />
+ <script src="../branding/scripts/tigris.js" type="text/javascript"></script>
+ <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+  
+             
+ 
+  <script src="../branding/scripts/alm.js" type="text/javascript"></script>
+  <style type="text/css">
+     /* <![CDATA[ */
+     @import "../branding/css/alm.css";
+         /* ]]> */
+  </style>
+
+  
+ 
+               
+ 
+  
+ 
+               
+ 
+ 
+ <script src="../branding/scripts/wiki.js" type="text/javascript"></script>
+
+    
+ <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../branding/css/wiki/cee/css/common.css" />
+ <link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../branding/css/wiki/cee/css/screen.css" />
+
+  
+ <link rel="Start" href="FrontPage.html" />
+ <link rel="Alternate" title="Wiki Markup" href="http://argouml.tigris.org/wiki/Build_Process?action=raw" />
+ <link rel="Alternate" media="print" title="Print View" href="http://argouml.tigris.org/wiki/Build_Process?action=print" />
+ <link rel="Search" href="FindPage.html" />
+ <link rel="Index" href="TitleIndex.html" />
+ <link rel="Glossary" href="WordIndex.html" />
+ <link rel="Help" href="HelpOnFormatting.html" />
+ 
+ 
+                                                 <title>
+        argouml:        Wiki: Build Process
+    </title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <meta http-equiv="Content-Style-Type" content="text/css" />
+ <meta name="version" content="5.3.0.167.5" />
+ <meta name="google-site-verification" content="FRRR8-RLGasBA76ejzXypMklVl0cwg9sna2rgSS4iHk" />
+ <meta name="keywords" content="Defect Tracking, Issue Tracking, Version Control, Configuration Management, Software Configuration Management, SCM, CM, Revision Control, Software Engineering, Unit Testing, Outsourcing, Collaboration, Open Source, Software Development, Collaborative Software Development, Enterprise, Java, Web Services" />   
+<meta name="description" content="CollabNet, Facilitating Collaborative Software Development" /> <meta name="description" content="Open source software engineering" />
+
+ 
+
+<meta name="robots" content="index,nofollow">
+
+
+<script type="text/javascript" src="../branding/css/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../branding/css/wiki/cee/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../branding/css/wiki/cee/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="http://argouml.tigris.org/branding/css/wiki/cee/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="http://argouml.tigris.org/branding/css/wiki/cee/css/projection.css">
+
+<!-- css only for MSIE browsers -->
+<!--[if IE]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/branding/css/wiki/cee/css/msie.css">
+<![endif]-->
+
+
+
+<link rel="Start" href="FrontPage.html">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+
+ 
+  <!--   Single pic border tables -->
+ <style type="text/css">
+/* <![CDATA[ */
+
+table.sborder, table.sborder td
+{
+	border-color: #A9A9A9;
+	border-style: solid;
+}
+
+table.sborder
+{
+	border-width: 0 0 1px 1px;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+table.sborder td
+{
+	margin: 0;
+	padding: 4px;
+	border-width: 1px 1px 0 0;
+	background-color: #FFFFFF;
+}
+
+/* ]]> */
+</style>
+ 
+ <!--   Tigris Script to load random images -->
+ <SCRIPT LANGUAGE="JavaScript">
+var theImages = new Array()
+//Random-loading images
+theImages[0] = 'http://www.tigris.org/branding/images/banners/svn15support.gif' 
+theImages[1] = 'http://www.tigris.org/branding/images/banners/mergeclient.gif' 
+var p = theImages.length;
+
+var preBuffer = new Array()
+for (i = 0; i < p; i++){
+preBuffer[i] = new Image()
+preBuffer[i].src = theImages[i]
+}
+
+var whichImage = Math.round(Math.random()*(p-1));
+function showImage(){
+
+if(whichImage==0){
+document.write('<a href ="http://www.collab.net/services/subversion"><img src="http://argouml.tigris.org/wiki/'+theImages[whichImage]+'" border=0 width=175 height=60></a>');
+}
+else if(whichImage==1){
+document.write('<a href ="http://www.collab.net/subversion15-tigris"><img src="http://argouml.tigris.org/wiki/'+theImages[whichImage]+'" border=0 width=175 height=60></a>');
+}
+}
+</script>
+<!-- Google Aanalytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48365716-1', 'tigris.org');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Tracking code -->
+
+<!-- Sstart Muchkin code -->
+<script src="http://munchkin.marketo.net/munchkin.js" type="text/javascript"></script> 
+<script>mktoMunchkin("563-XAN-459");</script>
+<!-- End Munchkin code -->
+
+<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type='text/javascript'>
+var _vwo_code=(function(){
+var account_id=20080,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+// DO NOT EDIT BELOW THIS LINE
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
+
+</head>
+ 
+ 
+<body  class="composite">
+ 
+ 
+ <div id="collabnet">
+ <div id="login"> 
+     <div>
+      <a href="http://www.tigris.org/servlets/Login?detour=http://argouml.tigris.org/wiki/Build_Process">Login</a>
+      |    <a href="http://www.tigris.org/servlets/Join">Register</a>    </div>
+ </div>
+ <a href="http://www.collab.net" id="cnlogo">
+<span class="alt">CollabNet Enterprise Edition</span></a>
+</div>
+ 
+ 
+ 
+ 
+ <div id="banner">
+</div>
+ 
+ 
+ 
+ 
+ <div id="banner">
+ <table width="100%" id="bannertable" cellpadding="0" cellspacing="0">
+   <tr>
+    <td rowspan="2" style="width: 50px;">
+    <a href="http://www.tigris.org/" title="Tigris.org:Defect
+Tracking,Issue Tracking,Version Control,Software Configuration
+Management,SCM,CM,Revision Control,Unit Testing,Software
+Engineering,Document Templates,Outsourcing,Collaboration,Open
+Source,Development,Enterprise,Java,Web Services">
+<img src="../branding/images/logo.gif" alt="Tigris.org" id="tigrislogo" height="48" width="48" /></a>
+    </td>
+    <td style="min-width: 300px;" id="tigrisheading">
+     <div>Tigris.org</div>
+      <div class="smaller">Open Source Software Engineering Tools</div>
+    </td>
+    <td rowspan="2" style="width: 300px;" id="collabnote">
+      <table cellpadding="0" cellspacing="0">
+       <tr>
+        <td>
+        <a href="http://www.collab.net/products/teamforge/free-trial?cid=tigris" target="_blank"><img src="../branding/images/banners/teamforge81.png" alt="CollabNet TeamForge 8.1" width="170" height="60" border="0"></a>
+       </td>
+	   <td>
+        <a href="http://www.collab.net/downloads/giteye?CID=tigris" target="_blank"><img src="../branding/images/banners/GitEye-desktop.png" alt="GitEye Desktop" title="GitEye Desktop" width="170" height="60" border="0"></a>
+       </td>
+        <td>
+        <a href="http://www.open.collab.net/products/subversion" target="_blank"><img src="../branding/images/banners/get-svn-binaries.png" alt="Get Certified Subversion Binaries" title="Get Certified Subversion Binaries" width="175" height="60" border="0"></a>
+       </td>
+       <td>
+	 <a href="http://www.cliqr.com/app-store/#!/CollabNet%20SVN/4.0.5/" target="_blank"><img src="../branding/images/banners/svnedge-cliqr.png" alt="Git Download" title="Subversion Edge now available on Cliqr" width="170" height="60" border="0"></a>
+       </td>
+      </tr>
+     </table>  
+</td>
+</tr>
+</table>
+</div>
+<div id="toptabs">
+<table cellpadding="4" cellspacing="0" border="0"><tr>
+<td>   <a href="http://www.tigris.org/servlets/StartPage">My pages</a><td>
+<th>   <a href="http://www.tigris.org/servlets/ProjectList">Projects</a><th>
+  <td>   <a href="http://www.tigris.org/servlets/DomainHome">Community</a><td>
+		<td>   <a href="http://www.tigris.org/servlets/OpenCollabNet">openCollabNet</a><td>
+</tr></table>
+</div>
+  
+ 
+ <div id="breadcrumbs">
+   <a href="http://www.tigris.org/servlets/ProjectList?type=Projects">Projects</a>    >
+     
+
+   <strong>   <a href="http://argouml.tigris.org/"
+     >argouml</a>
+   </strong>  </div>
+ 
+ 
+ 
+ 
+<table border="0" cellspacing="0" cellpadding="4" width="100%" id="main">
+<tr>
+<td id="navcol">
+ 
+ 
+ 
+
+
+  
+             
+ 
+   
+ 
+ 
+                                                                       <dl id="projecttools" class="navgroup">
+   <dt>Project tools</dt>
+   <dd>
+    <ul>
+          <li>   <a href="http://argouml.tigris.org/servlets/ProjectHome">Project home</a></li>
+                               	</ul>
+       </dd>
+            <dd>
+   <!-- $Id: project_tools.html 19964 2019-07-10 07:55:56Z linus $ -->
+ <ul>
+<li><a href="http://argouml.tigris.org/servlets/ProjectNewsList">Project News</a>
+    <a href="http://argouml.tigris.org/servlets/WebFeed?artifact=news&amp;version=rss_2.0">
+      <img src="../images/feed-icon.gif" alt="RSS Feed" width="10" height="10"/>
+    </a>
+</li>
+<li>
+  <a href="http://argouml.tigris.org/wiki">Developer Wiki</a>
+  <a href="RecentChanges.html">RC</a>
+</li>
+<li><a href="http://argouml.tigris.org/project_bugs.html">Bugs and Issues</a>  </li>
+<li><a href="https://github.com/argouml-tigris-org">Source code</a>  </li>
+<li><a href="http://argouml.tigris.org/servlets/ProjectMemberList">Project Membership</a>  </li>
+<li>
+  <a href="http://argouml.tigris.org/ds/viewForums.do">Mailing lists</a>
+  <a href="http://argouml.markmail.org">MarkMail</a>
+</li>
+<li><a href="http://argouml.tigris.org/servlets/ProjectDocumentList">File Sharing</a>  </li>
+ </ul>
+</dd>
+
+<dt>Using ArgoUML</dt>
+<dd>
+ <ul>
+<li><a href="http://argouml.tigris.org/support.html">Support</a></li>
+<li><a href="http://argouml-stats.tigris.org/documentation/quickguide-0.32/">Quick guide 0.32</a></li>
+<li><a href="http://argouml-stats.tigris.org/documentation/manual-0.32/">User Manual 0.32</a></li>
+<li><a href="http://argouml.tigris.org/servlets/SummarizeList?listName=users">Users' mailing list</a></li>
+<li><a href="http://argouml.tigris.org/documentation/">Documentation</a></li>
+<li><a href="http://argouml.tigris.org/tours/">Tour</a></li>
+<li><a href="http://argouml-downloads.tigris.org/">Downloads</a></li>
+ </ul>
+
+<!-- The project_header and project_footer files don't seem to work -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-682460-2";
+urchinTracker();
+</script>
+
+   </dd> 
+    
+ </dl>
+ 
+
+
+
+
+<form action="http://argouml.tigris.org/servlets/Search" method="get">
+ <dl id="searchbox" class="navgroup">
+  
+      <dt>Search</dt>
+  <dd>
+   <div>
+       <select name="scope">
+           <option value="project" selected="selected">This project</option>
+               <option value="domain" >All projects</option>
+    </select>
+      </div>
+   <div>
+    <input type="hidden" name="resultsPerPage" value="40" /> 
+    <input type="text" name="query" size="10" maxlength="99" /> 
+    <input type="submit" name="Button" value="Go" />
+   </div>
+   <div>
+       <a href="http://argouml.tigris.org/servlets/Search?mode=advanced">Advanced search</a>   </div>
+  </dd>
+
+ </dl>
+</form>
+
+
+<div style="padding: 6px; padding-left: 20px;">
+ <a href="http://www.collab.net/special/clickpbc0502.html" onclick="return launch(this.href, 1)"><img src="../branding/images/poweredby.gif" alt="This site is Powered by CollabNet." id="poweredbycollabnet" width="102" height="38" /></a>
+</div>
+
+<dl id="helptext" class="navgroup">
+ <dt>How do I...</dt>
+ <dd>
+  <ul>
+      
+ 
+ <li>  <a href="http://www.tigris.org/scdocs/wiki" onclick="return launch(this.href, 1)" 
+ title="Note: link may open in new window" class="helplink">
+ 
+ Learn about project wikis?</a>
+</li>
+ 
+ 
+     
+   <li> <a href="http://www.collab.net/rn/" onclick="return launch(this.href, 1)" 
+ title="Note: link may open in new window" class="helplink">
+ 
+ Get release notes for CollabNet 5.3.0?</a>
+</li>
+
+   <li><a href="http://argouml.tigris.org/nonav/servlets/HelpTOC" onclick="return launch(this.href, 1)" 
+title="Note: link may open in new window" class="helplink">Get help?</a></li>
+  </ul>
+ </dd>
+</dl>
+
+<!-- Begin include NavColumn-bottom -->
+<div id="mainhighlights">        
+
+<table border="0" cellspacing="0" cellpadding="3"  width="100%">
+ <tr>
+  <th>Category</th>
+  <th>Featured projects</th>
+ </tr>
+ <tr>
+  <td><a href="http://scm.tigris.org/">scm</a></td>
+  <td><a href="http://subversion.tigris.org/" title="open source version control">Subversion</a>, 
+<a href="http://subclipse.tigris.org/" title="Subversion Eclipse integration">Subclipse</a>,
+<a href="http://tortoisesvn.tigris.org/" title="Subversion client">TortoiseSVN</a>,
+<a href="http://rapidsvn.tigris.org/" title="Subversion client">RapidSVN</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://issuetrack.tigris.org/">issuetrack</a></td>
+  <td><a href="http://scarab.tigris.org/" title="customizable software defect tracking system">Scarab</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://requirements.tigris.org/">requirements</a></td>
+  <td><a href="http://xmlbasedsrs.tigris.org/">xmlbasedsrs</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://design.tigris.org/">design</a></td>
+  <td><a href="http://argouml.tigris.org/" title="Free UML tool, use cases, uml tutorials">ArgoUML</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://techcomm.tigris.org/">techcomm</a></td>
+  <td><a href="http://subetha.tigris.org/" title="Mailing list manager">SubEtha</a>, 
+  <a href="http://eyebrowse.tigris.org/" title="Mailing list archive tool">eyebrowse</a>, 
+<a href="http://midgard.tigris.org/">midgard</a>,
+<a href="http://cowiki.tigris.org/">cowiki</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://construction.tigris.org/">construction</a></td>
+  <td><a href="http://antelope.tigris.org/" title="Ant GUI">antelope</a>,
+  <a href="http://scons.tigris.org/" title="cross-platform build tool">scons</a>,
+  <a href="http://frameworx.tigris.org/">frameworx</a>,
+  <a href="http://build-interceptor.tigris.org/">build-interceptor</a>,
+  <a href="http://propel.tigris.org/">propel</a>,
+  <a href="http://phing.tigris.org/">phing</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://testing.tigris.org/" title="tools for quality software">testing</a></td>
+  <td><a href="http://maxq.tigris.org/" title="record and playback web automated testing tool">maxq</a>, 
+<a href="http://aut.tigris.org/" title="advanced unit testing">aut</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://deployment.tigris.org/">deployment</a></td>
+  <td><a href="http://current.tigris.org/">current</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://process.tigris.org/" title="software development process, extreme programming">process</a></td>
+  <td><a href="http://readyset.tigris.org/" 
+title="Use case template, example test plans, software requirements specification templates, sample project plan template">ReadySET</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://libraries.tigris.org/" title="software reuse, web services">libraries</a></td>
+  <td><a href="http://gef.tigris.org/" title="Graphical diagram editing">GEF</a>, 
+<a href="http://axion.tigris.org/" title="Relational database">Axion</a>, 
+<a href="http://style.tigris.org/" title="Reusable CSS stylesheets">Style</a>,
+<a href="http://sstree.tigris.org/" title="Super-simple trees in HTML, CSS, and javascript">SSTree</a>
+ </td>
+ </tr>
+ <tr>
+  <td colspan="2" style="text-align:center">Over 500 <a style="text-decoration:underline;" 
+  href="http://www.tigris.org/servlets/ProjectList">more tools...</a></td>
+ </tr>
+</table>
+
+
+
+<table border="0" cellspacing="2" cellpadding="3"  width="100%" style="margin-top: 15px;">
+ <tr>
+  <th>Subversion and IDEs</th>
+ </tr>
+ <tr>
+ <td>
+ <a href="http://subclipse.tigris.org/">Eclipse</a>
+ </td>
+ </tr>
+  <tr>
+ <td>
+ <a href="http://www.oracle.com/technology/products/jdev/htdocs/partners/addins/exchange/subversion/subversion.html">JDeveloper</a>
+ </td>
+ </tr>
+  <tr>
+ <td>
+ <a href="http://subversion.netbeans.org/">NetBeans</a>
+ </td>
+ </tr>
+ <tr>
+  <td>
+ <a href="http://ankhsvn.open.collab.net/">Visual Studio</a>
+ </td>
+ </tr>
+ <tr>
+  <td>
+ <a
+ href="http://www.open.collab.net/cloud/?cid=tigriscodesion">Subversion Hosting</a>
+ </td>
+ </tr>
+ </table>
+ 
+<br/>
+ 
+<table border="0" cellspacing="2" cellpadding="3"  width="100%" style="margin-top: 15px;">
+  <tr>
+    <th>Tigris.org (Whole-Site) Admin Contacts</th>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Announcements mail list" target="_blank"
+      href="mailto:announce-subscribe@www.tigris.org">Announcements</a> mail list
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Blog" target="_blank"
+      href="http://tigrisdotorg.wordpress.com">Status Blog</a> at WordPress
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a title="Twitter" target="_blank" href="http://twitter.com/tigrisdotorg">@tigrisdotorg</a> on Twitter
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Problems" target="_blank"
+      href="mailto:feedback@tigris.org">Problem reports</a>
+      on the whole site
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Problems and suggestions about individual projects should
+  go to users@thatproject.tigris.org
+    </td>
+  </tr>
+  </table>
+</div>
+
+<!-- End include NavColumn-bottom -->
+
+
+
+ 
+ 
+<div class="strut">&nbsp;</div>
+</td>
+<td id="midcol">
+ 
+  <div id="bodycol">
+<div id="apphead">
+<h1><small>argouml</small><br />         Wiki: Build Process
+    </h1>
+</div>
+ 
+ 
+ 
+        
+                 
+                 
+           
+    
+  
+
+ 
+ 
+
+
+
+
+
+<div class="wiki">
+
+<p class="tasknav inline">
+<span class="disabled">Edit this page</span> | <a class="backlink" title="Click to do a full-text search for this title" href="http://argouml.tigris.org/wiki/Build_Process?action=fullsearch&amp;value=linkto%3A%22Build+Process%22&amp;context=180">Links to this page</a> | <a href="http://argouml.tigris.org/wiki/Build_Process?action=info">Page information</a> | <a href="http://argouml.tigris.org/wiki/Build_Process?action=AttachFile">Attachments</a> | <a href="Build_Process.html">Refresh page</a>
+</p>
+&nbsp;
+
+<form class="actionsmenu inline" method="get" action="Build_Process.html" style="display: inline;">
+<div class="inline">
+    <label></label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected>More Actions:</option>
+<option value="raw">Raw Text</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+    </select>
+    <noscript>
+    <input type="submit" value="Submit">
+    </noscript>
+</div>
+<script type="text/javascript">
+</script>
+</form>
+
+
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line874">Note: This needs to be updated with the Eclipse-orientation. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line874">When building from the command line, the build process is driven by Apache Ant using the ant distribution provided in the tools directory. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line874">Ant is a tool written in Java developed for Apache that reads an XML-file with rules telling what to compile to what result and what files to include in what jar-file. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line862">The rule file is named <strong>build.xml</strong>, and there is one in each mini-project directory: (<strong>argouml/src/argouml-app</strong>, <strong>argouml/src/argouml-core-infra</strong>, <strong>argouml/src/argouml-core-model</strong>, ...). <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867">
+<h3 id="head-774f096661799ca5c7efd8c10be6d8f27b50c1a7">How Ant is run from the ArgoUML development environment</h3>
+<span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line862">For your convenience the ant tool is present in the source repository of ArgoUML in the file <strong>argouml/tools/apache-ant-<em>X.X.X</em></strong> directory. <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line862">It is possible to start ant with the command <tt>tools/apache-ant-X.X.X/bin/ant&nbsp;arg</tt>, <tt>../../tools/apache-ant-X.X.X/bin/ant&nbsp;arg</tt>, or <tt>../argouml/tools/apache-ant-X.X.X/bin/ant&nbsp;arg</tt>, depending on if you work from the <strong>argouml</strong> directory, the <strong>argouml/src/argouml-build</strong> directory, or a module in a subproject such as <strong>argouml-cpp</strong> directory respectively. <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><p class="line874">On windows the script to run is the ant.bat. <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><p class="line862">To keep you from having to write this and keeping track if you are working with a module or not there are two scripts (one for Unix and one for Windows) that are called <strong>build.sh</strong> and <strong>build.bat</strong> respectively present in most of the directories that contain a <strong>build.xml</strong> file. These two scripts run the equivalence of the above paths. <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><p class="line862">Note: Some of the <strong>build.<em>&lt;sh|bat&gt;</em></strong> files have been removed in the repository restructuring, (issue #4625). <span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><p class="line874">By setting JAVA_HOME to different values you can at different times build with different versions of JDK and Java. <span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><p class="line862">To use another version of Ant than the one provided in the repository you must execute <tt>/where/ever/you/placed/your/new/ant&nbsp;target</tt> rather than <tt>build&nbsp;target</tt>. <span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><p class="line867">
+<h4 id="head-56c7c3aa23ae08099fdcd4388e86bef237047657">Compiling for Unix and Mac OS X</h4>
+<span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><p class="line862">Here is what you need to do in order to compile and run your checked out copy of ArgoUML under Unix or Mac OS X. If building on Mac OS X make sure you have the current Developer Tools from Apple (see <a class="http" href="http://developer.apple.com/mac/">ADC/Mac</a> for details) installed. <span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><ol type="1"><li><span class="anchor" id="line-32"></span><pre>JAVA_HOME=/where/you/have/installed/jdk
+<span class="anchor" id="line-33"></span>
+<span class="anchor" id="line-34"></span>export JAVA_HOME
+<span class="anchor" id="line-35"></span></pre><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><p class="line862">This is for sh-style shells like sh, ksh, zsh and bash. If you use csh-style shells like csh and tcsh you will instead have to write <tt>setenv&nbsp;JAVA_HOME&nbsp;/where/you/have/installed/jdk</tt>. <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span></li><li class="gap"><p class="line862">Change the current directory to the directory you are building <span class="anchor" id="line-40"></span><pre>cd /your/checked/out/copy/of/argouml/src
+<span class="anchor" id="line-41"></span></pre><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span></li><li class="gap"><p class="line862">Start Ant with no parameters to get a list of build targets with descriptions <span class="anchor" id="line-44"></span><pre>./build.sh
+<span class="anchor" id="line-45"></span></pre><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span></li><li class="gap"><p class="line862">Run ArgoUML using <span class="anchor" id="line-48"></span><pre>./build.sh run 
+<span class="anchor" id="line-49"></span></pre><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span>If you change something, running the run target again will build and run. <span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span></li></ol><p class="line874">In certain cases when something is changed in the argouml project you need to use the "clean" target to re-compile everything, since we have not set up dependencies correctly. <span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><p class="line867">
+<h4 id="head-d24706fd289a8984da45e7b596e148ae2ae6da6a">Compiling for Windows</h4>
+<span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><p class="line874">If you do this from Cygwin you work just like for Unix. <span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><ol type="1"><li><span class="anchor" id="line-62"></span><pre>set JAVA_HOME=\where\you\have\installed\jdk
+<span class="anchor" id="line-63"></span></pre><span class="anchor" id="line-64"></span></li><li><p class="line862">Change the current directory to the directory you are building <span class="anchor" id="line-65"></span><pre>cd \your\checked\out\copy\of\argouml\src\argouml-build
+<span class="anchor" id="line-66"></span></pre><span class="anchor" id="line-67"></span></li><li><p class="line862">Start Ant with "-p" parameter to get a list of build targets with descriptions <span class="anchor" id="line-68"></span><pre>build -p
+<span class="anchor" id="line-69"></span></pre><span class="anchor" id="line-70"></span></li><li>Run ArgoUML using build run <span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span></li></ol><p class="line867">
+<h4 id="head-0486700b4d2114fabe2212416fac6c3def317600">Customizing and configuring your build</h4>
+<span class="anchor" id="line-73"></span><p class="line862">If you want to customize your build, change the appropriate <strong>build.xml</strong> or <strong>default.properties</strong> file. <span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><p class="line874">Don't commit these changes unless you are working with updating the development environment itself. <span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><p class="line874">Remember that if you do this, you have modified your development environment. To be sure that you will not break anything for anyone else when checking in things developed using this modified environment, remove these files temporarily for the compiling and testing you do just before you commit just as you would do before other commits. <span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><p class="line867">
+<h3 id="head-c7159bcd140b7ec06fb0c628d83ddeb8722679b7">Building the core ArgoUML</h3>
+<span class="anchor" id="line-80"></span><p class="line862">If you work with ant you will want to check out and build the entire project. You do this with the <tt>install</tt> target. <span class="anchor" id="line-81"></span><ol type="1"><li><p class="line862">Change the current directory to the directory you are building <span class="anchor" id="line-82"></span><pre>cd /your/checked/out/copy/of/argouml/src
+<span class="anchor" id="line-83"></span></pre><span class="anchor" id="line-84"></span></li><li><p class="line862">Start Ant with no parameters to get a list of build targets with descriptions <span class="anchor" id="line-85"></span><pre>./build.sh install
+<span class="anchor" id="line-86"></span></pre><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span></li></ol><p class="line862">This will build all of the core of ArgoUML and copy it to the <strong>build</strong> directory where sub-projects expect to find it. <span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><p class="line867">
+<h3 id="head-4feac49bb7dc00781c3c918ab464037dc0843703">Building one of the sub-projects</h3>
+<span class="anchor" id="line-91"></span><p class="line862">If you want to run ArgoUML with modules enabled the <strong>build.xml</strong>s are set up to do this in two ways: <span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><ol type="1"><li>Test just one sub-project <span class="anchor" id="line-94"></span><ol type="1"><li>Build the core ArgoUML (See above) <span class="anchor" id="line-95"></span></li><li>Run the module <span class="anchor" id="line-96"></span><p class="line862">This is done with <tt>run</tt> ant-target in the directory of the sub-project in question.  <span class="anchor" id="line-97"></span></li></ol></li><li>Test several sub-projects together <span class="anchor" id="line-98"></span><ol type="1"><li>Build the core ArgoUML (See above) <span class="anchor" id="line-99"></span></li><li>Compile and install the sub-projects <span class="anchor" id="line-100"></span><p class="line862">This is done with <tt>install</tt> ant-target in each of the sub-projects' directory. <span class="anchor" id="line-101"></span>The <tt>install</tt> ant-target copies the jar or jars of the module to the <strong>argouml/build/ext</strong> directory. <span class="anchor" id="line-102"></span></li><li>Start ArgoUML <span class="anchor" id="line-103"></span><p class="line862">This is done with <tt>run</tt> ant-target in the argouml directory.  <span class="anchor" id="line-104"></span>This will start ArgoUML with all the modules "installed".  <span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span></li></ol></li></ol><p class="line867">
+<h3 id="head-5a0bb598d7d59721ce46f24a65f10e10f7eaf4df">Developing in a sub-project without compiling the ArgoUML core yourself</h3>
+<span class="anchor" id="line-107"></span><ol type="1"><li><p class="line862">Download and unpack the latest release of ArgoUML and located it in the <strong>argouml\build</strong> directory. <span class="anchor" id="line-108"></span><pre>C:\Work&gt;mkdir argouml
+<span class="anchor" id="line-109"></span>C:\Work&gt;jar xf ArgoUML-0.34.zip
+<span class="anchor" id="line-110"></span>C:\Work&gt;move argouml-0.34 argouml\build
+<span class="anchor" id="line-111"></span></pre><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span></li><li class="gap"><p class="line862">Check out your subproject. <span class="anchor" id="line-114"></span><pre>C:\Work&gt;svn checkout http://argouml-XX.tigris.org/svn/argouml-XX/trunk argouml-XX
+<span class="anchor" id="line-115"></span>C:\Work&gt;set JAVA_HOME=C:\Programs\jdkwhatever
+<span class="anchor" id="line-116"></span>C:\Work&gt;cd argouml-XX
+<span class="anchor" id="line-117"></span>C:\Work\argouml-XX&gt;ant run
+<span class="anchor" id="line-118"></span></pre><span class="anchor" id="line-119"></span></li></ol><p class="line874">An ArgoUML starts with the module from the subproject argouml-XX enabled. <span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><p class="line867">
+<h3 id="head-6e89e53162d705f3efeac023843eaa30c7c573a0">The sub-project's relation to ArgoUML</h3>
+<span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><p class="line874">The purpose of a sub-project to ArgoUML is to develop things that are run within ArgoUML. In ArgoUML we call them modules, in other tools they are called add-ins or plug-ins. <span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><p class="line874">If you want to start working with a module of your own you could do it by letting the ArgoUML project leader set up a subproject to ArgoUML for you. The benefits are: <span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><ul><li>You will inherit all the infrastructure from the ArgoUML project. <span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span>This includes a site for your Subversion repository, mailing lists, web server..., a common way to set up the project, releases, bug fixes, static checks, and coding guidelines and license. <span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span></li><li class="gap">You get a community of ArgoUML developers that might monitor your work and fix problems, especially problems caused by changes that the developer makes to the ArgoUML API.  <span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span></li></ul><p class="line874">The draw-backs are: <span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><ul><li>You are forced to use the ArgoUML infrastructure <span class="anchor" id="line-136"></span>Subversion, license, coding guidelines. <span class="anchor" id="line-137"></span></li><li>You are forced to make your module Open Source. <span class="anchor" id="line-138"></span>This is actually a Tigris policy.  <span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span></li></ul><p class="line874">If you decide not to make your module a argouml subproject, you can still benefit from using a similar set up as described here but since you have your module repository elsewhere, some adaptations are necessary. <span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><p class="line874">The sub-projects are developed close to the ArgoUML project and reside in a similarly-looking subversion repository. We try to provide a working set of tools and instructions to fit the whole set of projects. These tools are sometimes located in the argouml project and sometimes in the subproject. Also, to compile the module, you need the argouml interfaces, and to run it you need argouml in place. In most cases the argouml interfaces is argouml itself so this distinction is mostly formal. <span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><p class="line874">There are two ways to get the argouml in place w.r.t. your module. The ArgoUML source way and the quicker ArgoUML distribution way. <span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><p class="line874">Using the ArgoUML source way you check out the argouml project alongside the subproject you are going to work with and build it. If you are doing development in the argouml project too, if the subproject in question requires a tool from the argouml project, or if your modules is on the bleeding edge of argouml development and you can't wait for distributions, this is the preferred way. You will need to update and rebuild the argouml project regularly. <span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><p class="line874">Using the ArgoUML distribution way, you check out only your module and then download the ArgoUML distribution and work against that. This is the approach described in the beginning of this section. You will need to download and replace the ArgoUML distribution whenever you need a newer version to work against. You could also, at any point, upgrade to the ArgoUML source way to get to the bleeding edge. <span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><p class="line874">The build.xml ant configuration file in the subproject and the argouml main project are set up to allow for both of these ways. <span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><p class="line867">
+<h4 id="head-55b06749bcddd2b8735b0857c7e85c6f036001d4">Working in a subproject</h4>
+<span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><p class="line874">Each subproject has its own web site with documentation and plans of the subproject. <span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><p class="line874">The subproject has its own commits mailing list that you need to join to monitor the commits. It also has its own dev mailing list where the people working within that subproject discusses the subproject. Join both of these mailing list to see what is going on in the subproject! <span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><p class="line874">The sub-projects could use their own Issuezilla database but should preferably instead have issues registered in the ArgoUML Issuezilla. Every developer of a subproject needs to acquire an Observer role in the argouml project. <span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><p class="line867">
+<h4 id="head-d7dc5ba8c348c9f33a96b72c3a9bcf15fb6528ce">Targets in build.xml in a subproject</h4>
+<span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><p class="line874">The following targets have the same documented meaning in all sub-projects: <span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><ul><li>clean (optional) - Removes files that are generated by running any of the other targets. <span class="anchor" id="line-165"></span></li><li>compile (optional) - Compiles the code. The result is in build/classes. <span class="anchor" id="line-166"></span></li><li>generate (optional) - This is a step that, if it exists, can be run before compile. The result of this is some files that are prerequisites for compile so the compile target runs this automatically. <span class="anchor" id="line-167"></span></li><li>install - This builds the whole module and copies it into the ext directory in the argouml installation. <span class="anchor" id="line-168"></span>The purpose of the ext directory is so that argouml can be started with several different modules started at once. <span class="anchor" id="line-169"></span></li><li>jar (optional) - This builds the whole module and puts the resulting jar file(s) in build. <span class="anchor" id="line-170"></span></li><li>run - This starts argouml with this module active. <span class="anchor" id="line-171"></span>This is the way to start this module with the newly compiled source. <span class="anchor" id="line-172"></span></li><li>tests (optional) - This runs all the JUnit test cases available in the module and generates a html report with the result. This probably requires the junit.jar tool from the argouml project. <span class="anchor" id="line-173"></span></li><li>tests-xml (if tests exists) - This runs all the JUnit test cases available in the module. <span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span></li></ul><p class="line867">
+<h3 id="head-ac22ecf171e01b95de121417c44197e78805390d">Troubleshooting the development build</h3>
+<span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><p class="line867">
+<h4 id="head-92630f590bf239d68ede33862c24d0bbb12aa6e7">Compiling failed. Any suggestions?</h4>
+<span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><p class="line874">It might be that some other developer has made a mistake in checking in things that contain errors, or forgotten to check in some files in a change. Look at the last couple of hours on the developers mailing list! It is probably on fire. <span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><p class="line874">Another reason for problems is an unclean local source tree. This means that if you have updated different parts of your source tree at different times it might contain inconsistencies. If you suspect this, first try to fix it by doing build clean and svn update before trying to build again. If that doesn't work get it all again from the repository in a new copy. <span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><p class="line862">Another reason might be that you have a <strong>build.properties</strong> or <strong>argouml.build.properties</strong> file that you have been working with earlier and that is doing something. If in doubt, remove those files. <span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><p class="line874">If nothing helps, ask the developers mailing list! <span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><p class="line867">
+<h4 id="head-5cad5a7e49d67fd9b0f020835862ab4bbfab23c3">Can't commit my changes?</h4>
+<span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><p class="line874">You need to have a developer role in the ArgoUML project or in the subproject you are working with. If you don't, then you cannot do commits yourself. Discuss what you have done and how best to test it on the ArgoUML project developers mailing list or the developers' mailing list for your subproject. Get in contact with the active developers and urge them to commit it for you. <span class="anchor" id="line-190"></span><span class="anchor" id="line-191"></span><p class="line874">Furthermore the checkout of your copy needs to be done with your Tigris id that has the Developer role. If you for some reason have earlier checked out a copy as guest and then made modifications you may have problems. It is unknown if this is a problem in Subversion. Let the editor know if you find out. <span class="anchor" id="line-192"></span><hr /><p class="line874"> <span class="anchor" id="line-193"></span><a href="CategoryFromCookbook.html">CategoryFromCookbook</a> <span class="anchor" id="line-194"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">Build Process  (last edited 2012-03-13 21:52:00 -0700 by <span title="Linus Tolke @ localhost[127.0.0.1]"><a href="linus.html" title="Linus Tolke @ localhost[127.0.0.1]">linus</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+
+</div>
+
+</div>
+</td>
+</tr>
+</table>
+ 
+ 
+ <div id="footer">
+    <a href="http://www.tigris.org/nonav/DomainFAQ"  onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Site FAQ</a> |
+<a href="http://www.tigris.org/nonav/DomainFeedback"  onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Feedback</a> |
+<a href="http://www.tigris.org/nonav/servlets/LegalNotices?type=TermsOfService" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Terms of service</a> | 
+<a href="http://www.tigris.org/nonav/servlets/LegalNotices?type=PrivacyPolicy" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Privacy policy</a> | 
+<a href="http://www.open.collab.net/cloud?cid=tigriscodesion" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Hosting</a> |
+<a href="http://www.collab.net/developers/tools/" onclick="return launch(this.href, 1)" title="Note: link may open in new window">Developer tools</a> 
+   
+   
+			   
+   <p>&#169; 2001 - 2009 CollabNet. CollabNet is a registered trademark of CollabNet, Inc.</p>
+
+   
+<div>
+<script type="text/javascript">
+// crazy egg code
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName('script')[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/6318.js";
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+// End crazy egg code
+</script>
+</div>
+
+ </div>
+ 
+ 
+</body>
+</html>

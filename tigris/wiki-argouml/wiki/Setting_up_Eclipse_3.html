@@ -1,0 +1,724 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+                 
+ 
+ <head>
+ <style type="text/css"> /* <![CDATA[ */
+ @import "../branding/css/tigris.css";
+ @import "../branding/css/inst.css";
+ /* ]]> */</style>
+ <link rel="stylesheet" type="text/css" href="../branding/css/print.css" media="print" />
+ <script src="../branding/scripts/tigris.js" type="text/javascript"></script>
+ <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+  
+             
+ 
+  <script src="../branding/scripts/alm.js" type="text/javascript"></script>
+  <style type="text/css">
+     /* <![CDATA[ */
+     @import "../branding/css/alm.css";
+         /* ]]> */
+  </style>
+
+  
+ 
+               
+ 
+  
+ 
+               
+ 
+ 
+ <script src="../branding/scripts/wiki.js" type="text/javascript"></script>
+
+    
+ <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../branding/css/wiki/cee/css/common.css" />
+ <link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../branding/css/wiki/cee/css/screen.css" />
+
+  
+ <link rel="Start" href="FrontPage.html" />
+ <link rel="Alternate" title="Wiki Markup" href="http://argouml.tigris.org/wiki/Setting_up_Eclipse_3?action=raw" />
+ <link rel="Alternate" media="print" title="Print View" href="http://argouml.tigris.org/wiki/Setting_up_Eclipse_3?action=print" />
+ <link rel="Search" href="FindPage.html" />
+ <link rel="Index" href="TitleIndex.html" />
+ <link rel="Glossary" href="WordIndex.html" />
+ <link rel="Help" href="HelpOnFormatting.html" />
+ 
+ 
+                                                 <title>
+        argouml:        Wiki: Setting up Eclipse 3
+    </title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <meta http-equiv="Content-Style-Type" content="text/css" />
+ <meta name="version" content="5.3.0.167.5" />
+ <meta name="google-site-verification" content="FRRR8-RLGasBA76ejzXypMklVl0cwg9sna2rgSS4iHk" />
+ <meta name="keywords" content="Defect Tracking, Issue Tracking, Version Control, Configuration Management, Software Configuration Management, SCM, CM, Revision Control, Software Engineering, Unit Testing, Outsourcing, Collaboration, Open Source, Software Development, Collaborative Software Development, Enterprise, Java, Web Services" />   
+<meta name="description" content="CollabNet, Facilitating Collaborative Software Development" /> <meta name="description" content="Open source software engineering" />
+
+ 
+
+<meta name="robots" content="index,nofollow">
+
+
+<script type="text/javascript" src="../branding/css/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../branding/css/wiki/cee/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../branding/css/wiki/cee/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="http://argouml.tigris.org/branding/css/wiki/cee/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="http://argouml.tigris.org/branding/css/wiki/cee/css/projection.css">
+
+<!-- css only for MSIE browsers -->
+<!--[if IE]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/branding/css/wiki/cee/css/msie.css">
+<![endif]-->
+
+
+
+<link rel="Start" href="FrontPage.html">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+
+ 
+  <!--   Single pic border tables -->
+ <style type="text/css">
+/* <![CDATA[ */
+
+table.sborder, table.sborder td
+{
+	border-color: #A9A9A9;
+	border-style: solid;
+}
+
+table.sborder
+{
+	border-width: 0 0 1px 1px;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+table.sborder td
+{
+	margin: 0;
+	padding: 4px;
+	border-width: 1px 1px 0 0;
+	background-color: #FFFFFF;
+}
+
+/* ]]> */
+</style>
+ 
+ <!--   Tigris Script to load random images -->
+ <SCRIPT LANGUAGE="JavaScript">
+var theImages = new Array()
+//Random-loading images
+theImages[0] = 'http://www.tigris.org/branding/images/banners/svn15support.gif' 
+theImages[1] = 'http://www.tigris.org/branding/images/banners/mergeclient.gif' 
+var p = theImages.length;
+
+var preBuffer = new Array()
+for (i = 0; i < p; i++){
+preBuffer[i] = new Image()
+preBuffer[i].src = theImages[i]
+}
+
+var whichImage = Math.round(Math.random()*(p-1));
+function showImage(){
+
+if(whichImage==0){
+document.write('<a href ="http://www.collab.net/services/subversion"><img src="http://argouml.tigris.org/wiki/'+theImages[whichImage]+'" border=0 width=175 height=60></a>');
+}
+else if(whichImage==1){
+document.write('<a href ="http://www.collab.net/subversion15-tigris"><img src="http://argouml.tigris.org/wiki/'+theImages[whichImage]+'" border=0 width=175 height=60></a>');
+}
+}
+</script>
+<!-- Google Aanalytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48365716-1', 'tigris.org');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Tracking code -->
+
+<!-- Sstart Muchkin code -->
+<script src="http://munchkin.marketo.net/munchkin.js" type="text/javascript"></script> 
+<script>mktoMunchkin("563-XAN-459");</script>
+<!-- End Munchkin code -->
+
+<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type='text/javascript'>
+var _vwo_code=(function(){
+var account_id=20080,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+// DO NOT EDIT BELOW THIS LINE
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
+
+</head>
+ 
+ 
+<body  class="composite">
+ 
+ 
+ <div id="collabnet">
+ <div id="login"> 
+     <div>
+      <a href="http://www.tigris.org/servlets/Login?detour=http://argouml.tigris.org/wiki/Setting_up_Eclipse_3">Login</a>
+      |    <a href="http://www.tigris.org/servlets/Join">Register</a>    </div>
+ </div>
+ <a href="http://www.collab.net" id="cnlogo">
+<span class="alt">CollabNet Enterprise Edition</span></a>
+</div>
+ 
+ 
+ 
+ 
+ <div id="banner">
+</div>
+ 
+ 
+ 
+ 
+ <div id="banner">
+ <table width="100%" id="bannertable" cellpadding="0" cellspacing="0">
+   <tr>
+    <td rowspan="2" style="width: 50px;">
+    <a href="http://www.tigris.org/" title="Tigris.org:Defect
+Tracking,Issue Tracking,Version Control,Software Configuration
+Management,SCM,CM,Revision Control,Unit Testing,Software
+Engineering,Document Templates,Outsourcing,Collaboration,Open
+Source,Development,Enterprise,Java,Web Services">
+<img src="../branding/images/logo.gif" alt="Tigris.org" id="tigrislogo" height="48" width="48" /></a>
+    </td>
+    <td style="min-width: 300px;" id="tigrisheading">
+     <div>Tigris.org</div>
+      <div class="smaller">Open Source Software Engineering Tools</div>
+    </td>
+    <td rowspan="2" style="width: 300px;" id="collabnote">
+      <table cellpadding="0" cellspacing="0">
+       <tr>
+        <td>
+        <a href="http://www.collab.net/products/teamforge/free-trial?cid=tigris" target="_blank"><img src="../branding/images/banners/teamforge81.png" alt="CollabNet TeamForge 8.1" width="170" height="60" border="0"></a>
+       </td>
+	   <td>
+        <a href="http://www.collab.net/downloads/giteye?CID=tigris" target="_blank"><img src="../branding/images/banners/GitEye-desktop.png" alt="GitEye Desktop" title="GitEye Desktop" width="170" height="60" border="0"></a>
+       </td>
+        <td>
+        <a href="http://www.open.collab.net/products/subversion" target="_blank"><img src="../branding/images/banners/get-svn-binaries.png" alt="Get Certified Subversion Binaries" title="Get Certified Subversion Binaries" width="175" height="60" border="0"></a>
+       </td>
+       <td>
+	 <a href="http://www.cliqr.com/app-store/#!/CollabNet%20SVN/4.0.5/" target="_blank"><img src="../branding/images/banners/svnedge-cliqr.png" alt="Git Download" title="Subversion Edge now available on Cliqr" width="170" height="60" border="0"></a>
+       </td>
+      </tr>
+     </table>  
+</td>
+</tr>
+</table>
+</div>
+<div id="toptabs">
+<table cellpadding="4" cellspacing="0" border="0"><tr>
+<td>   <a href="http://www.tigris.org/servlets/StartPage">My pages</a><td>
+<th>   <a href="http://www.tigris.org/servlets/ProjectList">Projects</a><th>
+  <td>   <a href="http://www.tigris.org/servlets/DomainHome">Community</a><td>
+		<td>   <a href="http://www.tigris.org/servlets/OpenCollabNet">openCollabNet</a><td>
+</tr></table>
+</div>
+  
+ 
+ <div id="breadcrumbs">
+   <a href="http://www.tigris.org/servlets/ProjectList?type=Projects">Projects</a>    >
+     
+
+   <strong>   <a href="http://argouml.tigris.org/"
+     >argouml</a>
+   </strong>  </div>
+ 
+ 
+ 
+ 
+<table border="0" cellspacing="0" cellpadding="4" width="100%" id="main">
+<tr>
+<td id="navcol">
+ 
+ 
+ 
+
+
+  
+             
+ 
+   
+ 
+ 
+                                                                       <dl id="projecttools" class="navgroup">
+   <dt>Project tools</dt>
+   <dd>
+    <ul>
+          <li>   <a href="http://argouml.tigris.org/servlets/ProjectHome">Project home</a></li>
+                               	</ul>
+       </dd>
+            <dd>
+   <!-- $Id: project_tools.html 19964 2019-07-10 07:55:56Z linus $ -->
+ <ul>
+<li><a href="http://argouml.tigris.org/servlets/ProjectNewsList">Project News</a>
+    <a href="http://argouml.tigris.org/servlets/WebFeed?artifact=news&amp;version=rss_2.0">
+      <img src="../images/feed-icon.gif" alt="RSS Feed" width="10" height="10"/>
+    </a>
+</li>
+<li>
+  <a href="http://argouml.tigris.org/wiki">Developer Wiki</a>
+  <a href="RecentChanges.html">RC</a>
+</li>
+<li><a href="http://argouml.tigris.org/project_bugs.html">Bugs and Issues</a>  </li>
+<li><a href="https://github.com/argouml-tigris-org">Source code</a>  </li>
+<li><a href="http://argouml.tigris.org/servlets/ProjectMemberList">Project Membership</a>  </li>
+<li>
+  <a href="http://argouml.tigris.org/ds/viewForums.do">Mailing lists</a>
+  <a href="http://argouml.markmail.org">MarkMail</a>
+</li>
+<li><a href="http://argouml.tigris.org/servlets/ProjectDocumentList">File Sharing</a>  </li>
+ </ul>
+</dd>
+
+<dt>Using ArgoUML</dt>
+<dd>
+ <ul>
+<li><a href="http://argouml.tigris.org/support.html">Support</a></li>
+<li><a href="http://argouml-stats.tigris.org/documentation/quickguide-0.32/">Quick guide 0.32</a></li>
+<li><a href="http://argouml-stats.tigris.org/documentation/manual-0.32/">User Manual 0.32</a></li>
+<li><a href="http://argouml.tigris.org/servlets/SummarizeList?listName=users">Users' mailing list</a></li>
+<li><a href="http://argouml.tigris.org/documentation/">Documentation</a></li>
+<li><a href="http://argouml.tigris.org/tours/">Tour</a></li>
+<li><a href="http://argouml-downloads.tigris.org/">Downloads</a></li>
+ </ul>
+
+<!-- The project_header and project_footer files don't seem to work -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-682460-2";
+urchinTracker();
+</script>
+
+   </dd> 
+    
+ </dl>
+ 
+
+
+
+
+<form action="http://argouml.tigris.org/servlets/Search" method="get">
+ <dl id="searchbox" class="navgroup">
+  
+      <dt>Search</dt>
+  <dd>
+   <div>
+       <select name="scope">
+           <option value="project" selected="selected">This project</option>
+               <option value="domain" >All projects</option>
+    </select>
+      </div>
+   <div>
+    <input type="hidden" name="resultsPerPage" value="40" /> 
+    <input type="text" name="query" size="10" maxlength="99" /> 
+    <input type="submit" name="Button" value="Go" />
+   </div>
+   <div>
+       <a href="http://argouml.tigris.org/servlets/Search?mode=advanced">Advanced search</a>   </div>
+  </dd>
+
+ </dl>
+</form>
+
+
+<div style="padding: 6px; padding-left: 20px;">
+ <a href="http://www.collab.net/special/clickpbc0502.html" onclick="return launch(this.href, 1)"><img src="../branding/images/poweredby.gif" alt="This site is Powered by CollabNet." id="poweredbycollabnet" width="102" height="38" /></a>
+</div>
+
+<dl id="helptext" class="navgroup">
+ <dt>How do I...</dt>
+ <dd>
+  <ul>
+      
+ 
+ <li>  <a href="http://www.tigris.org/scdocs/wiki" onclick="return launch(this.href, 1)" 
+ title="Note: link may open in new window" class="helplink">
+ 
+ Learn about project wikis?</a>
+</li>
+ 
+ 
+     
+   <li> <a href="http://www.collab.net/rn/" onclick="return launch(this.href, 1)" 
+ title="Note: link may open in new window" class="helplink">
+ 
+ Get release notes for CollabNet 5.3.0?</a>
+</li>
+
+   <li><a href="http://argouml.tigris.org/nonav/servlets/HelpTOC" onclick="return launch(this.href, 1)" 
+title="Note: link may open in new window" class="helplink">Get help?</a></li>
+  </ul>
+ </dd>
+</dl>
+
+<!-- Begin include NavColumn-bottom -->
+<div id="mainhighlights">        
+
+<table border="0" cellspacing="0" cellpadding="3"  width="100%">
+ <tr>
+  <th>Category</th>
+  <th>Featured projects</th>
+ </tr>
+ <tr>
+  <td><a href="http://scm.tigris.org/">scm</a></td>
+  <td><a href="http://subversion.tigris.org/" title="open source version control">Subversion</a>, 
+<a href="http://subclipse.tigris.org/" title="Subversion Eclipse integration">Subclipse</a>,
+<a href="http://tortoisesvn.tigris.org/" title="Subversion client">TortoiseSVN</a>,
+<a href="http://rapidsvn.tigris.org/" title="Subversion client">RapidSVN</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://issuetrack.tigris.org/">issuetrack</a></td>
+  <td><a href="http://scarab.tigris.org/" title="customizable software defect tracking system">Scarab</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://requirements.tigris.org/">requirements</a></td>
+  <td><a href="http://xmlbasedsrs.tigris.org/">xmlbasedsrs</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://design.tigris.org/">design</a></td>
+  <td><a href="http://argouml.tigris.org/" title="Free UML tool, use cases, uml tutorials">ArgoUML</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://techcomm.tigris.org/">techcomm</a></td>
+  <td><a href="http://subetha.tigris.org/" title="Mailing list manager">SubEtha</a>, 
+  <a href="http://eyebrowse.tigris.org/" title="Mailing list archive tool">eyebrowse</a>, 
+<a href="http://midgard.tigris.org/">midgard</a>,
+<a href="http://cowiki.tigris.org/">cowiki</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://construction.tigris.org/">construction</a></td>
+  <td><a href="http://antelope.tigris.org/" title="Ant GUI">antelope</a>,
+  <a href="http://scons.tigris.org/" title="cross-platform build tool">scons</a>,
+  <a href="http://frameworx.tigris.org/">frameworx</a>,
+  <a href="http://build-interceptor.tigris.org/">build-interceptor</a>,
+  <a href="http://propel.tigris.org/">propel</a>,
+  <a href="http://phing.tigris.org/">phing</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://testing.tigris.org/" title="tools for quality software">testing</a></td>
+  <td><a href="http://maxq.tigris.org/" title="record and playback web automated testing tool">maxq</a>, 
+<a href="http://aut.tigris.org/" title="advanced unit testing">aut</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://deployment.tigris.org/">deployment</a></td>
+  <td><a href="http://current.tigris.org/">current</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://process.tigris.org/" title="software development process, extreme programming">process</a></td>
+  <td><a href="http://readyset.tigris.org/" 
+title="Use case template, example test plans, software requirements specification templates, sample project plan template">ReadySET</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://libraries.tigris.org/" title="software reuse, web services">libraries</a></td>
+  <td><a href="http://gef.tigris.org/" title="Graphical diagram editing">GEF</a>, 
+<a href="http://axion.tigris.org/" title="Relational database">Axion</a>, 
+<a href="http://style.tigris.org/" title="Reusable CSS stylesheets">Style</a>,
+<a href="http://sstree.tigris.org/" title="Super-simple trees in HTML, CSS, and javascript">SSTree</a>
+ </td>
+ </tr>
+ <tr>
+  <td colspan="2" style="text-align:center">Over 500 <a style="text-decoration:underline;" 
+  href="http://www.tigris.org/servlets/ProjectList">more tools...</a></td>
+ </tr>
+</table>
+
+
+
+<table border="0" cellspacing="2" cellpadding="3"  width="100%" style="margin-top: 15px;">
+ <tr>
+  <th>Subversion and IDEs</th>
+ </tr>
+ <tr>
+ <td>
+ <a href="http://subclipse.tigris.org/">Eclipse</a>
+ </td>
+ </tr>
+  <tr>
+ <td>
+ <a href="http://www.oracle.com/technology/products/jdev/htdocs/partners/addins/exchange/subversion/subversion.html">JDeveloper</a>
+ </td>
+ </tr>
+  <tr>
+ <td>
+ <a href="http://subversion.netbeans.org/">NetBeans</a>
+ </td>
+ </tr>
+ <tr>
+  <td>
+ <a href="http://ankhsvn.open.collab.net/">Visual Studio</a>
+ </td>
+ </tr>
+ <tr>
+  <td>
+ <a
+ href="http://www.open.collab.net/cloud/?cid=tigriscodesion">Subversion Hosting</a>
+ </td>
+ </tr>
+ </table>
+ 
+<br/>
+ 
+<table border="0" cellspacing="2" cellpadding="3"  width="100%" style="margin-top: 15px;">
+  <tr>
+    <th>Tigris.org (Whole-Site) Admin Contacts</th>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Announcements mail list" target="_blank"
+      href="mailto:announce-subscribe@www.tigris.org">Announcements</a> mail list
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Blog" target="_blank"
+      href="http://tigrisdotorg.wordpress.com">Status Blog</a> at WordPress
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a title="Twitter" target="_blank" href="http://twitter.com/tigrisdotorg">@tigrisdotorg</a> on Twitter
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Problems" target="_blank"
+      href="mailto:feedback@tigris.org">Problem reports</a>
+      on the whole site
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Problems and suggestions about individual projects should
+  go to users@thatproject.tigris.org
+    </td>
+  </tr>
+  </table>
+</div>
+
+<!-- End include NavColumn-bottom -->
+
+
+
+ 
+ 
+<div class="strut">&nbsp;</div>
+</td>
+<td id="midcol">
+ 
+  <div id="bodycol">
+<div id="apphead">
+<h1><small>argouml</small><br />         Wiki: Setting up Eclipse 3
+    </h1>
+</div>
+ 
+ 
+ 
+        
+                 
+                 
+           
+    
+  
+
+ 
+ 
+
+
+
+
+
+<div class="wiki">
+
+<p class="tasknav inline">
+<span class="disabled">Edit this page</span> | <a class="backlink" title="Click to do a full-text search for this title" href="http://argouml.tigris.org/wiki/Setting_up_Eclipse_3?action=fullsearch&amp;value=linkto%3A%22Setting+up+Eclipse+3%22&amp;context=180">Links to this page</a> | <a href="http://argouml.tigris.org/wiki/Setting_up_Eclipse_3?action=info">Page information</a> | <a href="http://argouml.tigris.org/wiki/Setting_up_Eclipse_3?action=AttachFile">Attachments</a> | <a href="Setting_up_Eclipse_3.html">Refresh page</a>
+</p>
+&nbsp;
+
+<form class="actionsmenu inline" method="get" action="Setting_up_Eclipse_3.html" style="display: inline;">
+<div class="inline">
+    <label></label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected>More Actions:</option>
+<option value="raw">Raw Text</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+    </select>
+    <noscript>
+    <input type="submit" value="Submit">
+    </noscript>
+</div>
+<script type="text/javascript">
+</script>
+</form>
+
+
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line862">If you are running Eclipse 3.2 or later and Subclipse we have prepared a recommended setup configured through the <a href="Team_Project_Set_Files_For_ArgoUML.html">Team Project Set Files For ArgoUML</a>.  These are Eclipse .psf files which can be used to automatically check out the project. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line862">The directory structure of an Eclipse check-out of the main source code now mirrors the svn repository structure (since 20 April 2008). For details on the directory structure and layouts, see <a href="Source_layout.html">Source layout</a>. The argouml-core-projectset.psf project set contains a small subset of the full repository. It only contains the files and directories needed to build argouml using Eclipse. It is possible to extend the core project set by importing the argouml-command-line-build.psf file into an existing workspace. This will add the necessary tools to build argouml from the command line; this build can then be run without opening Eclipse. Alternatively, you could achieve the same result by checking-out trunk/ on the command line, and using Eclipse to edit the files (not requiring any .psf files). <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line874">For the recommended setup to work we make certain assumption on what modules you have available in your Eclipse. The following are needed: <span class="anchor" id="line-6"></span><ul><li>Subclipse <span class="anchor" id="line-7"></span></li><li>Ant <span class="anchor" id="line-8"></span></li><li>JUnit 3  <span class="anchor" id="line-9"></span></li><li>PDE Tools <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span></li></ul><p class="line874">The following is optional and the features will be enabled if available: <span class="anchor" id="line-12"></span><ul><li>Checkclipse <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span></li></ul><p class="line867">
+<h3 id="head-e04d476aec54ae31ae5c213d1545cdb18a0f020a">Eclipse installation instructions</h3>
+<span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><p class="line874">These instructions are tested on Eclipse 3.3.1.1, downloading Eclipse IDE for Java developers. Note that if you download Eclipse Classic or Eclipse for Java EE Developers, you will not need to install the PDE plugin (PDE is included in those Eclipse packages). <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><p class="line867"><img alt="&lt;!&gt;" height="15" src="../branding/css/wiki/cee/img/attention.png" title="&lt;!&gt;" width="15" /> For using the Eclipse Update feature, be sure that you're executing Eclipse with a user with writing privileges on the Eclipse installation folder. <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><ol type="1"><li><p class="line862">Download and install the latest Java Software Development Kit (JDK) from sun.com: <a class="http" href="http://java.sun.com/javase/downloads/">http://java.sun.com/javase/downloads/</a>   <span class="anchor" id="line-21"></span></li><li><p class="line862">Download and install the latest Eclipse IDE for Java Developers: <a class="http" href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</a> <span class="anchor" id="line-22"></span></li><li><p class="line862">Download and install Subclipse from within Eclipse, see <a class="http" href="http://subclipse.tigris.org/servlets/ProjectProcess?pageID=p4wYuA">http://subclipse.tigris.org/servlets/ProjectProcess?pageID=p4wYuA</a>. <span class="anchor" id="line-23"></span></li><li>Download and install the PDE tools from within Eclipse (for Eclipse Ganymede (version 3.4) and (maybe) above, see the next listitem): <span class="anchor" id="line-24"></span><ol type="a"><li><p class="line862">Help &gt; Software Updates &gt; Find and Install... <span class="anchor" id="line-25"></span></li><li>Select 'Search for new features to install', click Next. <span class="anchor" id="line-26"></span></li><li>Select 'The Eclipse Project Updates', click Finish. <span class="anchor" id="line-27"></span></li><li>Select a nearby mirror if asked. <span class="anchor" id="line-28"></span></li><li><p class="line862">Select The Eclipse Project &gt; Eclipse SDK Eclipse 3.3.1.1 &gt; Eclipse PDE Plug-in Developer Resources 3.3.2......., Next, Next, Install. <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span>Remark MVW: I had to install "Eclipse Plug-in Development Environment", too. <span class="anchor" id="line-31"></span></li><li>Restart Eclipse. <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span></li></ol></li><li class="gap"> If you're using Eclipse Ganymede (which is version 3.4) the installation process of PDE Tools is slightly different: <span class="anchor" id="line-34"></span><ol type="a"><li><p class="line862">Go to Help -&gt; Software Updates... (if you get this error on Linux "Cannot launch the Update UI...", then enable the classic update in Preferences &gt; General &gt; Capabilities, then follow the previous method). <span class="anchor" id="line-35"></span></li><li>Go to the tab called "Available software" <span class="anchor" id="line-36"></span></li><li>Open "Ganymede update site". Open "Java Development Tools". Check the appropriate package (Eclipse Java Development Tools) and click the button "Install". Maybe you need to install the Eclipse Plug-in Development Environment too, I (Shurakai) am not quite sure about that. Anyway, I installed them. <span class="anchor" id="line-37"></span></li><li>Restart Eclipse <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span></li></ol></li><li class="gap"> If you're using Eclipse Galileio (3.5) it looks like this: <span class="anchor" id="line-40"></span><ol type="a"><li><p class="line862">Go to Help -&gt; Install New Software. <span class="anchor" id="line-41"></span></li><li>In the dropdown box, select "The Eclipse Project Updates". <span class="anchor" id="line-42"></span></li><li>Check PDE/API Tools Environment and go through with the installation including the restart of Eclipse. <span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span></li></ol></li><li class="gap"><p class="line862">Download and install Checkstyle 4.4 from within Eclipse, see <a class="http" href="http://eclipse-cs.sourceforge.net/">http://eclipse-cs.sourceforge.net/</a>. (The ArgoUML configuration for checkstyle is not yet updated to Checkstyle 5.0). <span class="anchor" id="line-45"></span></li><li>Ant and JUnit3 are included in the above. <span class="anchor" id="line-46"></span></li><li><p class="line862">If you are planning to develop <a href="ArgoEclipse.html">ArgoEclipse</a> you also need to download the Albireo library, see <a class="http" href="http://wiki.eclipse.org/Albireo_Installation">http://wiki.eclipse.org/Albireo_Installation</a>. <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span></li></ol><p class="line874">If any of these instructions don't work or could be improved in some way, please ask on the developer mailing list or update this page. <span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><p class="line867">
+<h3 id="head-20b213ae7084ae26cf31daaec364bbd81d1bae2c">Basic ideas of the set up</h3>
+<span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><p class="line874">Here are the ideas governing the layout of the recommended Eclipse set up. <span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><ul><li>Argouml in its own workspace <span class="anchor" id="line-55"></span></li><li style="list-style-type:none">To some extent the ArgoUML projects rely on the workspace-specific settings. If no workspace-specific settings are relied on this is not important. <span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span></li><li class="gap">Prefer project-specific settings to workspace-specific settings (compiler, JRE, style). <span class="anchor" id="line-58"></span></li><li style="list-style-type:none">The workspace-specific settings are not saved automatically in the repository so using them would be error-prone. <span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span></li><li class="gap">Compile time dependencies are set up using the PDE Tools. Projects containing java code are Plugin-projects. <span class="anchor" id="line-61"></span></li><li>Run time dependencies are set up in the Configurations. <span class="anchor" id="line-62"></span></li><li>Configurations saved in the project where they "belong". <span class="anchor" id="line-63"></span></li><li>Use as many of the build tools as possible from their Eclipse distributions. <span class="anchor" id="line-64"></span></li><li style="list-style-type:none">Installing tools is always complicated and a risk in the project. On the other hand, maintaining our own set of tools is also complicated. As Eclipse delivers an infrastructure where the installation of tools is simple the strain on every ArgoUML developer is small and the Eclipse integration project of the tool project will deal with all OS and platform issues. <span class="anchor" id="line-65"></span></li><li style="list-style-type:none">Eclipse also has an infrastructure for handling tools that are configured but missing so developers forgetting to install one or several tools can still do basic things.  <span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span></li></ul><p class="line867">
+<h3 id="head-dd2d4ad1bb4adce3f35565b524b7ec741802072d">Checking out through Eclipse</h3>
+<span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><p class="line874">This instruction is for downloading the ArgoUML source through Eclipse. <span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><p class="line874">Eclipse uses Team Project Set (.psf) files to automatically control the check-out from the SVN repository. <span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><p class="line874">Do the following. <span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><ol type="1"><li><p class="line862">Go to the Team Project Set files download page: <a href="Team_Project_Set_Files_For_ArgoUML.html">Team Project Set Files For ArgoUML</a> <span class="anchor" id="line-76"></span></li><li><span class="anchor" id="line-77"></span><ol type="a"><li>On Windows systems (quicker way): <span class="anchor" id="line-78"></span><ol type="i"><li>Copy the link location of argouml-core-projectset.psf (copy shortcut/copy link location). <span class="anchor" id="line-79"></span></li><li>Open Eclipse <span class="anchor" id="line-80"></span></li><li><p class="line862">File &gt; Import... &gt; Team Project Set &gt; Next. <span class="anchor" id="line-81"></span></li><li>File name: click 'Browse...' <span class="anchor" id="line-82"></span></li><li><p class="line862">Right-click &gt; paste, or &lt;ctrl&gt;-v. Press &lt;enter&gt;. After a short delay, the filename updates with the .psf that's just been downloaded. <span class="anchor" id="line-83"></span></li><li>Click Finish.  <span class="anchor" id="line-84"></span></li></ol>b. On any other system: <span class="anchor" id="line-85"></span><ol type="i"><li>Download the argouml-core-projectset.psf Team Project Set file and save it somewhere. <span class="anchor" id="line-86"></span></li><li>Open Eclipse <span class="anchor" id="line-87"></span></li><li><p class="line862">File &gt; Import... &gt; Team Project Set &gt; Next. <span class="anchor" id="line-88"></span></li><li>File name: click 'Browse...' <span class="anchor" id="line-89"></span></li><li><p class="line862">Navigate to the .psf file you just saved and press &lt;enter&gt;. <span class="anchor" id="line-90"></span></li><li>Click Finish.  <span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span></li></ol></li></ol>Now everything is automatic even though it takes a while. What happens is: <span class="anchor" id="line-93"></span><ol type="a"><li>Files are downloaded from the Tigris SVN server and put into Eclipse projects. <span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><p class="line862">It is around 45MiB that is downloaded so beware if you are on a slow connection. If you do this for the <a href="ArgoEclipse.html">ArgoEclipse</a> psf file, more than 300MiB are downloaded. <span class="anchor" id="line-96"></span>During downloading, Eclipse is asking you multiple times for your Tigris account name and password; once per Eclipse project. It may look like the password is refused, but it is not - just be patient and type your name and password again. <span class="anchor" id="line-97"></span></li><li>The projects are built. First things that are special for ArgoUML, generated Java code, are created by Eclipse calling ant, then Eclipse kicks in and compiles the Java code. <span class="anchor" id="line-98"></span></li><li>Eclipse finds the Configurations that are also checked out.  <span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span></li></ol><p class="line862">If this doesn't work, try to select Project =&gt; Clean... and clean the projects that were not built properly. If it's always wrong (may be argouml-core-model-mdr with Indigo), run the "clean" ant's target from "build.xml". <span class="anchor" id="line-101"></span></li><li>Verify that you can start ArgoUML from the debugger within Eclipse. You can do this by clicking on the little down-arrow close to the Debug icon in the tool bar, selecting Debug... or Run..., and finding ArgoUML in the list (under Java Application).  <span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span></li></ol><p class="line867">
+<h3 id="head-115db9a0516927b8f84998b2f9edb5549aff1051">Eclipse to help with the ArgoUML coding style</h3>
+<span class="anchor" id="line-104"></span><p class="line874">Note: With the change to project specific settings this need not be done by every developer. <span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><p class="line874">This instruction is to set up Eclipse to work according to the ArgoUML Coding standards. If this is not done correctly you will most likely find that you will have to do a lot of manual edits every time Eclipse has touched the code. You have your tool working against you instead of for you. <span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><p class="line874">The instructions here are for these settings to affect your Eclipse Workspace. If you have other projects in the same Eclipse Workspace you would probably want this for only the ArgoUML projects and that is possible although not explained here. We suggest you to consider having ArgoUML work in an Eclipse Workspace separate from your other projects. <span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><p class="line867">
+<h4 id="head-ceb90aca7e55b12208b7082c201ea9c3d24dfebf">Code conventions</h4>
+<span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><ol type="1"><li><p class="line862">Select in the menu Window =&gt; Preferences. <span class="anchor" id="line-113"></span></li><li><p class="line862">Then select Java =&gt; Code Style =&gt; Formatter. <span class="anchor" id="line-114"></span></li><li>For Eclipse 3.2 and later you do: Select Java Conventions [built-in]. <span class="anchor" id="line-115"></span><ul><li style="list-style-type:none">For Eclipse 3.1 you do: Select Import and give the file eclipse/eclipse-argo-formatter.xml located in the argouml-core-tools project that you just checked out. <span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><p class="line862">This takes care of the Java Conventions [built-in] Tab width bug (<a class="https" href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=104765">https://bugs.eclipse.org/bugs/show_bug.cgi?id=104765</a>).  <span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span></li></ul></li><li class="gap">Press OK.  <span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span></li></ol><p class="line874">This will give you Code Conventions exactly like the Sun Coding Style that we use in the ArgoUML project. <span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><p class="line867">
+<h4 id="head-7913ff2591aa57d0b92f0276d6c96e1159cf69fc">New file templates</h4>
+<span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><ol type="1"><li><p class="line862">Select in the menu Window =&gt; Preferences. <span class="anchor" id="line-126"></span></li><li><p class="line862">Then select Java =&gt; Code Style =&gt; Code Templates. <span class="anchor" id="line-127"></span></li><li><p class="line862">Select Import and give the file <a class="nonexistent" href="http://argouml.tigris.org/wiki/EclipseWorkspace">?</a>EclipseWorkspace/argouml-core-tools/eclipse/eclipse-argo-codetemplates.xml located in the argouml-core-tools project that you just checked out. <span class="anchor" id="line-128"></span></li><li>Press OK.  <span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span></li></ol><p class="line874">This will set up templates to be used when using the Eclipse functions for creating files, functions, types and Javadoc... <span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><p class="line867">
+<h3 id="head-dc24e67aed132dbd1898c47987201f9bbda7da86">Eclipse to automatically find problems in the code</h3>
+<span class="anchor" id="line-133"></span><p class="line874">Note: With the change to project specific settings this need not be done by every developer. <span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><p class="line874">This instruction is to set up Eclipse to automatically find what, in the ArgoUML project, could be considered problems in the code. <span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><p class="line874">You can apply these individually depending on what level of help you need in your coding. I (Linus Tolke) recommend that you set them all on the Warning level. This makes them visible for you. You can then decide to fix them or not depending on how you feel about the code you are working with. <span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><p class="line874">The instructions on where to find the different settings are for Eclipse 3.2. If you use Eclipse 3.1 you might need to search through the tabs to find where the setting is since they were reorganized for Eclipse 3.2. <span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><ul><li>Compiler compliance level. <span class="anchor" id="line-142"></span></li></ul><p class="line874">After ArgoUML v0.33.1: <span class="anchor" id="line-143"></span><ul><li style="list-style-type:none">The Complier level : "1.6" (nothing to do). <span class="anchor" id="line-144"></span></li></ul><p class="line874">Before ArgoUML v0.33.1: <span class="anchor" id="line-145"></span><ul><li style="list-style-type:none"><p class="line862">See in the menu Window =&gt; Preferences. Then select Java =&gt; Compiler. At the right hand side set Compiler compliance level: 5.0. <span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span>Check Use default compliance settings. <span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span>In the ArgoUML project we have decided to keep source compliance to Java5 (See Section 3.3.1, “Choice of JRE: ArgoUML will support any JRE compatible with a Sun specification of any JRE from Sun that has not begun the Sun End of Life (EOL) process. ”). This setting enables Eclipse to tell you where some Java6 features have crept in. <span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span></li><li class="gap">Find forgotten and incorrect Javadoc comments. <span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><p class="line862">In the menu select Window =&gt; Preferences. Then select Java =&gt; Compiler =&gt; Javadoc. Suggested settings for these tabs (Only things diverting from the Eclipse defaults are listed): <span class="anchor" id="line-154"></span><ul><li><p class="line862">Javadoc =&gt; Malformed Javadoc comments: Warning, Private, Check all "Report...". <span class="anchor" id="line-155"></span></li><li><p class="line862">Javadoc =&gt; Missing Javadoc tags: Warning, Private, check Check overriding and implementing methods. <span class="anchor" id="line-156"></span></li><li><p class="line862">Javadoc =&gt; Missing Javadoc comments: Warning, Protected, uncheck Check overriding and implementing methods.  <span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span></li></ul>These problems (except missing Javadoc comments) are also found by Checkstyle so if you are running Checkclipse (See Section 2.9.6, “Settings for Checkclipse”) put this in Ignore instead. <span class="anchor" id="line-159"></span></li><li>Code that hides other code. <span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><p class="line862">In the menu select Window =&gt; Preferences. Then select Java =&gt; Compiler =&gt; Error/Warnings. Suggested settings for these tabs (Only things diverting from the Eclipse defaults are listed): <span class="anchor" id="line-162"></span><ul><li><p class="line862">Potential programming problems =&gt; Serializable class without serialVersionUID: Ignore <span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span>We don't use serialization in the ArgoUML project anyway. <span class="anchor" id="line-165"></span></li><li><p class="line862">Potential programming problems =&gt; Possible accidental boolean assignment: Warning. <span class="anchor" id="line-166"></span></li><li><p class="line862">Name shadowing and conflicts =&gt; Field declaration hides another field or variable: Warning. <span class="anchor" id="line-167"></span></li><li><p class="line862">Name shadowing and conflicts =&gt; Local variable declaration hides another field or variable: Warning, check Include constructor or setter method parameters.  <span class="anchor" id="line-168"></span></li></ul></li><li>Find Code that shall be removed. <span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><p class="line862">In the menu select Window =&gt; Preferences. Then select Java =&gt; Compiler =&gt; Error/Warnings. Suggested settings for these tabs (Only things diverting from the Eclipse defaults are listed): <span class="anchor" id="line-171"></span><ul><li><p class="line862">Unnecessary code =&gt; Local variable is never read: Warning. (This is default in Eclipse 3.3.) <span class="anchor" id="line-172"></span></li><li><p class="line862">Unnecessary code =&gt; Parameter is never read: Warning. uncheck Ignore parameters documented with '@param' tag. <span class="anchor" id="line-173"></span></li><li><p class="line862">Unnecessary code =&gt; Unused or unread private members: Warning. (This is reformulated and default in Eclipse 3.3.) <span class="anchor" id="line-174"></span></li><li><p class="line862">Unnecessary code =&gt; Unnecessary semicolon: Warning. <span class="anchor" id="line-175"></span></li><li><p class="line862">Unnecessary code =&gt; Unnecessary cast or 'instanceof' operation: Warning. <span class="anchor" id="line-176"></span></li><li><p class="line862">Unnecessary code =&gt; Unnecessary declaration of thrown checked exception: Warning.  <span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span></li></ul></li></ul><p class="line867">
+<h3 id="head-535744085a93e975ad0c7bf86129ad22992ec554">Settings for Checkclipse</h3>
+<span class="anchor" id="line-179"></span><p class="line867"><a href="CategoryFix.html">CategoryFix</a>: This description needs to be updated! <span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><p class="line874">Checkclipse is a plug in for Eclipse which needs to be installed separately. It enables style checking according the rules set for the ArgoUML project. <span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><p class="line862">Get the latest Checkclipse kit from <a class="nonexistent" href="http://argouml.tigris.org/wiki/SourceForge">?</a>SourceForge as described at <a class="http" href="http://eclipse-cs.sourceforge.net/downloads.html">http://eclipse-cs.sourceforge.net/downloads.html</a>. (Checkstyle is bundled with Checkclipse so it's not necessary to install it separately, but the web site is <a class="http" href="http://checkstyle.sourceforge.net/">http://checkstyle.sourceforge.net/</a> for reference.) <span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><p class="line874">Most ArgoUML projects in Eclipse have their Checkclipse settings predefined which should be found as soon as you install Checkclipse, but if you need to set them up by hand, use the following instructions. These instructions are for Checkclipse 2.1. <span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><p class="line862">In the Java perspective, in the Package Explorer select the project argouml-app. Then, in the menu, select Project =&gt; Properties, select Checkclipse (appears only if Checkclipse is correctly installed) and then fill the fields like this: <span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><ul><li>Enable Checkstyle - Checked. <span class="anchor" id="line-190"></span></li><li>Set Project Classloader - Checked. <span class="anchor" id="line-191"></span></li><li>Checkstyle Configuration File: /argouml-core-tools/checkstyle/checkstyle_argouml.xml in the argouml-core-tools project. <span class="anchor" id="line-192"></span></li><li>Checkstyle Properties File: /argouml-core-tools/checkstyle/checkstyle.properties in the argouml-core-tools project.  <span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span></li></ul><p class="line862">Leave the rest of the fields at their default (empty). The File Filters are defined on an additional preferences tab rather than in a separate file as in earlier versions of Checkclipse. If this isn't populated with the saved values from SVN you can add individual files to the exclude list as you encounter them, but generally any machine generated source file (<a class="nonexistent" href="http://argouml.tigris.org/wiki/JavaLexer">?</a>JavaLexer, <a class="nonexistent" href="http://argouml.tigris.org/wiki/JavaRecognizer">?</a>JavaRecognizer, etc) should be excluded from the checks. <span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><p class="line867">
+<h3 id="head-fbb70762d3bc1b382d4b9b7c5efcdccfb8545110">Running JUnit test cases from within Eclipse</h3>
+<span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><p class="line874">Most of the JUnit test cases belong to the argouml-core-tests Eclipse project. The argouml-core-tests Eclipse project has its compile time dependencies set up to include the things needed to compile the test cases. This means that it is possible to compile the test cases and nobody will create tests that use the insides of some subsystem that is supposed to be hidden. <span class="anchor" id="line-200"></span><span class="anchor" id="line-201"></span><p class="line874">The Model subsystem is separated in two parts: <span class="anchor" id="line-202"></span><span class="anchor" id="line-203"></span><ul><li>The interfaces and some bootstrap code in the argouml-core-model Eclipse project. <span class="anchor" id="line-204"></span></li><li>The MDR implementation in the argouml-core-model-mdr Eclipse project.  <span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span></li></ul><p class="line862">There is also for test purposes a partly implemented Mock implementation of the model subsystem in the org.argouml.model.<a class="nonexistent" href="http://argouml.tigris.org/wiki/MockModelImplementation">?</a>MockModelImplementation-class for the purpose of testing the interfaces and the bootstrap code but it requires the test cases to be written especially for that. <span class="anchor" id="line-207"></span><span class="anchor" id="line-208"></span><p class="line874">The tests are never to be compiled against the MDR-implementation but against the interfaces. This means that the MDR-implementation is not included in the project dependencies. <span class="anchor" id="line-209"></span><span class="anchor" id="line-210"></span><p class="line874">When it comes to running the tests, most of the tests require the Model subsystem working to succeed. To run the application with a working Model subsystem, a working implementation is needed so the tests require the MDR-implementation. <span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span><p class="line874">The simplest way to solve this is to: <span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><ol type="1"><li>Create the test (by right-clicking on any of the test classes and select Run as JUnit Test or Debug as JUnit Test). <span class="anchor" id="line-215"></span><span class="anchor" id="line-216"></span><p class="line862">The test fails with a java.lang.<a class="nonexistent" href="http://argouml.tigris.org/wiki/ExceptionInInitializerError">?</a>ExceptionInInitializerError on the first reference to Model. If it doesn't then the perhaps the test case doesn't use the Model. <span class="anchor" id="line-217"></span><span class="anchor" id="line-218"></span></li><li class="gap">Select Debug... or Run... to get the configuration editing box. It has remembered the test case and it is selected. <span class="anchor" id="line-219"></span><span class="anchor" id="line-220"></span></li><li class="gap">Add the argouml-core-model-mdr to the class path. <span class="anchor" id="line-221"></span><span class="anchor" id="line-222"></span>Classpath tab, Select User Entries, Add Projects, Check argouml-core-model-mdr, make sure Add exported entries of selected projects and Add required projects of selected projects are checked, Press OK, Press Debug or Run. Eclipse will remember these changes to that configuration but you will have to do it all over again once for each new test case.  <span class="anchor" id="line-223"></span><span class="anchor" id="line-224"></span></li></ol><p class="line867">
+<h4 id="head-256ec1a99a7f0930442934a207bc3307902fd7f9">Running all JUnit test cases from within Eclipse</h4>
+<span class="anchor" id="line-225"></span><span class="anchor" id="line-226"></span><p class="line874">The description so far describes how to do this for a single test case at the time. If you want to run all test cases in one go from within Eclipse it is also possible. We have not prepared that for three reasons: <span class="anchor" id="line-227"></span><span class="anchor" id="line-228"></span><ul><li>Some of the tests fail when run in this way. <span class="anchor" id="line-229"></span><span class="anchor" id="line-230"></span>The guess (Linus July 2006) is that this depends on the fact that Eclipse doesn't start each test in its own JVM and some of the tests relies on a fresh environment (empty models...). Let's hope that an upcoming version of Eclipse includes a function to allow us to specify that the tests are to be run each in its own JVM. <span class="anchor" id="line-231"></span><span class="anchor" id="line-232"></span>Another cause might be that the tests rely on certain other files being in specified places that the Eclipse set up doesn't provide. <span class="anchor" id="line-233"></span><span class="anchor" id="line-234"></span></li><li class="gap">Maintaining the Configuration. <span class="anchor" id="line-235"></span><span class="anchor" id="line-236"></span>Since we have an Eclipse setup with a mismatch between the compile time dependencies and the run time dependencies this Configuration contains references to specific jar-files. This means a maintenance problem whenever changing version of a dependency. <span class="anchor" id="line-237"></span><span class="anchor" id="line-238"></span></li><li class="gap">Selection of tests. <span class="anchor" id="line-239"></span><span class="anchor" id="line-240"></span>In the project we keep all tests in the same tree, whether they are working or not. We distinguish between test classes with names starting with "Test", "GUITest", and neither of them. The ones starting with "Test" or "GUITest" are official tests that should be working. All others are tests that are never run automatically. They are perhaps used for other purposes. In Eclipse, there is no way to specify this so the description below will run all tests. <span class="anchor" id="line-241"></span><span class="anchor" id="line-242"></span><p class="line862">Such a test is the <a class="nonexistent" href="http://argouml.tigris.org/wiki/DoAllTests">?</a>DoAllTests-test suite that runs all tests so tests risk to be run twice.  <span class="anchor" id="line-243"></span><span class="anchor" id="line-244"></span></li></ul><p class="line874">If you want to test this, this is what you do: <span class="anchor" id="line-245"></span><span class="anchor" id="line-246"></span><ul><li>Right-click on the project argouml-core-tests. <span class="anchor" id="line-247"></span></li><li>On the multilevel pop-up that opens, select Run As... JUnit Test or Debug As... JUnit Test. <span class="anchor" id="line-248"></span></li><li>A Configuration is created on that project with the Run all tests in the selected project, package or source folder: checked and the configuration is started/launched. <span class="anchor" id="line-249"></span></li><li>Stop the running Configuration. <span class="anchor" id="line-250"></span><span class="anchor" id="line-251"></span>The newly Configuration has the same problem as every single test above with the model subsystem so it won't work. <span class="anchor" id="line-252"></span><span class="anchor" id="line-253"></span></li><li class="gap">Press Debug... or Run... to open the Configuration editor. <span class="anchor" id="line-254"></span><span class="anchor" id="line-255"></span>The newly created Configuration argouml-core-test is selected. <span class="anchor" id="line-256"></span><span class="anchor" id="line-257"></span></li><li class="gap">Add the argouml-core-model-mdr project to the class path. <span class="anchor" id="line-258"></span><span class="anchor" id="line-259"></span>This is done by: <span class="anchor" id="line-260"></span><ul><li>selecting the Classpath tab, <span class="anchor" id="line-261"></span></li><li>selecting argouml-core-tests under User Entries, <span class="anchor" id="line-262"></span></li><li>clicking Add projects, and <span class="anchor" id="line-263"></span></li><li>selecting the argouml-core-model-mdr project and press OK.  <span class="anchor" id="line-264"></span></li></ul></li><li>Run all the tests by pressing Debug or Run.  <span class="anchor" id="line-265"></span><span class="anchor" id="line-266"></span></li></ul><p class="line867">
+<h3 id="head-6a6920758a25b4a33226d25b1fee4ab32b0d848c">How to work with the modules</h3>
+<span class="anchor" id="line-267"></span><span class="anchor" id="line-268"></span><p class="line874">The Eclipse set up is prepared to handle work with some ArgoUML subprojects too in the same way. To work on these, or having them enabled in the workspace to spot incompatible changes you do the following: <span class="anchor" id="line-269"></span><span class="anchor" id="line-270"></span><ul><li>Set the workspace default file for ant to tools/eclipse/eclipse-ant.properties. <span class="anchor" id="line-271"></span><span class="anchor" id="line-272"></span><p class="line862">Window =&gt; Preferences, Ant -&gt; Runtime Properties and add a Global property file ${workspace_loc:/argouml-core-tools/eclipse/eclipse-ant.properties}. <span class="anchor" id="line-273"></span><span class="anchor" id="line-274"></span></li><li class="gap">Import from the argouml-modules-projectset.psf files.  <span class="anchor" id="line-275"></span><span class="anchor" id="line-276"></span><span class="anchor" id="line-277"></span></li></ul><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-278"></span><a href="CategoryFix.html">CategoryFix</a>: We no longer recommend the workspace-settings but use project settings so each developer need not supply those themselves. <span class="anchor" id="line-279"></span><hr /><p class="line874"> <span class="anchor" id="line-280"></span><a href="CategoryFromCookbook.html">CategoryFromCookbook</a> <span class="anchor" id="line-281"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">Setting up Eclipse 3  (last edited 2014-11-24 18:11:31 -0700 by <span title="Laurent BRAUD @ localhost[127.0.0.1]"><a class="nonexistent" href="http://argouml.tigris.org/wiki/elbedd" title="Laurent BRAUD @ localhost[127.0.0.1]">?</a>elbedd</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+
+</div>
+
+</div>
+</td>
+</tr>
+</table>
+ 
+ 
+ <div id="footer">
+    <a href="http://www.tigris.org/nonav/DomainFAQ"  onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Site FAQ</a> |
+<a href="http://www.tigris.org/nonav/DomainFeedback"  onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Feedback</a> |
+<a href="http://www.tigris.org/nonav/servlets/LegalNotices?type=TermsOfService" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Terms of service</a> | 
+<a href="http://www.tigris.org/nonav/servlets/LegalNotices?type=PrivacyPolicy" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Privacy policy</a> | 
+<a href="http://www.open.collab.net/cloud?cid=tigriscodesion" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Hosting</a> |
+<a href="http://www.collab.net/developers/tools/" onclick="return launch(this.href, 1)" title="Note: link may open in new window">Developer tools</a> 
+   
+   
+			   
+   <p>&#169; 2001 - 2009 CollabNet. CollabNet is a registered trademark of CollabNet, Inc.</p>
+
+   
+<div>
+<script type="text/javascript">
+// crazy egg code
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName('script')[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/6318.js";
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+// End crazy egg code
+</script>
+</div>
+
+ </div>
+ 
+ 
+</body>
+</html>

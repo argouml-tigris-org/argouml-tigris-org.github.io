@@ -1,0 +1,726 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+                 
+ 
+ <head>
+ <style type="text/css"> /* <![CDATA[ */
+ @import "../branding/css/tigris.css";
+ @import "../branding/css/inst.css";
+ /* ]]> */</style>
+ <link rel="stylesheet" type="text/css" href="../branding/css/print.css" media="print" />
+ <script src="../branding/scripts/tigris.js" type="text/javascript"></script>
+ <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+  
+             
+ 
+  <script src="../branding/scripts/alm.js" type="text/javascript"></script>
+  <style type="text/css">
+     /* <![CDATA[ */
+     @import "../branding/css/alm.css";
+         /* ]]> */
+  </style>
+
+  
+ 
+               
+ 
+  
+ 
+               
+ 
+ 
+ <script src="../branding/scripts/wiki.js" type="text/javascript"></script>
+
+    
+ <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../branding/css/wiki/cee/css/common.css" />
+ <link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../branding/css/wiki/cee/css/screen.css" />
+
+  
+ <link rel="Start" href="FrontPage.html" />
+ <link rel="Alternate" title="Wiki Markup" href="http://argouml.tigris.org/wiki/Status_of_eUML?action=raw" />
+ <link rel="Alternate" media="print" title="Print View" href="http://argouml.tigris.org/wiki/Status_of_eUML?action=print" />
+ <link rel="Search" href="FindPage.html" />
+ <link rel="Index" href="TitleIndex.html" />
+ <link rel="Glossary" href="WordIndex.html" />
+ <link rel="Help" href="HelpOnFormatting.html" />
+ 
+ 
+                                                 <title>
+        argouml:        Wiki: Status of eUML
+    </title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <meta http-equiv="Content-Style-Type" content="text/css" />
+ <meta name="version" content="5.3.0.167.5" />
+ <meta name="google-site-verification" content="FRRR8-RLGasBA76ejzXypMklVl0cwg9sna2rgSS4iHk" />
+ <meta name="keywords" content="Defect Tracking, Issue Tracking, Version Control, Configuration Management, Software Configuration Management, SCM, CM, Revision Control, Software Engineering, Unit Testing, Outsourcing, Collaboration, Open Source, Software Development, Collaborative Software Development, Enterprise, Java, Web Services" />   
+<meta name="description" content="CollabNet, Facilitating Collaborative Software Development" /> <meta name="description" content="Open source software engineering" />
+
+ 
+
+<meta name="robots" content="index,nofollow">
+
+
+<script type="text/javascript" src="../branding/css/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../branding/css/wiki/cee/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../branding/css/wiki/cee/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="http://argouml.tigris.org/branding/css/wiki/cee/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="http://argouml.tigris.org/branding/css/wiki/cee/css/projection.css">
+
+<!-- css only for MSIE browsers -->
+<!--[if IE]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/branding/css/wiki/cee/css/msie.css">
+<![endif]-->
+
+
+
+<link rel="Start" href="FrontPage.html">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+
+ 
+  <!--   Single pic border tables -->
+ <style type="text/css">
+/* <![CDATA[ */
+
+table.sborder, table.sborder td
+{
+	border-color: #A9A9A9;
+	border-style: solid;
+}
+
+table.sborder
+{
+	border-width: 0 0 1px 1px;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+table.sborder td
+{
+	margin: 0;
+	padding: 4px;
+	border-width: 1px 1px 0 0;
+	background-color: #FFFFFF;
+}
+
+/* ]]> */
+</style>
+ 
+ <!--   Tigris Script to load random images -->
+ <SCRIPT LANGUAGE="JavaScript">
+var theImages = new Array()
+//Random-loading images
+theImages[0] = 'http://www.tigris.org/branding/images/banners/svn15support.gif' 
+theImages[1] = 'http://www.tigris.org/branding/images/banners/mergeclient.gif' 
+var p = theImages.length;
+
+var preBuffer = new Array()
+for (i = 0; i < p; i++){
+preBuffer[i] = new Image()
+preBuffer[i].src = theImages[i]
+}
+
+var whichImage = Math.round(Math.random()*(p-1));
+function showImage(){
+
+if(whichImage==0){
+document.write('<a href ="http://www.collab.net/services/subversion"><img src="http://argouml.tigris.org/wiki/'+theImages[whichImage]+'" border=0 width=175 height=60></a>');
+}
+else if(whichImage==1){
+document.write('<a href ="http://www.collab.net/subversion15-tigris"><img src="http://argouml.tigris.org/wiki/'+theImages[whichImage]+'" border=0 width=175 height=60></a>');
+}
+}
+</script>
+<!-- Google Aanalytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48365716-1', 'tigris.org');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Tracking code -->
+
+<!-- Sstart Muchkin code -->
+<script src="http://munchkin.marketo.net/munchkin.js" type="text/javascript"></script> 
+<script>mktoMunchkin("563-XAN-459");</script>
+<!-- End Munchkin code -->
+
+<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type='text/javascript'>
+var _vwo_code=(function(){
+var account_id=20080,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+// DO NOT EDIT BELOW THIS LINE
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
+
+</head>
+ 
+ 
+<body  class="composite">
+ 
+ 
+ <div id="collabnet">
+ <div id="login"> 
+     <div>
+      <a href="http://www.tigris.org/servlets/Login?detour=http://argouml.tigris.org/wiki/Status_of_eUML">Login</a>
+      |    <a href="http://www.tigris.org/servlets/Join">Register</a>    </div>
+ </div>
+ <a href="http://www.collab.net" id="cnlogo">
+<span class="alt">CollabNet Enterprise Edition</span></a>
+</div>
+ 
+ 
+ 
+ 
+ <div id="banner">
+</div>
+ 
+ 
+ 
+ 
+ <div id="banner">
+ <table width="100%" id="bannertable" cellpadding="0" cellspacing="0">
+   <tr>
+    <td rowspan="2" style="width: 50px;">
+    <a href="http://www.tigris.org/" title="Tigris.org:Defect
+Tracking,Issue Tracking,Version Control,Software Configuration
+Management,SCM,CM,Revision Control,Unit Testing,Software
+Engineering,Document Templates,Outsourcing,Collaboration,Open
+Source,Development,Enterprise,Java,Web Services">
+<img src="../branding/images/logo.gif" alt="Tigris.org" id="tigrislogo" height="48" width="48" /></a>
+    </td>
+    <td style="min-width: 300px;" id="tigrisheading">
+     <div>Tigris.org</div>
+      <div class="smaller">Open Source Software Engineering Tools</div>
+    </td>
+    <td rowspan="2" style="width: 300px;" id="collabnote">
+      <table cellpadding="0" cellspacing="0">
+       <tr>
+        <td>
+        <a href="http://www.collab.net/products/teamforge/free-trial?cid=tigris" target="_blank"><img src="../branding/images/banners/teamforge81.png" alt="CollabNet TeamForge 8.1" width="170" height="60" border="0"></a>
+       </td>
+	   <td>
+        <a href="http://www.collab.net/downloads/giteye?CID=tigris" target="_blank"><img src="../branding/images/banners/GitEye-desktop.png" alt="GitEye Desktop" title="GitEye Desktop" width="170" height="60" border="0"></a>
+       </td>
+        <td>
+        <a href="http://www.open.collab.net/products/subversion" target="_blank"><img src="../branding/images/banners/get-svn-binaries.png" alt="Get Certified Subversion Binaries" title="Get Certified Subversion Binaries" width="175" height="60" border="0"></a>
+       </td>
+       <td>
+	 <a href="http://www.cliqr.com/app-store/#!/CollabNet%20SVN/4.0.5/" target="_blank"><img src="../branding/images/banners/svnedge-cliqr.png" alt="Git Download" title="Subversion Edge now available on Cliqr" width="170" height="60" border="0"></a>
+       </td>
+      </tr>
+     </table>  
+</td>
+</tr>
+</table>
+</div>
+<div id="toptabs">
+<table cellpadding="4" cellspacing="0" border="0"><tr>
+<td>   <a href="http://www.tigris.org/servlets/StartPage">My pages</a><td>
+<th>   <a href="http://www.tigris.org/servlets/ProjectList">Projects</a><th>
+  <td>   <a href="http://www.tigris.org/servlets/DomainHome">Community</a><td>
+		<td>   <a href="http://www.tigris.org/servlets/OpenCollabNet">openCollabNet</a><td>
+</tr></table>
+</div>
+  
+ 
+ <div id="breadcrumbs">
+   <a href="http://www.tigris.org/servlets/ProjectList?type=Projects">Projects</a>    >
+     
+
+   <strong>   <a href="http://argouml.tigris.org/"
+     >argouml</a>
+   </strong>  </div>
+ 
+ 
+ 
+ 
+<table border="0" cellspacing="0" cellpadding="4" width="100%" id="main">
+<tr>
+<td id="navcol">
+ 
+ 
+ 
+
+
+  
+             
+ 
+   
+ 
+ 
+                                                                       <dl id="projecttools" class="navgroup">
+   <dt>Project tools</dt>
+   <dd>
+    <ul>
+          <li>   <a href="http://argouml.tigris.org/servlets/ProjectHome">Project home</a></li>
+                               	</ul>
+       </dd>
+            <dd>
+   <!-- $Id: project_tools.html 19964 2019-07-10 07:55:56Z linus $ -->
+ <ul>
+<li><a href="http://argouml.tigris.org/servlets/ProjectNewsList">Project News</a>
+    <a href="http://argouml.tigris.org/servlets/WebFeed?artifact=news&amp;version=rss_2.0">
+      <img src="../images/feed-icon.gif" alt="RSS Feed" width="10" height="10"/>
+    </a>
+</li>
+<li>
+  <a href="http://argouml.tigris.org/wiki">Developer Wiki</a>
+  <a href="RecentChanges.html">RC</a>
+</li>
+<li><a href="http://argouml.tigris.org/project_bugs.html">Bugs and Issues</a>  </li>
+<li><a href="https://github.com/argouml-tigris-org">Source code</a>  </li>
+<li><a href="http://argouml.tigris.org/servlets/ProjectMemberList">Project Membership</a>  </li>
+<li>
+  <a href="http://argouml.tigris.org/ds/viewForums.do">Mailing lists</a>
+  <a href="http://argouml.markmail.org">MarkMail</a>
+</li>
+<li><a href="http://argouml.tigris.org/servlets/ProjectDocumentList">File Sharing</a>  </li>
+ </ul>
+</dd>
+
+<dt>Using ArgoUML</dt>
+<dd>
+ <ul>
+<li><a href="http://argouml.tigris.org/support.html">Support</a></li>
+<li><a href="http://argouml-stats.tigris.org/documentation/quickguide-0.32/">Quick guide 0.32</a></li>
+<li><a href="http://argouml-stats.tigris.org/documentation/manual-0.32/">User Manual 0.32</a></li>
+<li><a href="http://argouml.tigris.org/servlets/SummarizeList?listName=users">Users' mailing list</a></li>
+<li><a href="http://argouml.tigris.org/documentation/">Documentation</a></li>
+<li><a href="http://argouml.tigris.org/tours/">Tour</a></li>
+<li><a href="http://argouml-downloads.tigris.org/">Downloads</a></li>
+ </ul>
+
+<!-- The project_header and project_footer files don't seem to work -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-682460-2";
+urchinTracker();
+</script>
+
+   </dd> 
+    
+ </dl>
+ 
+
+
+
+
+<form action="http://argouml.tigris.org/servlets/Search" method="get">
+ <dl id="searchbox" class="navgroup">
+  
+      <dt>Search</dt>
+  <dd>
+   <div>
+       <select name="scope">
+           <option value="project" selected="selected">This project</option>
+               <option value="domain" >All projects</option>
+    </select>
+      </div>
+   <div>
+    <input type="hidden" name="resultsPerPage" value="40" /> 
+    <input type="text" name="query" size="10" maxlength="99" /> 
+    <input type="submit" name="Button" value="Go" />
+   </div>
+   <div>
+       <a href="http://argouml.tigris.org/servlets/Search?mode=advanced">Advanced search</a>   </div>
+  </dd>
+
+ </dl>
+</form>
+
+
+<div style="padding: 6px; padding-left: 20px;">
+ <a href="http://www.collab.net/special/clickpbc0502.html" onclick="return launch(this.href, 1)"><img src="../branding/images/poweredby.gif" alt="This site is Powered by CollabNet." id="poweredbycollabnet" width="102" height="38" /></a>
+</div>
+
+<dl id="helptext" class="navgroup">
+ <dt>How do I...</dt>
+ <dd>
+  <ul>
+      
+ 
+ <li>  <a href="http://www.tigris.org/scdocs/wiki" onclick="return launch(this.href, 1)" 
+ title="Note: link may open in new window" class="helplink">
+ 
+ Learn about project wikis?</a>
+</li>
+ 
+ 
+     
+   <li> <a href="http://www.collab.net/rn/" onclick="return launch(this.href, 1)" 
+ title="Note: link may open in new window" class="helplink">
+ 
+ Get release notes for CollabNet 5.3.0?</a>
+</li>
+
+   <li><a href="http://argouml.tigris.org/nonav/servlets/HelpTOC" onclick="return launch(this.href, 1)" 
+title="Note: link may open in new window" class="helplink">Get help?</a></li>
+  </ul>
+ </dd>
+</dl>
+
+<!-- Begin include NavColumn-bottom -->
+<div id="mainhighlights">        
+
+<table border="0" cellspacing="0" cellpadding="3"  width="100%">
+ <tr>
+  <th>Category</th>
+  <th>Featured projects</th>
+ </tr>
+ <tr>
+  <td><a href="http://scm.tigris.org/">scm</a></td>
+  <td><a href="http://subversion.tigris.org/" title="open source version control">Subversion</a>, 
+<a href="http://subclipse.tigris.org/" title="Subversion Eclipse integration">Subclipse</a>,
+<a href="http://tortoisesvn.tigris.org/" title="Subversion client">TortoiseSVN</a>,
+<a href="http://rapidsvn.tigris.org/" title="Subversion client">RapidSVN</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://issuetrack.tigris.org/">issuetrack</a></td>
+  <td><a href="http://scarab.tigris.org/" title="customizable software defect tracking system">Scarab</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://requirements.tigris.org/">requirements</a></td>
+  <td><a href="http://xmlbasedsrs.tigris.org/">xmlbasedsrs</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://design.tigris.org/">design</a></td>
+  <td><a href="http://argouml.tigris.org/" title="Free UML tool, use cases, uml tutorials">ArgoUML</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://techcomm.tigris.org/">techcomm</a></td>
+  <td><a href="http://subetha.tigris.org/" title="Mailing list manager">SubEtha</a>, 
+  <a href="http://eyebrowse.tigris.org/" title="Mailing list archive tool">eyebrowse</a>, 
+<a href="http://midgard.tigris.org/">midgard</a>,
+<a href="http://cowiki.tigris.org/">cowiki</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://construction.tigris.org/">construction</a></td>
+  <td><a href="http://antelope.tigris.org/" title="Ant GUI">antelope</a>,
+  <a href="http://scons.tigris.org/" title="cross-platform build tool">scons</a>,
+  <a href="http://frameworx.tigris.org/">frameworx</a>,
+  <a href="http://build-interceptor.tigris.org/">build-interceptor</a>,
+  <a href="http://propel.tigris.org/">propel</a>,
+  <a href="http://phing.tigris.org/">phing</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://testing.tigris.org/" title="tools for quality software">testing</a></td>
+  <td><a href="http://maxq.tigris.org/" title="record and playback web automated testing tool">maxq</a>, 
+<a href="http://aut.tigris.org/" title="advanced unit testing">aut</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://deployment.tigris.org/">deployment</a></td>
+  <td><a href="http://current.tigris.org/">current</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://process.tigris.org/" title="software development process, extreme programming">process</a></td>
+  <td><a href="http://readyset.tigris.org/" 
+title="Use case template, example test plans, software requirements specification templates, sample project plan template">ReadySET</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://libraries.tigris.org/" title="software reuse, web services">libraries</a></td>
+  <td><a href="http://gef.tigris.org/" title="Graphical diagram editing">GEF</a>, 
+<a href="http://axion.tigris.org/" title="Relational database">Axion</a>, 
+<a href="http://style.tigris.org/" title="Reusable CSS stylesheets">Style</a>,
+<a href="http://sstree.tigris.org/" title="Super-simple trees in HTML, CSS, and javascript">SSTree</a>
+ </td>
+ </tr>
+ <tr>
+  <td colspan="2" style="text-align:center">Over 500 <a style="text-decoration:underline;" 
+  href="http://www.tigris.org/servlets/ProjectList">more tools...</a></td>
+ </tr>
+</table>
+
+
+
+<table border="0" cellspacing="2" cellpadding="3"  width="100%" style="margin-top: 15px;">
+ <tr>
+  <th>Subversion and IDEs</th>
+ </tr>
+ <tr>
+ <td>
+ <a href="http://subclipse.tigris.org/">Eclipse</a>
+ </td>
+ </tr>
+  <tr>
+ <td>
+ <a href="http://www.oracle.com/technology/products/jdev/htdocs/partners/addins/exchange/subversion/subversion.html">JDeveloper</a>
+ </td>
+ </tr>
+  <tr>
+ <td>
+ <a href="http://subversion.netbeans.org/">NetBeans</a>
+ </td>
+ </tr>
+ <tr>
+  <td>
+ <a href="http://ankhsvn.open.collab.net/">Visual Studio</a>
+ </td>
+ </tr>
+ <tr>
+  <td>
+ <a
+ href="http://www.open.collab.net/cloud/?cid=tigriscodesion">Subversion Hosting</a>
+ </td>
+ </tr>
+ </table>
+ 
+<br/>
+ 
+<table border="0" cellspacing="2" cellpadding="3"  width="100%" style="margin-top: 15px;">
+  <tr>
+    <th>Tigris.org (Whole-Site) Admin Contacts</th>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Announcements mail list" target="_blank"
+      href="mailto:announce-subscribe@www.tigris.org">Announcements</a> mail list
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Blog" target="_blank"
+      href="http://tigrisdotorg.wordpress.com">Status Blog</a> at WordPress
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a title="Twitter" target="_blank" href="http://twitter.com/tigrisdotorg">@tigrisdotorg</a> on Twitter
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Problems" target="_blank"
+      href="mailto:feedback@tigris.org">Problem reports</a>
+      on the whole site
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Problems and suggestions about individual projects should
+  go to users@thatproject.tigris.org
+    </td>
+  </tr>
+  </table>
+</div>
+
+<!-- End include NavColumn-bottom -->
+
+
+
+ 
+ 
+<div class="strut">&nbsp;</div>
+</td>
+<td id="midcol">
+ 
+  <div id="bodycol">
+<div id="apphead">
+<h1><small>argouml</small><br />         Wiki: Status of eUML
+    </h1>
+</div>
+ 
+ 
+ 
+        
+                 
+                 
+           
+    
+  
+
+ 
+ 
+
+
+
+
+
+<div class="wiki">
+
+<p class="tasknav inline">
+<span class="disabled">Edit this page</span> | <a class="backlink" title="Click to do a full-text search for this title" href="http://argouml.tigris.org/wiki/Status_of_eUML?action=fullsearch&amp;value=linkto%3A%22Status+of+eUML%22&amp;context=180">Links to this page</a> | <a href="http://argouml.tigris.org/wiki/Status_of_eUML?action=info">Page information</a> | <a href="http://argouml.tigris.org/wiki/Status_of_eUML?action=AttachFile">Attachments</a> | <a href="Status_of_eUML.html">Refresh page</a>
+</p>
+&nbsp;
+
+<form class="actionsmenu inline" method="get" action="Status_of_eUML.html" style="display: inline;">
+<div class="inline">
+    <label></label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected>More Actions:</option>
+<option value="raw">Raw Text</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+    </select>
+    <noscript>
+    <input type="submit" value="Submit">
+    </noscript>
+</div>
+<script type="text/javascript">
+</script>
+</form>
+
+
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line874">eUML is the name of the Model Subsystem implementation based on the Eclipse UML2 plugin which currently implements support for UML 2.1.1.  Although it is a prerequesite for UML 2.x support, there are many individual features of UML 2.x which require support in the GUI or other areas. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line874">The bug tracking systems contain the most up-to-date information on the status of UML 2.x support.  This page is only updated on an ad hoc basis.  Please see the following: <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><ul><li><p class="line891"><a class="http" href="http://argouml.tigris.org/issues/show_bug.cgi?id=5463">Top level ArgoUML UML 2.x issue</a> which has all other UML 2.x issues attached to it <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span></li><li class="gap"><p class="line891"><a class="http" href="http://argouml.tigris.org/issues/buglist.cgi?Submit+query=Submit+query&amp;subcomponent=Model%2FEUML&amp;issue_status=NEW&amp;issue_status=STARTED&amp;issue_status=REOPENED">eUML model subsystem issues</a> <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span></li><li class="gap"><p class="line891"><a class="http" href="http://argoeclipse.tigris.org/issues/query.cgi">ArgoEclipse issues</a> <span class="anchor" id="line-10"></span></li></ul><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-11"></span>(This currently just contains fragments from the dev mailing list and Bogdan's great status reports. This page needs rework, please help to organize and complete the raw material.) <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line867">
+<h1 id="head-c163e1745fba6e9ebd57331911bf2fadbf005777">Unsorted stuff from the dev mailing list</h1>
+<span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><p class="line862">NOTE: Many different, unidentified, authors!  Tom Morris has identified a few of the pieces that he recognizes, but there are no other authors, dates, or links back to the original threads.  Please see <a class="http" href="http://argouml.markmail.org">http://argouml.markmail.org</a> for the original discussions in context. <span class="anchor" id="line-16"></span><hr /><p class="line874"> <span class="anchor" id="line-17"></span>eUML does not depend on RCP. eUML uses Eclipse UML2 and Eclipse EMF which consists of a few jars that are self contained, there are no other references, in fact ArgoUML uses the eUML subsystem as is without any additional dependencies. More info about the eUML dependencies <a class="http" href="http://euml.wikispaces.com/">here</a>. <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><p class="line874">I'm wondering if there are any way of retrieving from EUML an element by an Id. In ModelEventPumpMDRImpl there is a method with the following signature: <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><p class="line874">Object getByMofId(String mofId) <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><p class="line874">I need a similar method in ModelEventPumpEUMFImpl, but I don't know how to do it. Any hints? <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><p class="line874">You can use org.eclipse.emf.ecore.resource.Resource.getURIFragment(EObject) and org.eclipse.emf.ecore.resource.Resource.getEObject(java.lang.String uriFragment). An UML element in UML2 Eclipse implementation is an EObject. It can be uniquely identified by a uriFragment. <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><p class="line867"><a class="http" href="http://help.eclipse.org/help32/index.jsp?topic=/org.eclipse.emf.doc/references/javadoc/org/eclipse/emf/ecore/resource/Resource.html">More details in the javadoc of Resource</a> <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-31"></span>(<a class="http" href="http://markmail.org/message/wiucp2dliagpln6u">MarkMail link</a>) Tom Morris Nov. 2007 - "All existing eUML work is fully integrated with the trunk in the source pool. There are both an Eclipse run configuration and an Ant target that can be used to start ArgoUML with the eUML subsystem instead of the MDR subsystem. To take it for a test drive, just select Run-&gt;"ArgoUML UML2-EUML debug" in Eclipse. <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><p class="line874">Bogdan did a bunch of work over the summer, but there's still lots and LOTS left to do to get ArgoUML to a complete UML 2.x implementation. You can get an idea of the state of completion of the eUML model subsystem itself by counting the number of occurrences of "TODO Auto-generated method stub" and comparing it to the total number of methods. <span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><p class="line874">The model subsystem itself is just one part of the story though. One of the reasons OMG was so late with UML 2 (and took until UML 2.1.1 to actually get a usable implementation) is because they changed SO MUCH. About the only thing that looks anything like it used to is Use Cases (which were pretty simple to start with). Now, a lot of the changes are good, but the volume of them will make for a huge amount of work in adapting ArgoUML. All of these changes bubble up through the software layers from the Model API (which is loosely based on UML 1.4) to the application logic to the user interface (where we tend to use UML terminology to make it easy for the user to map things back to the UML spec). Supporting both UML 1.4 and UML 2.1.1, whether for a transition period or for the longer term, will introduce an extra level of complexity. <span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><p class="line874">Upgrading UML 1.4 models from earlier versions of ArgoUML to UML 2.1.1 models is another facility which will be needed. Nothing has been done on that yet. <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><p class="line874">The UML 1.3 to UML 1.4 transition was a huge chunk of work and we STILL don't have some of the "new" UML 1.4 features fully implemented (e.g. Tagged Value types other than String), but that transition will look absolutely trivial next to what needs to be done to implement the changes for UML 2.x. The good news is that because the last transition was done relatively recently, the organizational knowledge about how to go about this is still fresh in people's minds. <span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><p class="line874">In addition to determining the relative importance (and timing) of the UML 2.x migration, we also need to decide whether this is a one-way migration or whether there's a long term need for UML 1.4 support. <span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><p class="line862">By the way, you mention "EMF &amp; UML2" a couple of times, so just to head off any potential misconceptions, the implementation target is OMG's UML 2.1.1, not Eclipse's EMF or Eclipse's UML2 plugin. Those are just implementation details to get us where we need to go and won't be exposed to the end user. <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-46"></span>(<a class="http" href="http://markmail.org/message/lfvuvwecx6a4jcx6">MarkMail link</a>) <span class="anchor" id="line-47"></span>Bogdan Pistol March 2008 - "Instead of estimating how much of the org.argouml.model interfaces are implemented by eUML, a better estimation is the current functionality of eUML in ArgoUML: what one can currently do with eUML in ArgoUML. <span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><p class="line862">I suggest you to take a look at the source code (if you haven't done already) and run ArgoUML with the eUML implementation. Details about ArgoUML infrastructure and general architecture are in the cookbook (Moved to the wiki. See <a href="ArgoUML_Design,_The_Big_Picture.html">ArgoUML Design, The Big Picture</a>). You should read the it (or the relevant parts of it). If you have any problems don't hesitate to ask for help. <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><p class="line874">A summary of the current functionality of eUML in ArgoUML is: <span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><p class="line874">- in the Class diagram you can't create an operation for a Classifier, you can't create an enumeration, a stereotype, a signal or an exception - in the Use Case diagram you can't create includes or excludes <span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><p class="line862">in the class diagram and the use case diagram: - you can create the elements not listed in the things you can't do above (so, you can create classes, interfaces, use cases, actors, etc) - create attributes, associations (bidirectional or unidirectional) but these can behave a little different from the MDR implementation - save &amp; load the project (XMI + diagrams) - undo &amp; redo - this is not complete, it needs to hook with ArgoUML's undo/redo mechanism. <span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><p class="line874">The eUML model will send event notifications of the model changes. <span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-61"></span><ul><li style="list-style-type:none"><p class="line862">-&gt; Where are all the Modeling constructs defined by UML ( packages, components, dependency, class, Interface, etc ) <span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span></li></ul><p class="line862">The UML model constructs should be defined by the modelling subsystem of ArgoUML. Every model subsystem should define it's own modelling constructs. MDR defines its owns and eUML likewise. For example in org.argouml.model.CoreFactory interface there is a createClass( ) method that should create the Class modelling construct. The MDR model subsystem implements the createClass( ) method and the implementation creates a org.omg.uml.foundation.core.UmlClass that is used as a UML Class modelling construct for the MDR implementation while the eUML model subsystem creates a org.eclipse.uml2.uml.Class (implementing the same createClass( ) method) that is used as a UML Class modelling construct for the eUML implementation. <span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><p class="line874">As you can see, the eUML subsystem uses under the hood the Eclipse UML2 project to create modelling constructs. <span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><p class="line862">Look at the <a class="http" href="http://argouml-stats.tigris.org/nonav/reports-java5/javadocs-api/index.html?org/argouml/model/package-summary.html">Factory interface</a> and you can observe all its subinterfaces that are responsible for creating UML modelling constructs. It's the job of the model subsystem to implement these interfaces and actually create some modelling constructs to be used further in the same model subsystem. <span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><p class="line862">-&gt; is it like upgrading from UML 1.4 -&gt; UML 2.x ??? <span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><p class="line874">Yep, because eUML uses Eclipse UML2 that makes it UML2.x compatible. The current usable model subsystem (that implements the org.argouml.model interface most completely) is the MDR model subsystem that is UML 1.4 compatible. So completing the eUML implementation would upgrade ArgoUML from UML 1.4 to UML 2.x <span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><p class="line862">-&gt; What main role a student has to play in this project ? ie. implement Model Subsystem as much as its possible or what ? <span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><p class="line874">The student should implement the model subsystem's interfaces, but this should be done incrementally. Incrementally means that you will implement what is needed in the model subsystem for a specific functionality (eg. You want to extend eUML so that in the use case diagram should be possible to create a "use case" and an "actor" and an "association" between them, this requires that the eUML model subsystem should be able to create use cases, actors and associations and glue them together) <span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><p class="line874">In conclusion eUML will use standard mementos, and all other functionality should be added in ArgoUML. <span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><p class="line867">
+<h1 id="head-71a440741efb6cda0ddff2db0d6dec7cbcab697e">History: Bogdans GSoC Status reports</h1>
+<span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><p class="line867">
+<h2 id="head-b90d8f1cb646e99bc2115270977fe226c22fdbe2">eUML Weekly Report - Week 12</h2>
+<span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><p class="line874">From:   Bogdan Ciprian Pistol; <span class="anchor" id="line-85"></span>Date:   Aug 20, 2007 11:07:03 am <span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><p class="line874">Planned <span class="anchor" id="line-88"></span><ul><li>finish the tests <span class="anchor" id="line-89"></span></li><li>finish Classes diagram and Use case diagram <span class="anchor" id="line-90"></span></li><li><p class="line862">create the <a href="Demo_of_the_eUML_Subsystem.html">Demo of the eUML Subsystem</a> <span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span></li></ul><p class="line874">Achieved <span class="anchor" id="line-93"></span><ul><li><p class="line862">removed the plugin dependencies from EMF&amp;UML2 Eclipse plugins and selected some jars from the plugins to be part of eUML's classpath. Now it's possible to use ArgoUML with eUML without any additional dependencies. <span class="anchor" id="line-94"></span></li><li><p class="line862">defined a general command stack that was overlapping with ModelMementos and UndoManager, and at Tom's and Bob's suggestions I use ModelMemento notifications but I need to extend the UndoManager with additional functionality. <span class="anchor" id="line-95"></span></li><li>general review of eUML with minor changes where there was needed (use the editing domain, repair bugs, etc) <span class="anchor" id="line-96"></span></li><li>fix the XMI ids retrieval functions <span class="anchor" id="line-97"></span></li><li>fix loading files: now loading a file works with XMI and diagrams (zargo) <span class="anchor" id="line-98"></span></li><li>workaround for association end to visually show the navigability correctly because the isNavigable property is not properly use by ArgoUML (I appears that only in UML2.x) <span class="anchor" id="line-99"></span></li><li>fix some elements and functionality from Class Diagram: comments, attributes, contextual menu (right click menu), deletion of elements from the model, using generalizations <span class="anchor" id="line-100"></span></li><li>fix some elements and functionality from Use Case Diagram: includes, excludes (but not quite functional yet). <span class="anchor" id="line-101"></span></li><li>created a demo ArgoUML with eUML model subsystem (I did this to demonstrate the full capabilities of undo/redo of eUML, and because GSoC deadline is today I don't do it the right way -- mementos, etc -- instead I use a modified ArgoUML environment) <span class="anchor" id="line-102"></span></li><li>wrote a presentation of the ArgoUML demo (the email on the dev list about the demo) <span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span></li></ul><p class="line874">JUnit statistics (rHEAD = r13416) <span class="anchor" id="line-105"></span><ul><li>Tests: 631 Errors: 20 Failures: 250 <span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span></li></ul><p class="line874">Some of these tests fail because are using stereotypes (creates tests), use operations not yet implemented or use reflection on a list of UML1.x elements (so they fail on some element not available in UML2.x, or with its functionality changed) <span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><p class="line874">To do <span class="anchor" id="line-110"></span><ul><li><p class="line862">Extend the UndoManager and fully use the capabilities of eUML's command stack <span class="anchor" id="line-111"></span></li><li><p class="line862">write &amp; tweak unit tests <span class="anchor" id="line-112"></span></li><li>implement Cut, Paste, Copy <span class="anchor" id="line-113"></span></li><li>implement the correct deletion of elements (deletion is possible, but the elements that ArgoUML expects to be deleted at the same time an element is deleted is not implemented) <span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span></li></ul><p class="line867">
+<h2 id="head-840830751f0670fbd9420ab0b52206848d3a06ba">eUML Weekly Report - Week 11</h2>
+<span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><p class="line874">From:   Bogdan Ciprian Pistol; <span class="anchor" id="line-119"></span>Date:   Aug 13, 2007 11:56:28 am <span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><p class="line874">Planned <span class="anchor" id="line-122"></span><ul><li>test units <span class="anchor" id="line-123"></span></li><li><p class="line862">finish Facade &amp; CoreHelper <span class="anchor" id="line-124"></span></li><li>the demo with the current features of eUML <span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span></li></ul><p class="line874">Achieved <span class="anchor" id="line-127"></span><ul><li><p class="line862">I tweaked the existing unit tests and added new methods to test additional functionality (these new tests are general, not eUML specific - except for a test in ModelEventPump wich uses "ownedAttribute") <span class="anchor" id="line-128"></span></li><li>Fixed some bugs that I caught during testing and implemented a few methods that I needed. <span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span></li></ul><p class="line874">JUnit statistics (rHEAD = r13311) <span class="anchor" id="line-131"></span><ul><li>Tests: 631 Errors: 21 Failures: 259 <span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span></li></ul><p class="line874">To do <span class="anchor" id="line-134"></span><ul><li>finish the tests <span class="anchor" id="line-135"></span></li><li>finish Classes diagram and Use case diagram <span class="anchor" id="line-136"></span></li><li>create the eUML demo <span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span></li></ul><p class="line867">
+<h2 id="head-bb598e780478bc4cbb1f6764d9f5e09b322c05cc">eUML Weekly Report - Week 9 and 10</h2>
+<span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><p class="line874">From:   Bogdan Ciprian Pistol; <span class="anchor" id="line-142"></span>Date:   Aug 7, 2007 7:51:42 am <span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><p class="line874">Sorry for the combined reports, I tried to implement all the features planned for week 9 last week, but it took a lot longer and I tried to finish as quickly as I can and then do the report. <span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><p class="line874">Planned <span class="anchor" id="line-147"></span><ul><li><p class="line862">The relatively easy task (IMO) to complete Facade, CoreFactory, ( :) it wasn't that easy, lots of methods) <span class="anchor" id="line-148"></span></li><li>junit tests: I'll use the already existing tests to have a statistics of how much of eUML passes the tests (As Tom suggested I'll use the junit tests to have a quantifiable amount of functionality reported) <span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span></li></ul><p class="line874">Achieved <span class="anchor" id="line-151"></span><ul><li><p class="line862">Completed CoreFactory <span class="anchor" id="line-152"></span></li><li><p class="line862">Completed a good part of CoreHelper <span class="anchor" id="line-153"></span></li><li><p class="line862">Created a new ChangeCommand that updates its label based on some objects, so undo now has a descriptive string about every command that changes the repository <span class="anchor" id="line-154"></span></li><li><p class="line862">Enhanced ModelEventPump to pump CommandStack events and label updates events for ChangeCommand <span class="anchor" id="line-155"></span></li><li><p class="line862">a few minor methods in Facade and ModelManagementHelper <span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span></li></ul><p class="line874">To do <span class="anchor" id="line-158"></span><ul><li>I want to make a demo with the current features of eUML <span class="anchor" id="line-159"></span></li><li><p class="line862">finish CoreHelper <span class="anchor" id="line-160"></span></li><li>Implement Facade <span class="anchor" id="line-161"></span></li><li>test units <span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span></li></ul><p class="line867">
+<h2 id="head-7cbb594e6749609f96346297aa5ebcac7d2221e9">eUML Weekly Report - Week 8</h2>
+<span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><p class="line874">From:   Bogdan Ciprian Pistol; <span class="anchor" id="line-167"></span>Date:   Jul 25, 2007 3:26:31 am <span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><p class="line874">Achieved <span class="anchor" id="line-170"></span><ul><li>synchronized the event pump (thread safe) <span class="anchor" id="line-171"></span></li><li>fixed some bugs that got in the event pump <span class="anchor" id="line-172"></span></li><li>fixed the undo/redo notifications <span class="anchor" id="line-173"></span></li><li><p class="line862">added DeleteInstanceEvent and AttributeChangeEvent for model event pump <span class="anchor" id="line-174"></span></li><li>documented myself (debugging, comparing UML2.1.1 with UML 1.4) about the changes of attribute (property) names of UML elements. There are changes, but roughly there are lots of names unchanged. IMO changes in ArgoUML where the property names are used would be the best solution, this could be configurable based on UML 1.4 or 2.1.1. <span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span></li></ul><p class="line874">To do <span class="anchor" id="line-177"></span><ul><li><p class="line862">The relatively easy task (IMO) to complete Facade, CoreFactory <span class="anchor" id="line-178"></span></li><li>junit tests: I'll use the already existing tests to have a statistics of how much of eUML passes the tests (As Tom suggested I'll use the junit tests to have a quantifiable amount of functionality reported) <span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span></li></ul><p class="line867">
+<h2 id="head-9da7e8528691accd8b2d6a1821f15f651849c13a">eUML Weekly Report - Week 7</h2>
+<span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><p class="line874">From:   Bogdan Ciprian Pistol; <span class="anchor" id="line-184"></span>Date:   Jul 16, 2007 2:01:41 am <span class="anchor" id="line-185"></span><span class="anchor" id="line-186"></span><p class="line874">Planned <span class="anchor" id="line-187"></span><ul><li><p class="line862">Implement the ModelEventPump <span class="anchor" id="line-188"></span></li><li>Solve the property names problems <span class="anchor" id="line-189"></span></li><li><p class="line862">Test the undo/redo features with the ModelEventPump <span class="anchor" id="line-190"></span></li><li><p class="line862">Continue the adaptation of all other UML elements to use a ChangeCommand <span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span></li></ul><p class="line874">Achieved <span class="anchor" id="line-193"></span><ul><li>I debugged the ArgoUML application quite a lot to find out how are used the property names <span class="anchor" id="line-194"></span></li><li><p class="line862">I tried several methods to deliver events from the eUML model: an Adapter for every UML element, a global adapter for all the UML elements, and (the actual method used now) a ContentAdapter that adapts itself to listen all the new UML elements added to the model. So, if a UML element is created it will not be listened, but when it will be atached to the model element the ContentAdapter will adapt itself to listen the newly added UML element. <span class="anchor" id="line-195"></span></li><li><p class="line862">I implemented the ModelEventPump to use this ContentAdapter (named RootContainerAdapter in eUML) and committed this final implementation. <span class="anchor" id="line-196"></span></li><li><p class="line862">I tweaked the ModelEventPump to listen efficiently a class of types and subtypes of model elements. It uses a Class.isAssignableFrom(Class) method to determine if the UML model (the notifier) if compatible with the class of objects listened by the PropertyChangeListener. <span class="anchor" id="line-197"></span></li><li>I've done some changes to XMIReader/Writer to use the editing domain and added undo()/redo(), canUndo()/canRedo() methods to EUMLModelImplementation <span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span></li></ul><p class="line874">Problems <span class="anchor" id="line-200"></span><ul><li><p class="line862">I have a big problem with undo/redo notifications in the ModelEventPump. If the eUML model changes, then some notifications are fired, if I undo/redo a command no notifications are fired (the eUML model is changed <span class="anchor" id="line-201"></span></li><li>I verified by serializing the model and the XMI confirms the undo/redo works). I already asked for help on the Eclipse UML2 news forum. <span class="anchor" id="line-202"></span></li><li>Figure out if I can somehow map automatically the property names of UML 1.4 to UML 2.1.1, I should search a little bit more before I decide to hard code the mappings. Or it would be a better solution to change the code in ArgoUML to use the new property names. I don't know yet. <span class="anchor" id="line-203"></span></li><li>The org.argouml.model interfaces should be extended to support additional features like undo()/redo(), canUndo()/canRedo() <span class="anchor" id="line-204"></span></li><li>The serialization of a model is throwing an error. I will investigate further. <span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span></li></ul><p class="line874">To do <span class="anchor" id="line-207"></span><ul><li><p class="line862">Solve the undo/redo notifications in the ModelEventPump <span class="anchor" id="line-208"></span></li><li>Investigate more the property names problems <span class="anchor" id="line-209"></span></li><li><p class="line862">Continue the adaptation of all other UML elements to use a ChangeCommand (I always defer this because I do not consider it a priority, when all the infrastructure will be ready this part will be quite straightforward.) <span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span></li></ul><p class="line867">
+<h2 id="head-6efc07da5ce46a61b3f9eef197d2945e7e6aac90">eUML Weekly Report - Week 6</h2>
+<span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><p class="line874">From:   Bogdan Ciprian Pistol; <span class="anchor" id="line-215"></span>Date:   Jul 11, 2007 12:40:23 pm <span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span><p class="line874">Planned: <span class="anchor" id="line-218"></span><ul><li><p class="line862">Commit the work based on ItemProviders: <span class="anchor" id="line-219"></span><ul><li><p class="line862">that sort of implementation uses some EMF.edit commands like SetCommand, AddCommand or CreateChildCommand etc for manipulating the features of modelling elements with support for undo/redo <span class="anchor" id="line-220"></span></li><li><p class="line862">also, ItemProvider is an observer of the UML items (the notifiers), and provides for Eclipse framework a label, a property descriptor, etc and are supposed to be easy to use in a possible future version of an Eclipse GEF editor <span class="anchor" id="line-221"></span></li></ul></li><li><p class="line862">study &amp; search a method to implement the ModelEventPump <span class="anchor" id="line-222"></span><span class="anchor" id="line-223"></span></li></ul><p class="line874">Achieved <span class="anchor" id="line-224"></span><ul><li><p class="line862">I found a generic ChangeCommand that can be used without all the ItemProvider hassle, so this would allow the implementation not be to Eclipse specific. I asked for support on the Eclipse UML 2 news forum and I got a confirmation that it's an alternative to use the ChangeCommand directly on the UML elements rather then ItemProviders with their commands (Set, Add, etc). This command stores the history of all changes to the model, and can undo and redo in it's history. <span class="anchor" id="line-225"></span></li><li><p class="line862">I implemented and committed a working implementation of the Association UML element using the ChangeCommand. <span class="anchor" id="line-226"></span></li><li><p class="line862">I started studying the ModelEventPump mechanism from ArgoUML and I sketched an implementation (this is needed to test the actual consequences of undo/redo of model changes to ArgoUML) <span class="anchor" id="line-227"></span><span class="anchor" id="line-228"></span></li></ul><p class="line874">Problems <span class="anchor" id="line-229"></span><ul><li><p class="line862">I have trouble with the property names of the events which should be fired by the ModelEventPump (I'll send a separate message about these problems) <span class="anchor" id="line-230"></span><span class="anchor" id="line-231"></span></li></ul><p class="line874">Plan for the next week <span class="anchor" id="line-232"></span><ul><li>Solve the property names problems <span class="anchor" id="line-233"></span></li><li><p class="line862">Implement the ModelEventPumpEumlImpl <span class="anchor" id="line-234"></span></li><li><p class="line862">Test the undo/redo features with the ModelEventPump <span class="anchor" id="line-235"></span></li><li><p class="line862">Continue the adaptation of all other UML elements to use a ChangeCommand <span class="anchor" id="line-236"></span><span class="anchor" id="line-237"></span><span class="anchor" id="line-238"></span></li></ul><p class="line867">
+<h2 id="head-7d67b0c468a3010edd94630d972bf1bedbfbbdc8">eUML Weekly Report - Week 4 and 5</h2>
+<span class="anchor" id="line-239"></span><span class="anchor" id="line-240"></span><p class="line874">From:   Bogdan Ciprian Pistol; <span class="anchor" id="line-241"></span>Date:   Jul 3, 2007 10:53:29 pm <span class="anchor" id="line-242"></span><span class="anchor" id="line-243"></span><p class="line874">Sorry for the late reports. In week 5 didn't worked much because I left Iasi (university town) to go in Mangalia (my home town) where i'll stay for the summer. <span class="anchor" id="line-244"></span><span class="anchor" id="line-245"></span><p class="line874">Achieved <span class="anchor" id="line-246"></span><ul><li><p class="line862">I spent quite a lot of time figuring out the way in which the model subsystem implementation should use an EditingDomain (which tracks changes to the model, and so it can support undo and redo). <span class="anchor" id="line-247"></span><span class="anchor" id="line-248"></span></li></ul><p class="line862">I presumed the UML model subsystem could have multiple instances (one for each editor - in the future would be desirable to have multiple editors in the same application). So it will be a 1-1 relationship between an eUML instance and an editing domain. Multiple instances of eUML will have their own EditingDomain, so every eUML could have an independent undo/redo stack. <span class="anchor" id="line-249"></span><span class="anchor" id="line-250"></span><p class="line862">There is a problem with the current Model.initialise(String) initialization and Model.setImplementation(ModelImplementation). In the current form it only allows one implementation of Model to be used as the Model. IMHO one should have the possibility to create multiple instances (how many it needs) of the implementation of the Model (maybe to support multiple editors in the same application). <span class="anchor" id="line-251"></span><span class="anchor" id="line-252"></span><ul><li>I debugged the ArgoUML application to see how a model element is created and used. I saw that when the user clicks, on mouse press event the element is created (without an owner), and then on mouse released event the owner is set. Why isn't the owner set also when the element is created? <span class="anchor" id="line-253"></span><span class="anchor" id="line-254"></span></li></ul><p class="line874">The eUML should be able to find out if it's inside an Eclipse plugin or in a stand alone application. In the case of a standalone application eUML should somehow know the location in the filesystem of the "org.eclipse.uml2.uml.resource" jar plugin. So I thought that a system property (System.getProperty(String key)) would be appropriate to define the path of the jar. So if this property is defined then it's the case of a standalone application, else it's an Eclipse plugin. <span class="anchor" id="line-255"></span><span class="anchor" id="line-256"></span><p class="line874">To do next <span class="anchor" id="line-257"></span><ul><li><p class="line862">continue the current implementation of the EditingDomain and submit the code ASAP <span class="anchor" id="line-258"></span></li><li>figure out the singleton pieces of the eUML implementation in the case of multiple eUML instances <span class="anchor" id="line-259"></span><span class="anchor" id="line-260"></span></li></ul><p class="line874">Problems <span class="anchor" id="line-261"></span><ul><li><p class="line862">I had some trouble understanding the relations between some classes in org.eclipse.uml2.common.edit.command and EMF commands and how actually they are used in conjunction with a model through implementation of EditingDomain (AdapterFactoryEditingDomain), and some other few classes. All the trouble had the cause that the classes have no javadoc. <span class="anchor" id="line-262"></span><span class="anchor" id="line-263"></span><span class="anchor" id="line-264"></span></li></ul><p class="line867">
+<h2 id="head-a8213d2c268151aefb7a1889fe9a2bab6ba9a207">eUML Weekly Report - Week 3</h2>
+<span class="anchor" id="line-265"></span><span class="anchor" id="line-266"></span><p class="line874">From:   Bogdan Ciprian Pistol; <span class="anchor" id="line-267"></span>Date:   Jun 19, 2007 3:23:43 pm <span class="anchor" id="line-268"></span><span class="anchor" id="line-269"></span><p class="line874">Objectives <span class="anchor" id="line-270"></span><ul><li>implement the basic Factory.createXXX methods <span class="anchor" id="line-271"></span></li><li><p class="line862">adjust my plan to be more productive &amp; to better identify my objectives <span class="anchor" id="line-272"></span></li><li>implement identification methods "isAXXX()" for UML elements <span class="anchor" id="line-273"></span></li><li><p class="line862">figure out an undo &amp; redo mechanism <span class="anchor" id="line-274"></span></li><li>figure out the event notification mechanism <span class="anchor" id="line-275"></span><span class="anchor" id="line-276"></span></li></ul><p class="line874">Achieved <span class="anchor" id="line-277"></span><ul><li>I realised that the UMLAdapterFactory.createXXX() methods shouldn't be used, instead an undo/redo mechanism should be at the model implementation level and the creation of model elements should be done with this mechanism <span class="anchor" id="line-278"></span></li><li><p class="line862">I analysed the EMF.Edit mechanism for: Command, CommandStack and Notify mechanisms; I believe that instead of pure UML superstructure elements we should use Item providers that will adapt the model elements supporting also undo/redo and centralized notification. <span class="anchor" id="line-279"></span></li><li>I tested the EMF.Edit implementation from Eclipse UML2, I need more tests, but I had achieved to actually undo my command applied to the model. <span class="anchor" id="line-280"></span></li><li><p class="line862">I wrote some documentation about the eUML model subsystem and the Eclipse UML2 plugin: <a class="http" href="http://euml.wikispaces.com/">http://euml.wikispaces.com/</a> This is a wiki, anyone has write access, if you want to add something feel free to do so. I am notified every time someone makes a change so I can review it. <span class="anchor" id="line-281"></span><span class="anchor" id="line-282"></span></li></ul><p class="line874">Objectives for the next week <span class="anchor" id="line-283"></span><ul><li>implement the basic EMF.Edit mechanisms <span class="anchor" id="line-284"></span></li><li><p class="line862">implement some model element creation commands that will support undo/redo &amp; notification <span class="anchor" id="line-285"></span><span class="anchor" id="line-286"></span><span class="anchor" id="line-287"></span></li></ul><p class="line867">
+<h2 id="head-f03fdcdcffe4a3bd10adb13f502f1b0688388c0c">eUML Weekly Report - Week 2</h2>
+<span class="anchor" id="line-288"></span><span class="anchor" id="line-289"></span><p class="line874">From:   Bogdan Ciprian Pistol; <span class="anchor" id="line-290"></span>Date:   Jun 12, 2007 7:11:46 am <span class="anchor" id="line-291"></span><span class="anchor" id="line-292"></span><p class="line874">Objectives <span class="anchor" id="line-293"></span><ul><li>read Superstructure (Classes chapter) <span class="anchor" id="line-294"></span></li><li>identify changes from UML 1.x <span class="anchor" id="line-295"></span></li><li>implement the basic Factory.createXXX methods <span class="anchor" id="line-296"></span></li><li><p class="line862">adjust my plan to be more productive &amp; to better identify my objectives <span class="anchor" id="line-297"></span><span class="anchor" id="line-298"></span></li></ul><p class="line874">Achieved <span class="anchor" id="line-299"></span><ul><li>read the Classes chapter from Superstructure - it contains a lot of Infrastructure::Core <span class="anchor" id="line-300"></span></li><li><p class="line862">I identified a few changes from UML 1.x in the "Changes from previous UML" (Only for AssociationEnd, Feature, StructuralFeature are specified changes) - this is only in the Classes chapter <span class="anchor" id="line-301"></span></li><li><p class="line862">fixed some minor settings for the configuration launch (the b00<span class="u">1 branch) <span class="anchor" id="line-302"></span><span class="anchor" id="line-303"></span></span></li></ul><p class="line874">Objectives for the next week <span class="anchor" id="line-304"></span><ul><li>implement the basic Factory.createXXX methods <span class="anchor" id="line-305"></span></li><li><p class="line862">adjust my plan to be more productive &amp; to better identify my objectives <span class="anchor" id="line-306"></span></li><li>implement identification methods "isAXXX()" for UML elements <span class="anchor" id="line-307"></span><span class="anchor" id="line-308"></span><span class="anchor" id="line-309"></span></li></ul><p class="line867">
+<h2 id="head-3d506d47afdcefc59d55847abbcb2f5d1f388ac1">eUML Weekly Report - Week 1</h2>
+<span class="anchor" id="line-310"></span><span class="anchor" id="line-311"></span><p class="line874">From:   Bogdan Ciprian Pistol; <span class="anchor" id="line-312"></span>Date:   Jun 3, 2007 4:37:39 pm <span class="anchor" id="line-313"></span><span class="anchor" id="line-314"></span><p class="line874">Objectives <span class="anchor" id="line-315"></span><ul><li>Set-up the environment <span class="anchor" id="line-316"></span></li><li>adapt the my current plan to the current time line, identify and plan the next milestone <span class="anchor" id="line-317"></span></li><li>Start implementing the first basic UML elements so that eUML works <span class="anchor" id="line-318"></span><span class="anchor" id="line-319"></span></li></ul><p class="line874">Achieved <span class="anchor" id="line-320"></span><ul><li><p class="line862">I started my branch on branches/gsoc2007/b00</span>1/ and created the initial project with the the help from Tom Morris that started the eUML model. <span class="anchor" id="line-321"></span></li><li>Read the Infrastructure spec. <span class="anchor" id="line-322"></span><span class="anchor" id="line-323"></span></li></ul><p class="line874">Problems <span class="anchor" id="line-324"></span><ul><li>I realized that my understanding of UML concepts has some lacking. So I printed UML2.1.1 Infrastructure and read. This delayed all other objectives. <span class="anchor" id="line-325"></span></li><li>There are problems with model-mdr in Eclipse 3.3, (compiler errors that don't show up in Eclipse 3.2). This does not affect eUML. <span class="anchor" id="line-326"></span><span class="anchor" id="line-327"></span></li></ul><p class="line874">Objectives for the next week <span class="anchor" id="line-328"></span><ul><li>adapt the my current plan to the current time line, identify and plan the next milestone <span class="anchor" id="line-329"></span></li><li>Start implementing the first basic UML elements so that eUML works <span class="anchor" id="line-330"></span></li><li>identify changes from UML 1.4 to 2.1.1 in the API <span class="anchor" id="line-331"></span></li></ul><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">Status of eUML  (last edited 2009-11-07 11:47:45 -0700 by <span title="Linus Tolke @ localhost[127.0.0.1]"><a href="linus.html" title="Linus Tolke @ localhost[127.0.0.1]">linus</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+
+</div>
+
+</div>
+</td>
+</tr>
+</table>
+ 
+ 
+ <div id="footer">
+    <a href="http://www.tigris.org/nonav/DomainFAQ"  onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Site FAQ</a> |
+<a href="http://www.tigris.org/nonav/DomainFeedback"  onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Feedback</a> |
+<a href="http://www.tigris.org/nonav/servlets/LegalNotices?type=TermsOfService" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Terms of service</a> | 
+<a href="http://www.tigris.org/nonav/servlets/LegalNotices?type=PrivacyPolicy" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Privacy policy</a> | 
+<a href="http://www.open.collab.net/cloud?cid=tigriscodesion" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Hosting</a> |
+<a href="http://www.collab.net/developers/tools/" onclick="return launch(this.href, 1)" title="Note: link may open in new window">Developer tools</a> 
+   
+   
+			   
+   <p>&#169; 2001 - 2009 CollabNet. CollabNet is a registered trademark of CollabNet, Inc.</p>
+
+   
+<div>
+<script type="text/javascript">
+// crazy egg code
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName('script')[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/6318.js";
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+// End crazy egg code
+</script>
+</div>
+
+ </div>
+ 
+ 
+</body>
+</html>

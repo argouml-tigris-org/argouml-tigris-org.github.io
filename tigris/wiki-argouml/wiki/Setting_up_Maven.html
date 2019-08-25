@@ -1,0 +1,748 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+                 
+ 
+ <head>
+ <style type="text/css"> /* <![CDATA[ */
+ @import "../branding/css/tigris.css";
+ @import "../branding/css/inst.css";
+ /* ]]> */</style>
+ <link rel="stylesheet" type="text/css" href="../branding/css/print.css" media="print" />
+ <script src="../branding/scripts/tigris.js" type="text/javascript"></script>
+ <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+  
+             
+ 
+  <script src="../branding/scripts/alm.js" type="text/javascript"></script>
+  <style type="text/css">
+     /* <![CDATA[ */
+     @import "../branding/css/alm.css";
+         /* ]]> */
+  </style>
+
+  
+ 
+               
+ 
+  
+ 
+               
+ 
+ 
+ <script src="../branding/scripts/wiki.js" type="text/javascript"></script>
+
+    
+ <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../branding/css/wiki/cee/css/common.css" />
+ <link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../branding/css/wiki/cee/css/screen.css" />
+
+  
+ <link rel="Start" href="FrontPage.html" />
+ <link rel="Alternate" title="Wiki Markup" href="http://argouml.tigris.org/wiki/Setting_up_Maven?action=raw" />
+ <link rel="Alternate" media="print" title="Print View" href="http://argouml.tigris.org/wiki/Setting_up_Maven?action=print" />
+ <link rel="Search" href="FindPage.html" />
+ <link rel="Index" href="TitleIndex.html" />
+ <link rel="Glossary" href="WordIndex.html" />
+ <link rel="Help" href="HelpOnFormatting.html" />
+ 
+ 
+                                                 <title>
+        argouml:        Wiki: Setting up Maven
+    </title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <meta http-equiv="Content-Style-Type" content="text/css" />
+ <meta name="version" content="5.3.0.167.5" />
+ <meta name="google-site-verification" content="FRRR8-RLGasBA76ejzXypMklVl0cwg9sna2rgSS4iHk" />
+ <meta name="keywords" content="Defect Tracking, Issue Tracking, Version Control, Configuration Management, Software Configuration Management, SCM, CM, Revision Control, Software Engineering, Unit Testing, Outsourcing, Collaboration, Open Source, Software Development, Collaborative Software Development, Enterprise, Java, Web Services" />   
+<meta name="description" content="CollabNet, Facilitating Collaborative Software Development" /> <meta name="description" content="Open source software engineering" />
+
+ 
+
+<meta name="robots" content="index,nofollow">
+
+
+<script type="text/javascript" src="../branding/css/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../branding/css/wiki/cee/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../branding/css/wiki/cee/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="http://argouml.tigris.org/branding/css/wiki/cee/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="http://argouml.tigris.org/branding/css/wiki/cee/css/projection.css">
+
+<!-- css only for MSIE browsers -->
+<!--[if IE]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/branding/css/wiki/cee/css/msie.css">
+<![endif]-->
+
+
+
+<link rel="Start" href="FrontPage.html">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+
+ 
+  <!--   Single pic border tables -->
+ <style type="text/css">
+/* <![CDATA[ */
+
+table.sborder, table.sborder td
+{
+	border-color: #A9A9A9;
+	border-style: solid;
+}
+
+table.sborder
+{
+	border-width: 0 0 1px 1px;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+table.sborder td
+{
+	margin: 0;
+	padding: 4px;
+	border-width: 1px 1px 0 0;
+	background-color: #FFFFFF;
+}
+
+/* ]]> */
+</style>
+ 
+ <!--   Tigris Script to load random images -->
+ <SCRIPT LANGUAGE="JavaScript">
+var theImages = new Array()
+//Random-loading images
+theImages[0] = 'http://www.tigris.org/branding/images/banners/svn15support.gif' 
+theImages[1] = 'http://www.tigris.org/branding/images/banners/mergeclient.gif' 
+var p = theImages.length;
+
+var preBuffer = new Array()
+for (i = 0; i < p; i++){
+preBuffer[i] = new Image()
+preBuffer[i].src = theImages[i]
+}
+
+var whichImage = Math.round(Math.random()*(p-1));
+function showImage(){
+
+if(whichImage==0){
+document.write('<a href ="http://www.collab.net/services/subversion"><img src="http://argouml.tigris.org/wiki/'+theImages[whichImage]+'" border=0 width=175 height=60></a>');
+}
+else if(whichImage==1){
+document.write('<a href ="http://www.collab.net/subversion15-tigris"><img src="http://argouml.tigris.org/wiki/'+theImages[whichImage]+'" border=0 width=175 height=60></a>');
+}
+}
+</script>
+<!-- Google Aanalytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48365716-1', 'tigris.org');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Tracking code -->
+
+<!-- Sstart Muchkin code -->
+<script src="http://munchkin.marketo.net/munchkin.js" type="text/javascript"></script> 
+<script>mktoMunchkin("563-XAN-459");</script>
+<!-- End Munchkin code -->
+
+<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type='text/javascript'>
+var _vwo_code=(function(){
+var account_id=20080,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+// DO NOT EDIT BELOW THIS LINE
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
+
+</head>
+ 
+ 
+<body  class="composite">
+ 
+ 
+ <div id="collabnet">
+ <div id="login"> 
+     <div>
+      <a href="http://www.tigris.org/servlets/Login?detour=http://argouml.tigris.org/wiki/Setting_up_Maven">Login</a>
+      |    <a href="http://www.tigris.org/servlets/Join">Register</a>    </div>
+ </div>
+ <a href="http://www.collab.net" id="cnlogo">
+<span class="alt">CollabNet Enterprise Edition</span></a>
+</div>
+ 
+ 
+ 
+ 
+ <div id="banner">
+</div>
+ 
+ 
+ 
+ 
+ <div id="banner">
+ <table width="100%" id="bannertable" cellpadding="0" cellspacing="0">
+   <tr>
+    <td rowspan="2" style="width: 50px;">
+    <a href="http://www.tigris.org/" title="Tigris.org:Defect
+Tracking,Issue Tracking,Version Control,Software Configuration
+Management,SCM,CM,Revision Control,Unit Testing,Software
+Engineering,Document Templates,Outsourcing,Collaboration,Open
+Source,Development,Enterprise,Java,Web Services">
+<img src="../branding/images/logo.gif" alt="Tigris.org" id="tigrislogo" height="48" width="48" /></a>
+    </td>
+    <td style="min-width: 300px;" id="tigrisheading">
+     <div>Tigris.org</div>
+      <div class="smaller">Open Source Software Engineering Tools</div>
+    </td>
+    <td rowspan="2" style="width: 300px;" id="collabnote">
+      <table cellpadding="0" cellspacing="0">
+       <tr>
+        <td>
+        <a href="http://www.collab.net/products/teamforge/free-trial?cid=tigris" target="_blank"><img src="../branding/images/banners/teamforge81.png" alt="CollabNet TeamForge 8.1" width="170" height="60" border="0"></a>
+       </td>
+	   <td>
+        <a href="http://www.collab.net/downloads/giteye?CID=tigris" target="_blank"><img src="../branding/images/banners/GitEye-desktop.png" alt="GitEye Desktop" title="GitEye Desktop" width="170" height="60" border="0"></a>
+       </td>
+        <td>
+        <a href="http://www.open.collab.net/products/subversion" target="_blank"><img src="../branding/images/banners/get-svn-binaries.png" alt="Get Certified Subversion Binaries" title="Get Certified Subversion Binaries" width="175" height="60" border="0"></a>
+       </td>
+       <td>
+	 <a href="http://www.cliqr.com/app-store/#!/CollabNet%20SVN/4.0.5/" target="_blank"><img src="../branding/images/banners/svnedge-cliqr.png" alt="Git Download" title="Subversion Edge now available on Cliqr" width="170" height="60" border="0"></a>
+       </td>
+      </tr>
+     </table>  
+</td>
+</tr>
+</table>
+</div>
+<div id="toptabs">
+<table cellpadding="4" cellspacing="0" border="0"><tr>
+<td>   <a href="http://www.tigris.org/servlets/StartPage">My pages</a><td>
+<th>   <a href="http://www.tigris.org/servlets/ProjectList">Projects</a><th>
+  <td>   <a href="http://www.tigris.org/servlets/DomainHome">Community</a><td>
+		<td>   <a href="http://www.tigris.org/servlets/OpenCollabNet">openCollabNet</a><td>
+</tr></table>
+</div>
+  
+ 
+ <div id="breadcrumbs">
+   <a href="http://www.tigris.org/servlets/ProjectList?type=Projects">Projects</a>    >
+     
+
+   <strong>   <a href="http://argouml.tigris.org/"
+     >argouml</a>
+   </strong>  </div>
+ 
+ 
+ 
+ 
+<table border="0" cellspacing="0" cellpadding="4" width="100%" id="main">
+<tr>
+<td id="navcol">
+ 
+ 
+ 
+
+
+  
+             
+ 
+   
+ 
+ 
+                                                                       <dl id="projecttools" class="navgroup">
+   <dt>Project tools</dt>
+   <dd>
+    <ul>
+          <li>   <a href="http://argouml.tigris.org/servlets/ProjectHome">Project home</a></li>
+                               	</ul>
+       </dd>
+            <dd>
+   <!-- $Id: project_tools.html 19964 2019-07-10 07:55:56Z linus $ -->
+ <ul>
+<li><a href="http://argouml.tigris.org/servlets/ProjectNewsList">Project News</a>
+    <a href="http://argouml.tigris.org/servlets/WebFeed?artifact=news&amp;version=rss_2.0">
+      <img src="../images/feed-icon.gif" alt="RSS Feed" width="10" height="10"/>
+    </a>
+</li>
+<li>
+  <a href="http://argouml.tigris.org/wiki">Developer Wiki</a>
+  <a href="RecentChanges.html">RC</a>
+</li>
+<li><a href="http://argouml.tigris.org/project_bugs.html">Bugs and Issues</a>  </li>
+<li><a href="https://github.com/argouml-tigris-org">Source code</a>  </li>
+<li><a href="http://argouml.tigris.org/servlets/ProjectMemberList">Project Membership</a>  </li>
+<li>
+  <a href="http://argouml.tigris.org/ds/viewForums.do">Mailing lists</a>
+  <a href="http://argouml.markmail.org">MarkMail</a>
+</li>
+<li><a href="http://argouml.tigris.org/servlets/ProjectDocumentList">File Sharing</a>  </li>
+ </ul>
+</dd>
+
+<dt>Using ArgoUML</dt>
+<dd>
+ <ul>
+<li><a href="http://argouml.tigris.org/support.html">Support</a></li>
+<li><a href="http://argouml-stats.tigris.org/documentation/quickguide-0.32/">Quick guide 0.32</a></li>
+<li><a href="http://argouml-stats.tigris.org/documentation/manual-0.32/">User Manual 0.32</a></li>
+<li><a href="http://argouml.tigris.org/servlets/SummarizeList?listName=users">Users' mailing list</a></li>
+<li><a href="http://argouml.tigris.org/documentation/">Documentation</a></li>
+<li><a href="http://argouml.tigris.org/tours/">Tour</a></li>
+<li><a href="http://argouml-downloads.tigris.org/">Downloads</a></li>
+ </ul>
+
+<!-- The project_header and project_footer files don't seem to work -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-682460-2";
+urchinTracker();
+</script>
+
+   </dd> 
+    
+ </dl>
+ 
+
+
+
+
+<form action="http://argouml.tigris.org/servlets/Search" method="get">
+ <dl id="searchbox" class="navgroup">
+  
+      <dt>Search</dt>
+  <dd>
+   <div>
+       <select name="scope">
+           <option value="project" selected="selected">This project</option>
+               <option value="domain" >All projects</option>
+    </select>
+      </div>
+   <div>
+    <input type="hidden" name="resultsPerPage" value="40" /> 
+    <input type="text" name="query" size="10" maxlength="99" /> 
+    <input type="submit" name="Button" value="Go" />
+   </div>
+   <div>
+       <a href="http://argouml.tigris.org/servlets/Search?mode=advanced">Advanced search</a>   </div>
+  </dd>
+
+ </dl>
+</form>
+
+
+<div style="padding: 6px; padding-left: 20px;">
+ <a href="http://www.collab.net/special/clickpbc0502.html" onclick="return launch(this.href, 1)"><img src="../branding/images/poweredby.gif" alt="This site is Powered by CollabNet." id="poweredbycollabnet" width="102" height="38" /></a>
+</div>
+
+<dl id="helptext" class="navgroup">
+ <dt>How do I...</dt>
+ <dd>
+  <ul>
+      
+ 
+ <li>  <a href="http://www.tigris.org/scdocs/wiki" onclick="return launch(this.href, 1)" 
+ title="Note: link may open in new window" class="helplink">
+ 
+ Learn about project wikis?</a>
+</li>
+ 
+ 
+     
+   <li> <a href="http://www.collab.net/rn/" onclick="return launch(this.href, 1)" 
+ title="Note: link may open in new window" class="helplink">
+ 
+ Get release notes for CollabNet 5.3.0?</a>
+</li>
+
+   <li><a href="http://argouml.tigris.org/nonav/servlets/HelpTOC" onclick="return launch(this.href, 1)" 
+title="Note: link may open in new window" class="helplink">Get help?</a></li>
+  </ul>
+ </dd>
+</dl>
+
+<!-- Begin include NavColumn-bottom -->
+<div id="mainhighlights">        
+
+<table border="0" cellspacing="0" cellpadding="3"  width="100%">
+ <tr>
+  <th>Category</th>
+  <th>Featured projects</th>
+ </tr>
+ <tr>
+  <td><a href="http://scm.tigris.org/">scm</a></td>
+  <td><a href="http://subversion.tigris.org/" title="open source version control">Subversion</a>, 
+<a href="http://subclipse.tigris.org/" title="Subversion Eclipse integration">Subclipse</a>,
+<a href="http://tortoisesvn.tigris.org/" title="Subversion client">TortoiseSVN</a>,
+<a href="http://rapidsvn.tigris.org/" title="Subversion client">RapidSVN</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://issuetrack.tigris.org/">issuetrack</a></td>
+  <td><a href="http://scarab.tigris.org/" title="customizable software defect tracking system">Scarab</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://requirements.tigris.org/">requirements</a></td>
+  <td><a href="http://xmlbasedsrs.tigris.org/">xmlbasedsrs</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://design.tigris.org/">design</a></td>
+  <td><a href="http://argouml.tigris.org/" title="Free UML tool, use cases, uml tutorials">ArgoUML</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://techcomm.tigris.org/">techcomm</a></td>
+  <td><a href="http://subetha.tigris.org/" title="Mailing list manager">SubEtha</a>, 
+  <a href="http://eyebrowse.tigris.org/" title="Mailing list archive tool">eyebrowse</a>, 
+<a href="http://midgard.tigris.org/">midgard</a>,
+<a href="http://cowiki.tigris.org/">cowiki</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://construction.tigris.org/">construction</a></td>
+  <td><a href="http://antelope.tigris.org/" title="Ant GUI">antelope</a>,
+  <a href="http://scons.tigris.org/" title="cross-platform build tool">scons</a>,
+  <a href="http://frameworx.tigris.org/">frameworx</a>,
+  <a href="http://build-interceptor.tigris.org/">build-interceptor</a>,
+  <a href="http://propel.tigris.org/">propel</a>,
+  <a href="http://phing.tigris.org/">phing</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://testing.tigris.org/" title="tools for quality software">testing</a></td>
+  <td><a href="http://maxq.tigris.org/" title="record and playback web automated testing tool">maxq</a>, 
+<a href="http://aut.tigris.org/" title="advanced unit testing">aut</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://deployment.tigris.org/">deployment</a></td>
+  <td><a href="http://current.tigris.org/">current</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://process.tigris.org/" title="software development process, extreme programming">process</a></td>
+  <td><a href="http://readyset.tigris.org/" 
+title="Use case template, example test plans, software requirements specification templates, sample project plan template">ReadySET</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://libraries.tigris.org/" title="software reuse, web services">libraries</a></td>
+  <td><a href="http://gef.tigris.org/" title="Graphical diagram editing">GEF</a>, 
+<a href="http://axion.tigris.org/" title="Relational database">Axion</a>, 
+<a href="http://style.tigris.org/" title="Reusable CSS stylesheets">Style</a>,
+<a href="http://sstree.tigris.org/" title="Super-simple trees in HTML, CSS, and javascript">SSTree</a>
+ </td>
+ </tr>
+ <tr>
+  <td colspan="2" style="text-align:center">Over 500 <a style="text-decoration:underline;" 
+  href="http://www.tigris.org/servlets/ProjectList">more tools...</a></td>
+ </tr>
+</table>
+
+
+
+<table border="0" cellspacing="2" cellpadding="3"  width="100%" style="margin-top: 15px;">
+ <tr>
+  <th>Subversion and IDEs</th>
+ </tr>
+ <tr>
+ <td>
+ <a href="http://subclipse.tigris.org/">Eclipse</a>
+ </td>
+ </tr>
+  <tr>
+ <td>
+ <a href="http://www.oracle.com/technology/products/jdev/htdocs/partners/addins/exchange/subversion/subversion.html">JDeveloper</a>
+ </td>
+ </tr>
+  <tr>
+ <td>
+ <a href="http://subversion.netbeans.org/">NetBeans</a>
+ </td>
+ </tr>
+ <tr>
+  <td>
+ <a href="http://ankhsvn.open.collab.net/">Visual Studio</a>
+ </td>
+ </tr>
+ <tr>
+  <td>
+ <a
+ href="http://www.open.collab.net/cloud/?cid=tigriscodesion">Subversion Hosting</a>
+ </td>
+ </tr>
+ </table>
+ 
+<br/>
+ 
+<table border="0" cellspacing="2" cellpadding="3"  width="100%" style="margin-top: 15px;">
+  <tr>
+    <th>Tigris.org (Whole-Site) Admin Contacts</th>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Announcements mail list" target="_blank"
+      href="mailto:announce-subscribe@www.tigris.org">Announcements</a> mail list
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Blog" target="_blank"
+      href="http://tigrisdotorg.wordpress.com">Status Blog</a> at WordPress
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a title="Twitter" target="_blank" href="http://twitter.com/tigrisdotorg">@tigrisdotorg</a> on Twitter
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Problems" target="_blank"
+      href="mailto:feedback@tigris.org">Problem reports</a>
+      on the whole site
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Problems and suggestions about individual projects should
+  go to users@thatproject.tigris.org
+    </td>
+  </tr>
+  </table>
+</div>
+
+<!-- End include NavColumn-bottom -->
+
+
+
+ 
+ 
+<div class="strut">&nbsp;</div>
+</td>
+<td id="midcol">
+ 
+  <div id="bodycol">
+<div id="apphead">
+<h1><small>argouml</small><br />         Wiki: Setting up Maven
+    </h1>
+</div>
+ 
+ 
+ 
+        
+                 
+                 
+           
+    
+  
+
+ 
+ 
+
+
+
+
+
+<div class="wiki">
+
+<p class="tasknav inline">
+<span class="disabled">Edit this page</span> | <a class="backlink" title="Click to do a full-text search for this title" href="http://argouml.tigris.org/wiki/Setting_up_Maven?action=fullsearch&amp;value=linkto%3A%22Setting+up+Maven%22&amp;context=180">Links to this page</a> | <a href="http://argouml.tigris.org/wiki/Setting_up_Maven?action=info">Page information</a> | <a href="http://argouml.tigris.org/wiki/Setting_up_Maven?action=AttachFile">Attachments</a> | <a href="Setting_up_Maven.html">Refresh page</a>
+</p>
+&nbsp;
+
+<form class="actionsmenu inline" method="get" action="Setting_up_Maven.html" style="display: inline;">
+<div class="inline">
+    <label></label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected>More Actions:</option>
+<option value="raw">Raw Text</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+    </select>
+    <noscript>
+    <input type="submit" value="Submit">
+    </noscript>
+</div>
+<script type="text/javascript">
+</script>
+</form>
+
+
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line862">Preparations before it is possible to work with ArgoUML using <a class="http" href="http://maven.apache.org/">Maven</a>: <span class="anchor" id="line-2"></span><ul><li>Install Maven. <span class="anchor" id="line-3"></span></li><li><p class="line862">Configure the argouml profile with the two argouml repositories in your <tt>settings.xml</tt> file. Like this <span class="anchor" id="line-4"></span><pre>&lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+<span class="anchor" id="line-5"></span>  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<span class="anchor" id="line-6"></span>  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+<span class="anchor" id="line-7"></span>                      http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
+<span class="anchor" id="line-8"></span>
+<span class="anchor" id="line-9"></span>  &lt;profiles&gt;
+<span class="anchor" id="line-10"></span>    &lt;profile&gt;
+<span class="anchor" id="line-11"></span>      &lt;id&gt;ArgoUML repositories&lt;/id&gt;
+<span class="anchor" id="line-12"></span>      &lt;activation&gt;
+<span class="anchor" id="line-13"></span>        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;
+<span class="anchor" id="line-14"></span>      &lt;/activation&gt;
+<span class="anchor" id="line-15"></span>
+<span class="anchor" id="line-16"></span>      &lt;repositories&gt;
+<span class="anchor" id="line-17"></span>        &lt;repository&gt;
+<span class="anchor" id="line-18"></span>          &lt;id&gt;argouml-snapshots&lt;/id&gt;
+<span class="anchor" id="line-19"></span>          &lt;snapshots&gt;
+<span class="anchor" id="line-20"></span>            &lt;enabled&gt;true&lt;/enabled&gt;
+<span class="anchor" id="line-21"></span>            &lt;checksumPolicy&gt;fail&lt;/checksumPolicy&gt;
+<span class="anchor" id="line-22"></span>          &lt;/snapshots&gt;
+<span class="anchor" id="line-23"></span>          &lt;releases&gt;
+<span class="anchor" id="line-24"></span>            &lt;enabled&gt;false&lt;/enabled&gt;
+<span class="anchor" id="line-25"></span>          &lt;/releases&gt;
+<span class="anchor" id="line-26"></span>          &lt;url&gt;https://oss.sonatype.org/content/repositories/snapshots&lt;/url&gt;
+<span class="anchor" id="line-27"></span>        &lt;/repository&gt;
+<span class="anchor" id="line-28"></span>        &lt;repository&gt;
+<span class="anchor" id="line-29"></span>          &lt;id&gt;argouml-released&lt;/id&gt;
+<span class="anchor" id="line-30"></span>          &lt;snapshots&gt;
+<span class="anchor" id="line-31"></span>            &lt;enabled&gt;false&lt;/enabled&gt;
+<span class="anchor" id="line-32"></span>          &lt;/snapshots&gt;
+<span class="anchor" id="line-33"></span>          &lt;releases&gt;
+<span class="anchor" id="line-34"></span>            &lt;enabled&gt;true&lt;/enabled&gt;
+<span class="anchor" id="line-35"></span>            &lt;checksumPolicy&gt;fail&lt;/checksumPolicy&gt;
+<span class="anchor" id="line-36"></span>          &lt;/releases&gt;
+<span class="anchor" id="line-37"></span>          &lt;url&gt;http://argouml-downloads.tigris.org/maven2&lt;/url&gt;
+<span class="anchor" id="line-38"></span>        &lt;/repository&gt;
+<span class="anchor" id="line-39"></span>      &lt;/repositories&gt;
+<span class="anchor" id="line-40"></span>    &lt;/profile&gt;
+<span class="anchor" id="line-41"></span>  &lt;/profiles&gt;
+<span class="anchor" id="line-42"></span>
+<span class="anchor" id="line-43"></span>&lt;/settings&gt;
+<span class="anchor" id="line-44"></span></pre><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span></li></ul><p class="line862">If you would want to work from within Eclipse, you should know that there is a conflict between the <tt>.project</tt> and <tt>.classpath</tt> files currently in the repository and the <tt>pom.xml</tt> file that controls all dependencies when running maven. Until a decision is made to move entirely to maven, you will have to avoid checking in the changes to the <tt>.project</tt> and <tt>.classpath</tt> files that are caused by Eclipse recalculating the dependencies based on the contents of the <tt>pom.xml</tt> file. <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><p class="line867">
+<h2 id="head-f0cfc7248149f1375eb7113b0dbe9b5480a67e94">How the system is set up and works</h2>
+<span class="anchor" id="line-49"></span><p class="line862">The Continuous Integration server builds snapshots when a developer commits to the repository. If the build is successful a snapshot is uploaded automatically to the <a class="http" href="http://nexus.sonatype.org/oss-repository-hosting.html">Sonatype OSS Repository Hosting</a>. These have version number like 0.2-SNAPSHOT. <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><p class="line862">All core projects have the same version number, specified in the argouml-core pom (at <tt>trunk/pom.xml</tt>) and referring to the same version number. Non-core projects, such as argouml-actionscript3, must specify the version number of the used argouml core jars explicitly. <span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><p class="line862">All projects, core argouml projects and non-core projects alike, use the parentpom (at <tt>trunk/tools/maven/parentpom.xml</tt>) to define the version and configuration of tools used to compile, run unit, and static tests throughout the entire argouml project. It also defines the directory layout. <span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><p class="line874">For the build to work, there are two argouml-specific repositories used. There is also the Maven infrastructure repositories: <span class="anchor" id="line-56"></span><ul><li><p class="line862">The ArgoUML Maven2 repository at <a class="http" href="http://argouml-downloads.tigris.org/maven2">http://argouml-downloads.tigris.org/maven2</a>. This is used for non-snapshot files such as parentpom, the tools jar, and libraries used. This is the same repository where released argouml artifacts are stored and the libraries used are the ones that are part of the release and used by java web start. <span class="anchor" id="line-57"></span></li><li><p class="line862">The OSS Sonatype Snapshot repository at <a class="https" href="https://oss.sonatype.org/content/repositories/snapshots/">https://oss.sonatype.org/content/repositories/snapshots/</a> that is provided to the ArgoUML project by Sonatype. Linus Tolke is the only developer that has access to upload snapshots and that is done from the <a class="http" href="http://argouml-jenkins1.no-ip.biz:8080/">Jenkins Continuous Integration server</a>. <span class="anchor" id="line-58"></span></li><li>The Maven Central is the repository that is at the center the Maven world. <span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span></li></ul><p class="line867">
+<h2 id="head-da54a5273bc93e09a91472bfd3e18cdc82ebeb6e">For those new to maven</h2>
+<span class="anchor" id="line-61"></span><p class="line874">Maven relies heavily on access to repositories throughout the internet. When issueing maven commands, most of the tools and jars are downloaded and stored locally (in the home directory of the user). On subsequent invocations these stored copies are checked for updates and used. <span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><p class="line862">When you type the first mvn command <tt>mvn&nbsp;compile</tt>, after having installed maven and checked out a part of the argouml project, the following things happens: <span class="anchor" id="line-64"></span><ol type="1"><li><p class="line862">the checked out <tt>pom.xml</tt> file is read. That file references the parentpom or the argouml-core pom.  <span class="anchor" id="line-65"></span></li><li>If it references the argouml-core pom it is a snapshot version and the specified argouml-core pom is downloaded from the OSS Sonatype Snapshot repository.  <span class="anchor" id="line-66"></span></li><li>The parentpom is downloaded from the ArgoUML Maven2 repository. It is specified from the file or from argouml-core is not a snapshot version. <span class="anchor" id="line-67"></span></li><li>The parentpom references the sonatype oss-parent pom that is downloaded from the Maven Central. <span class="anchor" id="line-68"></span></li><li><p class="line862">Then the rest of the maven world is downloaded, with some tool versions specified by the parentpom and some by the <a class="http" href="http://maven.apache.org/guides/introduction/introduction-to-the-pom.html#Super_POM">Super POM (Maven's default pom)</a>. <span class="anchor" id="line-69"></span></li></ol><p class="line862">When you issue your subsequent commands <tt>mvn&nbsp;test</tt> or <tt>mvn&nbsp;site</tt> more maven tools are downloaded. <span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><p class="line874">When a new version is released all snapshot versions will be updated to the next version number, also the pom.xml in the project you have checked out. After you have gotten an update of the pom.xml of the project you are working with, the next mvn command will download the updated version of all snapshot files. <span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><p class="line874">If the parentpom or tools is updated to a newer version, the new version needs to be put into the ArgoUML Maven2 repository. <span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><p class="line867">
+<h2 id="head-a8192f331fbdcedf92096ac698166304cfa7d0fe">Historic</h2>
+<span class="anchor" id="line-76"></span><p class="line874">During 2011 the first experiments with Maven were done. This was first done to improve the tool set-up in the continuous integration server and later as a possibility to improve the build environment for any user. <span class="anchor" id="line-77"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">Setting up Maven  (last edited 2013-10-18 22:04:07 -0700 by <span title="Linus Tolke @ localhost[127.0.0.1]"><a href="linus.html" title="Linus Tolke @ localhost[127.0.0.1]">linus</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+
+</div>
+
+</div>
+</td>
+</tr>
+</table>
+ 
+ 
+ <div id="footer">
+    <a href="http://www.tigris.org/nonav/DomainFAQ"  onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Site FAQ</a> |
+<a href="http://www.tigris.org/nonav/DomainFeedback"  onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Feedback</a> |
+<a href="http://www.tigris.org/nonav/servlets/LegalNotices?type=TermsOfService" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Terms of service</a> | 
+<a href="http://www.tigris.org/nonav/servlets/LegalNotices?type=PrivacyPolicy" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Privacy policy</a> | 
+<a href="http://www.open.collab.net/cloud?cid=tigriscodesion" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Hosting</a> |
+<a href="http://www.collab.net/developers/tools/" onclick="return launch(this.href, 1)" title="Note: link may open in new window">Developer tools</a> 
+   
+   
+			   
+   <p>&#169; 2001 - 2009 CollabNet. CollabNet is a registered trademark of CollabNet, Inc.</p>
+
+   
+<div>
+<script type="text/javascript">
+// crazy egg code
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName('script')[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/6318.js";
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+// End crazy egg code
+</script>
+</div>
+
+ </div>
+ 
+ 
+</body>
+</html>

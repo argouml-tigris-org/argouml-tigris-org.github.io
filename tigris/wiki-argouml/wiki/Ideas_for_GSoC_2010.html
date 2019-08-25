@@ -1,0 +1,722 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+                 
+ 
+ <head>
+ <style type="text/css"> /* <![CDATA[ */
+ @import "../branding/css/tigris.css";
+ @import "../branding/css/inst.css";
+ /* ]]> */</style>
+ <link rel="stylesheet" type="text/css" href="../branding/css/print.css" media="print" />
+ <script src="../branding/scripts/tigris.js" type="text/javascript"></script>
+ <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+  
+             
+ 
+  <script src="../branding/scripts/alm.js" type="text/javascript"></script>
+  <style type="text/css">
+     /* <![CDATA[ */
+     @import "../branding/css/alm.css";
+         /* ]]> */
+  </style>
+
+  
+ 
+               
+ 
+  
+ 
+               
+ 
+ 
+ <script src="../branding/scripts/wiki.js" type="text/javascript"></script>
+
+    
+ <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../branding/css/wiki/cee/css/common.css" />
+ <link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../branding/css/wiki/cee/css/screen.css" />
+
+  
+ <link rel="Start" href="FrontPage.html" />
+ <link rel="Alternate" title="Wiki Markup" href="http://argouml.tigris.org/wiki/Ideas_for_GSoC_2010?action=raw" />
+ <link rel="Alternate" media="print" title="Print View" href="http://argouml.tigris.org/wiki/Ideas_for_GSoC_2010?action=print" />
+ <link rel="Search" href="FindPage.html" />
+ <link rel="Index" href="TitleIndex.html" />
+ <link rel="Glossary" href="WordIndex.html" />
+ <link rel="Help" href="HelpOnFormatting.html" />
+ 
+ 
+                                                 <title>
+        argouml:        Wiki: Ideas for GSoC 2010
+    </title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <meta http-equiv="Content-Style-Type" content="text/css" />
+ <meta name="version" content="5.3.0.167.5" />
+ <meta name="google-site-verification" content="FRRR8-RLGasBA76ejzXypMklVl0cwg9sna2rgSS4iHk" />
+ <meta name="keywords" content="Defect Tracking, Issue Tracking, Version Control, Configuration Management, Software Configuration Management, SCM, CM, Revision Control, Software Engineering, Unit Testing, Outsourcing, Collaboration, Open Source, Software Development, Collaborative Software Development, Enterprise, Java, Web Services" />   
+<meta name="description" content="CollabNet, Facilitating Collaborative Software Development" /> <meta name="description" content="Open source software engineering" />
+
+ 
+
+<meta name="robots" content="index,nofollow">
+
+
+<script type="text/javascript" src="../branding/css/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../branding/css/wiki/cee/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../branding/css/wiki/cee/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="http://argouml.tigris.org/branding/css/wiki/cee/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="http://argouml.tigris.org/branding/css/wiki/cee/css/projection.css">
+
+<!-- css only for MSIE browsers -->
+<!--[if IE]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/branding/css/wiki/cee/css/msie.css">
+<![endif]-->
+
+
+
+<link rel="Start" href="FrontPage.html">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+
+ 
+  <!--   Single pic border tables -->
+ <style type="text/css">
+/* <![CDATA[ */
+
+table.sborder, table.sborder td
+{
+	border-color: #A9A9A9;
+	border-style: solid;
+}
+
+table.sborder
+{
+	border-width: 0 0 1px 1px;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+table.sborder td
+{
+	margin: 0;
+	padding: 4px;
+	border-width: 1px 1px 0 0;
+	background-color: #FFFFFF;
+}
+
+/* ]]> */
+</style>
+ 
+ <!--   Tigris Script to load random images -->
+ <SCRIPT LANGUAGE="JavaScript">
+var theImages = new Array()
+//Random-loading images
+theImages[0] = 'http://www.tigris.org/branding/images/banners/svn15support.gif' 
+theImages[1] = 'http://www.tigris.org/branding/images/banners/mergeclient.gif' 
+var p = theImages.length;
+
+var preBuffer = new Array()
+for (i = 0; i < p; i++){
+preBuffer[i] = new Image()
+preBuffer[i].src = theImages[i]
+}
+
+var whichImage = Math.round(Math.random()*(p-1));
+function showImage(){
+
+if(whichImage==0){
+document.write('<a href ="http://www.collab.net/services/subversion"><img src="http://argouml.tigris.org/wiki/'+theImages[whichImage]+'" border=0 width=175 height=60></a>');
+}
+else if(whichImage==1){
+document.write('<a href ="http://www.collab.net/subversion15-tigris"><img src="http://argouml.tigris.org/wiki/'+theImages[whichImage]+'" border=0 width=175 height=60></a>');
+}
+}
+</script>
+<!-- Google Aanalytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48365716-1', 'tigris.org');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Tracking code -->
+
+<!-- Sstart Muchkin code -->
+<script src="http://munchkin.marketo.net/munchkin.js" type="text/javascript"></script> 
+<script>mktoMunchkin("563-XAN-459");</script>
+<!-- End Munchkin code -->
+
+<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type='text/javascript'>
+var _vwo_code=(function(){
+var account_id=20080,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+// DO NOT EDIT BELOW THIS LINE
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
+
+</head>
+ 
+ 
+<body  class="composite">
+ 
+ 
+ <div id="collabnet">
+ <div id="login"> 
+     <div>
+      <a href="http://www.tigris.org/servlets/Login?detour=http://argouml.tigris.org/wiki/Ideas_for_GSoC_2010">Login</a>
+      |    <a href="http://www.tigris.org/servlets/Join">Register</a>    </div>
+ </div>
+ <a href="http://www.collab.net" id="cnlogo">
+<span class="alt">CollabNet Enterprise Edition</span></a>
+</div>
+ 
+ 
+ 
+ 
+ <div id="banner">
+</div>
+ 
+ 
+ 
+ 
+ <div id="banner">
+ <table width="100%" id="bannertable" cellpadding="0" cellspacing="0">
+   <tr>
+    <td rowspan="2" style="width: 50px;">
+    <a href="http://www.tigris.org/" title="Tigris.org:Defect
+Tracking,Issue Tracking,Version Control,Software Configuration
+Management,SCM,CM,Revision Control,Unit Testing,Software
+Engineering,Document Templates,Outsourcing,Collaboration,Open
+Source,Development,Enterprise,Java,Web Services">
+<img src="../branding/images/logo.gif" alt="Tigris.org" id="tigrislogo" height="48" width="48" /></a>
+    </td>
+    <td style="min-width: 300px;" id="tigrisheading">
+     <div>Tigris.org</div>
+      <div class="smaller">Open Source Software Engineering Tools</div>
+    </td>
+    <td rowspan="2" style="width: 300px;" id="collabnote">
+      <table cellpadding="0" cellspacing="0">
+       <tr>
+        <td>
+        <a href="http://www.collab.net/products/teamforge/free-trial?cid=tigris" target="_blank"><img src="../branding/images/banners/teamforge81.png" alt="CollabNet TeamForge 8.1" width="170" height="60" border="0"></a>
+       </td>
+	   <td>
+        <a href="http://www.collab.net/downloads/giteye?CID=tigris" target="_blank"><img src="../branding/images/banners/GitEye-desktop.png" alt="GitEye Desktop" title="GitEye Desktop" width="170" height="60" border="0"></a>
+       </td>
+        <td>
+        <a href="http://www.open.collab.net/products/subversion" target="_blank"><img src="../branding/images/banners/get-svn-binaries.png" alt="Get Certified Subversion Binaries" title="Get Certified Subversion Binaries" width="175" height="60" border="0"></a>
+       </td>
+       <td>
+	 <a href="http://www.cliqr.com/app-store/#!/CollabNet%20SVN/4.0.5/" target="_blank"><img src="../branding/images/banners/svnedge-cliqr.png" alt="Git Download" title="Subversion Edge now available on Cliqr" width="170" height="60" border="0"></a>
+       </td>
+      </tr>
+     </table>  
+</td>
+</tr>
+</table>
+</div>
+<div id="toptabs">
+<table cellpadding="4" cellspacing="0" border="0"><tr>
+<td>   <a href="http://www.tigris.org/servlets/StartPage">My pages</a><td>
+<th>   <a href="http://www.tigris.org/servlets/ProjectList">Projects</a><th>
+  <td>   <a href="http://www.tigris.org/servlets/DomainHome">Community</a><td>
+		<td>   <a href="http://www.tigris.org/servlets/OpenCollabNet">openCollabNet</a><td>
+</tr></table>
+</div>
+  
+ 
+ <div id="breadcrumbs">
+   <a href="http://www.tigris.org/servlets/ProjectList?type=Projects">Projects</a>    >
+     
+
+   <strong>   <a href="http://argouml.tigris.org/"
+     >argouml</a>
+   </strong>  </div>
+ 
+ 
+ 
+ 
+<table border="0" cellspacing="0" cellpadding="4" width="100%" id="main">
+<tr>
+<td id="navcol">
+ 
+ 
+ 
+
+
+  
+             
+ 
+   
+ 
+ 
+                                                                       <dl id="projecttools" class="navgroup">
+   <dt>Project tools</dt>
+   <dd>
+    <ul>
+          <li>   <a href="http://argouml.tigris.org/servlets/ProjectHome">Project home</a></li>
+                               	</ul>
+       </dd>
+            <dd>
+   <!-- $Id: project_tools.html 19964 2019-07-10 07:55:56Z linus $ -->
+ <ul>
+<li><a href="http://argouml.tigris.org/servlets/ProjectNewsList">Project News</a>
+    <a href="http://argouml.tigris.org/servlets/WebFeed?artifact=news&amp;version=rss_2.0">
+      <img src="../images/feed-icon.gif" alt="RSS Feed" width="10" height="10"/>
+    </a>
+</li>
+<li>
+  <a href="http://argouml.tigris.org/wiki">Developer Wiki</a>
+  <a href="RecentChanges.html">RC</a>
+</li>
+<li><a href="http://argouml.tigris.org/project_bugs.html">Bugs and Issues</a>  </li>
+<li><a href="https://github.com/argouml-tigris-org">Source code</a>  </li>
+<li><a href="http://argouml.tigris.org/servlets/ProjectMemberList">Project Membership</a>  </li>
+<li>
+  <a href="http://argouml.tigris.org/ds/viewForums.do">Mailing lists</a>
+  <a href="http://argouml.markmail.org">MarkMail</a>
+</li>
+<li><a href="http://argouml.tigris.org/servlets/ProjectDocumentList">File Sharing</a>  </li>
+ </ul>
+</dd>
+
+<dt>Using ArgoUML</dt>
+<dd>
+ <ul>
+<li><a href="http://argouml.tigris.org/support.html">Support</a></li>
+<li><a href="http://argouml-stats.tigris.org/documentation/quickguide-0.32/">Quick guide 0.32</a></li>
+<li><a href="http://argouml-stats.tigris.org/documentation/manual-0.32/">User Manual 0.32</a></li>
+<li><a href="http://argouml.tigris.org/servlets/SummarizeList?listName=users">Users' mailing list</a></li>
+<li><a href="http://argouml.tigris.org/documentation/">Documentation</a></li>
+<li><a href="http://argouml.tigris.org/tours/">Tour</a></li>
+<li><a href="http://argouml-downloads.tigris.org/">Downloads</a></li>
+ </ul>
+
+<!-- The project_header and project_footer files don't seem to work -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-682460-2";
+urchinTracker();
+</script>
+
+   </dd> 
+    
+ </dl>
+ 
+
+
+
+
+<form action="http://argouml.tigris.org/servlets/Search" method="get">
+ <dl id="searchbox" class="navgroup">
+  
+      <dt>Search</dt>
+  <dd>
+   <div>
+       <select name="scope">
+           <option value="project" selected="selected">This project</option>
+               <option value="domain" >All projects</option>
+    </select>
+      </div>
+   <div>
+    <input type="hidden" name="resultsPerPage" value="40" /> 
+    <input type="text" name="query" size="10" maxlength="99" /> 
+    <input type="submit" name="Button" value="Go" />
+   </div>
+   <div>
+       <a href="http://argouml.tigris.org/servlets/Search?mode=advanced">Advanced search</a>   </div>
+  </dd>
+
+ </dl>
+</form>
+
+
+<div style="padding: 6px; padding-left: 20px;">
+ <a href="http://www.collab.net/special/clickpbc0502.html" onclick="return launch(this.href, 1)"><img src="../branding/images/poweredby.gif" alt="This site is Powered by CollabNet." id="poweredbycollabnet" width="102" height="38" /></a>
+</div>
+
+<dl id="helptext" class="navgroup">
+ <dt>How do I...</dt>
+ <dd>
+  <ul>
+      
+ 
+ <li>  <a href="http://www.tigris.org/scdocs/wiki" onclick="return launch(this.href, 1)" 
+ title="Note: link may open in new window" class="helplink">
+ 
+ Learn about project wikis?</a>
+</li>
+ 
+ 
+     
+   <li> <a href="http://www.collab.net/rn/" onclick="return launch(this.href, 1)" 
+ title="Note: link may open in new window" class="helplink">
+ 
+ Get release notes for CollabNet 5.3.0?</a>
+</li>
+
+   <li><a href="http://argouml.tigris.org/nonav/servlets/HelpTOC" onclick="return launch(this.href, 1)" 
+title="Note: link may open in new window" class="helplink">Get help?</a></li>
+  </ul>
+ </dd>
+</dl>
+
+<!-- Begin include NavColumn-bottom -->
+<div id="mainhighlights">        
+
+<table border="0" cellspacing="0" cellpadding="3"  width="100%">
+ <tr>
+  <th>Category</th>
+  <th>Featured projects</th>
+ </tr>
+ <tr>
+  <td><a href="http://scm.tigris.org/">scm</a></td>
+  <td><a href="http://subversion.tigris.org/" title="open source version control">Subversion</a>, 
+<a href="http://subclipse.tigris.org/" title="Subversion Eclipse integration">Subclipse</a>,
+<a href="http://tortoisesvn.tigris.org/" title="Subversion client">TortoiseSVN</a>,
+<a href="http://rapidsvn.tigris.org/" title="Subversion client">RapidSVN</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://issuetrack.tigris.org/">issuetrack</a></td>
+  <td><a href="http://scarab.tigris.org/" title="customizable software defect tracking system">Scarab</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://requirements.tigris.org/">requirements</a></td>
+  <td><a href="http://xmlbasedsrs.tigris.org/">xmlbasedsrs</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://design.tigris.org/">design</a></td>
+  <td><a href="http://argouml.tigris.org/" title="Free UML tool, use cases, uml tutorials">ArgoUML</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://techcomm.tigris.org/">techcomm</a></td>
+  <td><a href="http://subetha.tigris.org/" title="Mailing list manager">SubEtha</a>, 
+  <a href="http://eyebrowse.tigris.org/" title="Mailing list archive tool">eyebrowse</a>, 
+<a href="http://midgard.tigris.org/">midgard</a>,
+<a href="http://cowiki.tigris.org/">cowiki</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://construction.tigris.org/">construction</a></td>
+  <td><a href="http://antelope.tigris.org/" title="Ant GUI">antelope</a>,
+  <a href="http://scons.tigris.org/" title="cross-platform build tool">scons</a>,
+  <a href="http://frameworx.tigris.org/">frameworx</a>,
+  <a href="http://build-interceptor.tigris.org/">build-interceptor</a>,
+  <a href="http://propel.tigris.org/">propel</a>,
+  <a href="http://phing.tigris.org/">phing</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://testing.tigris.org/" title="tools for quality software">testing</a></td>
+  <td><a href="http://maxq.tigris.org/" title="record and playback web automated testing tool">maxq</a>, 
+<a href="http://aut.tigris.org/" title="advanced unit testing">aut</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://deployment.tigris.org/">deployment</a></td>
+  <td><a href="http://current.tigris.org/">current</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://process.tigris.org/" title="software development process, extreme programming">process</a></td>
+  <td><a href="http://readyset.tigris.org/" 
+title="Use case template, example test plans, software requirements specification templates, sample project plan template">ReadySET</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://libraries.tigris.org/" title="software reuse, web services">libraries</a></td>
+  <td><a href="http://gef.tigris.org/" title="Graphical diagram editing">GEF</a>, 
+<a href="http://axion.tigris.org/" title="Relational database">Axion</a>, 
+<a href="http://style.tigris.org/" title="Reusable CSS stylesheets">Style</a>,
+<a href="http://sstree.tigris.org/" title="Super-simple trees in HTML, CSS, and javascript">SSTree</a>
+ </td>
+ </tr>
+ <tr>
+  <td colspan="2" style="text-align:center">Over 500 <a style="text-decoration:underline;" 
+  href="http://www.tigris.org/servlets/ProjectList">more tools...</a></td>
+ </tr>
+</table>
+
+
+
+<table border="0" cellspacing="2" cellpadding="3"  width="100%" style="margin-top: 15px;">
+ <tr>
+  <th>Subversion and IDEs</th>
+ </tr>
+ <tr>
+ <td>
+ <a href="http://subclipse.tigris.org/">Eclipse</a>
+ </td>
+ </tr>
+  <tr>
+ <td>
+ <a href="http://www.oracle.com/technology/products/jdev/htdocs/partners/addins/exchange/subversion/subversion.html">JDeveloper</a>
+ </td>
+ </tr>
+  <tr>
+ <td>
+ <a href="http://subversion.netbeans.org/">NetBeans</a>
+ </td>
+ </tr>
+ <tr>
+  <td>
+ <a href="http://ankhsvn.open.collab.net/">Visual Studio</a>
+ </td>
+ </tr>
+ <tr>
+  <td>
+ <a
+ href="http://www.open.collab.net/cloud/?cid=tigriscodesion">Subversion Hosting</a>
+ </td>
+ </tr>
+ </table>
+ 
+<br/>
+ 
+<table border="0" cellspacing="2" cellpadding="3"  width="100%" style="margin-top: 15px;">
+  <tr>
+    <th>Tigris.org (Whole-Site) Admin Contacts</th>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Announcements mail list" target="_blank"
+      href="mailto:announce-subscribe@www.tigris.org">Announcements</a> mail list
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Blog" target="_blank"
+      href="http://tigrisdotorg.wordpress.com">Status Blog</a> at WordPress
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a title="Twitter" target="_blank" href="http://twitter.com/tigrisdotorg">@tigrisdotorg</a> on Twitter
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Problems" target="_blank"
+      href="mailto:feedback@tigris.org">Problem reports</a>
+      on the whole site
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Problems and suggestions about individual projects should
+  go to users@thatproject.tigris.org
+    </td>
+  </tr>
+  </table>
+</div>
+
+<!-- End include NavColumn-bottom -->
+
+
+
+ 
+ 
+<div class="strut">&nbsp;</div>
+</td>
+<td id="midcol">
+ 
+  <div id="bodycol">
+<div id="apphead">
+<h1><small>argouml</small><br />         Wiki: Ideas for GSoC 2010
+    </h1>
+</div>
+ 
+ 
+ 
+        
+                 
+                 
+           
+    
+  
+
+ 
+ 
+
+
+
+
+
+<div class="wiki">
+
+<p class="tasknav inline">
+<span class="disabled">Edit this page</span> | <a class="backlink" title="Click to do a full-text search for this title" href="http://argouml.tigris.org/wiki/Ideas_for_GSoC_2010?action=fullsearch&amp;value=linkto%3A%22Ideas+for+GSoC+2010%22&amp;context=180">Links to this page</a> | <a href="http://argouml.tigris.org/wiki/Ideas_for_GSoC_2010?action=info">Page information</a> | <a href="http://argouml.tigris.org/wiki/Ideas_for_GSoC_2010?action=AttachFile">Attachments</a> | <a href="Ideas_for_GSoC_2010.html">Refresh page</a>
+</p>
+&nbsp;
+
+<form class="actionsmenu inline" method="get" action="Ideas_for_GSoC_2010.html" style="display: inline;">
+<div class="inline">
+    <label></label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected>More Actions:</option>
+<option value="raw">Raw Text</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+    </select>
+    <noscript>
+    <input type="submit" value="Submit">
+    </noscript>
+</div>
+<script type="text/javascript">
+</script>
+</form>
+
+
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line874">In the ArgoUML project we are hoping that we will be able to take part in Google Summer of Code 2010. In 2006, 2007, and 2008 we had a lot of students that improved ArgoUML and vitalised the project. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line867"><span class="anchor" id="line-6"></span><p class="line867"><span class="anchor" id="line-7"></span><p class="line867"><span class="anchor" id="line-8"></span><p class="line867"><span class="anchor" id="line-9"></span><p class="line867"><span class="anchor" id="line-10"></span><p class="line867"><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li><a href="Ideas_for_GSoC_2010.html#head-14016adbdf9d2a61008f0c923bbf8cb053e90224">Project ideas</a><ol><li><a href="Ideas_for_GSoC_2010.html#head-8bbdedec79bd76487f095c552f769b957fc95d03">ArgoUML towards UML 2.0</a></li><li><a href="Ideas_for_GSoC_2010.html#head-66f3287ec282c79ce2a640384b8e2ab1ed2843e6">Moving ArgoUML to Eclipse - RCP</a></li><li><a href="Ideas_for_GSoC_2010.html#head-ac01ae73d64fa48b2d48a627b74f4f56e05403e1">Redesign of Notation Subsystem</a></li><li><a href="Ideas_for_GSoC_2010.html#head-f756b72e30f236f17ddd012240ca2480a96e8227">Missing Diagram Figures</a></li><li><a href="Ideas_for_GSoC_2010.html#head-2923abd9313b4cf34286bfc2ba9659c33b654673">Improve GUI Interaction</a></li><li><a href="Ideas_for_GSoC_2010.html#head-a2e370e6ca0398493642d70579c7e450e8d0bbf8">Update to Graphics2D</a></li></ol><li><a href="Ideas_for_GSoC_2010.html#head-fe2b636c93f6ff8dbc6e2918cfdac4e8ccad2b8b">The Students we are looking for</a></li><li><a href="Ideas_for_GSoC_2010.html#head-8c5ef090df40e194d08b220ba0eff56779bfd4f4">The projects we are looking for</a></li><li><a href="Ideas_for_GSoC_2010.html#head-5b87d2209c3322f87c759e656974491a60d54b88">Quick intro of general information in the project</a></li></ol></div> <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><p class="line867">
+<h2 id="head-14016adbdf9d2a61008f0c923bbf8cb053e90224">1. Project ideas</h2>
+<span class="anchor" id="line-15"></span><p class="line867"><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><p class="line867">
+<h3 id="head-8bbdedec79bd76487f095c552f769b957fc95d03">1.1. ArgoUML towards UML 2.0</h3>
+<span class="anchor" id="line-18"></span><p class="line874">ArgoUML needs to be changed to support UML 2.0. <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><p class="line874">ArgoUML is still based on an UML 1.* model while some work has been done to support the euml backend. Moving all the way to euml will make ArgoUML compatible with the whole range of euml-based tools i.e. all Eclipse-based UML tools. <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><p class="line874">There are several challenges in this area such as: <span class="anchor" id="line-23"></span><ul><li>Build property panels for UML2 elements. <span class="anchor" id="line-24"></span></li><li>Update of existing diagrams with new UML 2.0 constructs. <span class="anchor" id="line-25"></span></li><li>Addition of new UML 2.0 diagrams. <span class="anchor" id="line-26"></span></li><li>Tool for converting UML 1.4 models. <span class="anchor" id="line-27"></span></li><li>Add UML 2.0 features to code generators. <span class="anchor" id="line-28"></span></li><li>Store diagrams using the UML 2 Diagrams format. <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span></li></ul><p class="line874">A couple of these challenges could be chosen combined into a project or made into projects for themselves. <span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><p class="line867">
+<h3 id="head-66f3287ec282c79ce2a640384b8e2ab1ed2843e6">1.2. Moving ArgoUML to Eclipse - RCP</h3>
+<span class="anchor" id="line-33"></span><p class="line862">A lot of work has gone into moving ArgoUML to and Eclipse-based platform (see <a class="http" href="http://argoeclipse.tigris.org">the ArgoEclipse project</a>). Also GSoC projects from previous years have been successful in improving this. What is still missing is the integration with the software update mechanism in the RCP version of <a href="ArgoEclipse.html">ArgoEclipse</a>. <span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><p class="line874">This work includes: <span class="anchor" id="line-36"></span><ul><li><p class="line862">Getting the auto-update function from Eclipse to work in the RCP version of <a href="ArgoEclipse.html">ArgoEclipse</a>. <span class="anchor" id="line-37"></span></li><li><p class="line862">Fixing all available ArgoUML modules to work with <a href="ArgoEclipse.html">ArgoEclipse</a>. <span class="anchor" id="line-38"></span></li><li>If possible getting the module discovery, installation, and update mechanism to work with the non RCP version of ArgoUML. <span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span></li></ul><p class="line867">
+<h3 id="head-ac01ae73d64fa48b2d48a627b74f4f56e05403e1">1.3. Redesign of Notation Subsystem</h3>
+<span class="anchor" id="line-42"></span><p class="line874">The Notation Subsystems purpose is to generate text to display within diagram figures. The notation has knowledge of what model elements in the UML model are required to build the description of any particular textual element in a diagram figure. <span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><p class="line874">This differs in complexity for different types of model element. e.g. The class name notation only requires to know of a specific class element. However an operation notation needs to know of an operation and all the parameters of that operation. If any of those model elements change then the display will have to be rebuilt. <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><p class="line874">Moreover the visual component using a notation can change notation type from one to another (e.g. UML to Java) so entire suits of notations are available for different language types. <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><p class="line874">An early design decision was to build notations as a Flyweight pattern. Each notation item has knowledge of what model elements the GUI should be listening to so that the GUI display can change when the model change (e.g. the operation display will change when the operation changes in the model but also when any parameter changes). The GUI requests that information and then the GUI takes charge of actually performing the listening. <span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><p class="line874">That decision in hindsight was not the best choice. Its resulted in an overcomplicated architecture which often results in the GUI listening to too many different events and redrawing itself too frequently. <span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><p class="line874">This work includes: <span class="anchor" id="line-53"></span><ul><li>Begin a new notation subsystem as a plugin module <span class="anchor" id="line-54"></span></li><li>Adapting the flyweight pattern into a standard factory pattern <span class="anchor" id="line-55"></span></li><li>Move responsibility of listing to the model from the GUI to the notation subsystem (done) <span class="anchor" id="line-56"></span></li><li>Introduce an event mechanism from the notation subsystem to the GUI (done) <span class="anchor" id="line-57"></span></li><li>Replace reflection by factory classes <span class="anchor" id="line-58"></span></li><li>When complete this work will allow further improvements to the GUI to reduce redrawing and rebuilding of diagram figures. Should time allow work can continue into improving the GUI. <span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span></li></ul><p class="line867">
+<h3 id="head-f756b72e30f236f17ddd012240ca2480a96e8227">1.4. Missing Diagram Figures</h3>
+<span class="anchor" id="line-62"></span><p class="line874">ArgoUML was developed initially with Java code generation and reverse engineering only and therefore became very Java-centric (this has been resolved with C#/C++ modules etc included). ArgoUML was also developed way before way before generics were introduced to Java. <span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><p class="line874">The result is that in the early days there was little attention given to Templates in UML. <span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><p class="line874">As well as this there are other missing diagrammatic features that would bring ArgoUML closer to the UML specification <span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><p class="line874">This work includes: <span class="anchor" id="line-69"></span><ul><li>Completing template and template binding <span class="anchor" id="line-70"></span></li><li>Qualified associations <span class="anchor" id="line-71"></span></li><li>Lollipop (ball and socket) notation for interfaces <span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span></li></ul><p class="line867">
+<h3 id="head-2923abd9313b4cf34286bfc2ba9659c33b654673">1.5. Improve GUI Interaction</h3>
+<span class="anchor" id="line-75"></span><p class="line874">ArgoUML has always strived to make the users experience as pleasurable one. Interacting with the tool should be intuitive and as effortless as possible. <span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><p class="line874">We are open to new ideas from students about how to improve user interaction with the diagrams and the rest of the GUI to make the UML designers work as easy as possible. <span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><p class="line874">Some current ideas include includes: <span class="anchor" id="line-80"></span><ul><li>Simplify drawing of self associations <span class="anchor" id="line-81"></span></li><li>Laser tool for edges (instead of dragging an edge with the mouse all the way to where it needs to be dropped the edge will automatically look past the mouse to the next figure it finds to connect to). <span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span></li></ul><p class="line874">How else could you make the diagrams easier to interact with? <span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><p class="line867">
+<h3 id="head-a2e370e6ca0398493642d70579c7e450e8d0bbf8">1.6. Update to Graphics2D</h3>
+<span class="anchor" id="line-87"></span><p class="line874">ArgoUML was originally developed before Java2D introduced the Graphics2D class. Much of the core libraries still cater for the possibility of the far simple Graphics class. <span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><p class="line874">Updating the code to use Graphics2D should bring further features. <span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><p class="line874">This would include but not be limited by <span class="anchor" id="line-92"></span><ul><li>Completion of SVGWriter2D - a Graphics2D replacement of our SVGWriter class that is currently the only class that ties us to the old Graphics implementation. <span class="anchor" id="line-93"></span></li><li>Gradient fill. <span class="anchor" id="line-94"></span></li><li>Line width settings. <span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span></li></ul><p class="line867">
+<h2 id="head-fe2b636c93f6ff8dbc6e2918cfdac4e8ccad2b8b">2. The Students we are looking for</h2>
+<span class="anchor" id="line-99"></span><p class="line874">We are looking for enthusiastic students with a solid knowledge of Java, who are interested in software development tools and modeling, particularly the UML modeling language. Most, although not all, tasks will be easier for those who already have an working knowledge of the OMG's UML.  <span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><p class="line867">
+<h2 id="head-8c5ef090df40e194d08b220ba0eff56779bfd4f4">3. The projects we are looking for</h2>
+<span class="anchor" id="line-102"></span><p class="line874">This page include a list of suggested projects that the development team has thought of, but we are happy to consider projects which are not listed here. <span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><p class="line874">If you'd like to suggest a different project, please discuss it previously with the team on the developers' mailing list so that you can develop the strongest possible proposal for evaluation. Our bug database (Issuezilla) could be used as inspiration. <span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><p class="line867">
+<h2 id="head-5b87d2209c3322f87c759e656974491a60d54b88">4. Quick intro of general information in the project</h2>
+<span class="anchor" id="line-107"></span><p class="line874">This wiki contains a lot of information on the design of ArgoUML and how we work in the project. The Cookbook was used before this wiki and is entirely migrated into the wiki so it is presumably less updated.  <span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><p class="line862">All discussions about the ArgoUML project, the ideas above, and other ideas, are kept at the developers' mailing list <a class="mailto" href="mailto:dev@argouml.tigris.org">dev@argouml.tigris.org</a> that also is available as a discussion forum on this site (at <a class="http" href="http://argouml.tigris.org/ds/viewForumSummary.do?dsForumId=450">http://argouml.tigris.org/ds/viewForumSummary.do?dsForumId=450</a>). Join the list on the web site and start your discussions there. Your first posting will have to be manually approved so be patient. <span class="anchor" id="line-110"></span><hr /><p class="line874"> <span class="anchor" id="line-111"></span><a href="CategoryFurtherDevelopment.html">CategoryFurtherDevelopment</a> <span class="anchor" id="line-112"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">Ideas for GSoC 2010  (last edited 2011-03-02 12:01:07 -0700 by <span title="Michiel van der Wulp @ localhost[127.0.0.1]"><a href="mvw.html" title="Michiel van der Wulp @ localhost[127.0.0.1]">mvw</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+
+</div>
+
+</div>
+</td>
+</tr>
+</table>
+ 
+ 
+ <div id="footer">
+    <a href="http://www.tigris.org/nonav/DomainFAQ"  onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Site FAQ</a> |
+<a href="http://www.tigris.org/nonav/DomainFeedback"  onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Feedback</a> |
+<a href="http://www.tigris.org/nonav/servlets/LegalNotices?type=TermsOfService" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Terms of service</a> | 
+<a href="http://www.tigris.org/nonav/servlets/LegalNotices?type=PrivacyPolicy" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Privacy policy</a> | 
+<a href="http://www.open.collab.net/cloud?cid=tigriscodesion" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Hosting</a> |
+<a href="http://www.collab.net/developers/tools/" onclick="return launch(this.href, 1)" title="Note: link may open in new window">Developer tools</a> 
+   
+   
+			   
+   <p>&#169; 2001 - 2009 CollabNet. CollabNet is a registered trademark of CollabNet, Inc.</p>
+
+   
+<div>
+<script type="text/javascript">
+// crazy egg code
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName('script')[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/6318.js";
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+// End crazy egg code
+</script>
+</div>
+
+ </div>
+ 
+ 
+</body>
+</html>

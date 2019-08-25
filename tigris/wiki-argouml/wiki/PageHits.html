@@ -1,0 +1,702 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+                 
+ 
+ <head>
+ <style type="text/css"> /* <![CDATA[ */
+ @import "../branding/css/tigris.css";
+ @import "../branding/css/inst.css";
+ /* ]]> */</style>
+ <link rel="stylesheet" type="text/css" href="../branding/css/print.css" media="print" />
+ <script src="../branding/scripts/tigris.js" type="text/javascript"></script>
+ <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+  
+             
+ 
+  <script src="../branding/scripts/alm.js" type="text/javascript"></script>
+  <style type="text/css">
+     /* <![CDATA[ */
+     @import "../branding/css/alm.css";
+         /* ]]> */
+  </style>
+
+  
+ 
+               
+ 
+  
+ 
+               
+ 
+ 
+ <script src="../branding/scripts/wiki.js" type="text/javascript"></script>
+
+    
+ <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../branding/css/wiki/cee/css/common.css" />
+ <link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../branding/css/wiki/cee/css/screen.css" />
+
+  
+ <link rel="Start" href="FrontPage.html" />
+ <link rel="Alternate" title="Wiki Markup" href="http://argouml.tigris.org/wiki/PageHits?action=raw" />
+ <link rel="Alternate" media="print" title="Print View" href="http://argouml.tigris.org/wiki/PageHits?action=print" />
+ <link rel="Search" href="FindPage.html" />
+ <link rel="Index" href="TitleIndex.html" />
+ <link rel="Glossary" href="WordIndex.html" />
+ <link rel="Help" href="HelpOnFormatting.html" />
+ 
+ 
+                                                 <title>
+        argouml:        Wiki: PageHits
+    </title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <meta http-equiv="Content-Style-Type" content="text/css" />
+ <meta name="version" content="5.3.0.167.5" />
+ <meta name="google-site-verification" content="FRRR8-RLGasBA76ejzXypMklVl0cwg9sna2rgSS4iHk" />
+ <meta name="keywords" content="Defect Tracking, Issue Tracking, Version Control, Configuration Management, Software Configuration Management, SCM, CM, Revision Control, Software Engineering, Unit Testing, Outsourcing, Collaboration, Open Source, Software Development, Collaborative Software Development, Enterprise, Java, Web Services" />   
+<meta name="description" content="CollabNet, Facilitating Collaborative Software Development" /> <meta name="description" content="Open source software engineering" />
+
+ 
+
+<meta name="robots" content="index,nofollow">
+
+
+<script type="text/javascript" src="../branding/css/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../branding/css/wiki/cee/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../branding/css/wiki/cee/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="http://argouml.tigris.org/branding/css/wiki/cee/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="http://argouml.tigris.org/branding/css/wiki/cee/css/projection.css">
+
+<!-- css only for MSIE browsers -->
+<!--[if IE]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/branding/css/wiki/cee/css/msie.css">
+<![endif]-->
+
+
+
+<link rel="Start" href="FrontPage.html">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+
+ 
+  <!--   Single pic border tables -->
+ <style type="text/css">
+/* <![CDATA[ */
+
+table.sborder, table.sborder td
+{
+	border-color: #A9A9A9;
+	border-style: solid;
+}
+
+table.sborder
+{
+	border-width: 0 0 1px 1px;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+table.sborder td
+{
+	margin: 0;
+	padding: 4px;
+	border-width: 1px 1px 0 0;
+	background-color: #FFFFFF;
+}
+
+/* ]]> */
+</style>
+ 
+ <!--   Tigris Script to load random images -->
+ <SCRIPT LANGUAGE="JavaScript">
+var theImages = new Array()
+//Random-loading images
+theImages[0] = 'http://www.tigris.org/branding/images/banners/svn15support.gif' 
+theImages[1] = 'http://www.tigris.org/branding/images/banners/mergeclient.gif' 
+var p = theImages.length;
+
+var preBuffer = new Array()
+for (i = 0; i < p; i++){
+preBuffer[i] = new Image()
+preBuffer[i].src = theImages[i]
+}
+
+var whichImage = Math.round(Math.random()*(p-1));
+function showImage(){
+
+if(whichImage==0){
+document.write('<a href ="http://www.collab.net/services/subversion"><img src="http://argouml.tigris.org/wiki/'+theImages[whichImage]+'" border=0 width=175 height=60></a>');
+}
+else if(whichImage==1){
+document.write('<a href ="http://www.collab.net/subversion15-tigris"><img src="http://argouml.tigris.org/wiki/'+theImages[whichImage]+'" border=0 width=175 height=60></a>');
+}
+}
+</script>
+<!-- Google Aanalytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48365716-1', 'tigris.org');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Tracking code -->
+
+<!-- Sstart Muchkin code -->
+<script src="http://munchkin.marketo.net/munchkin.js" type="text/javascript"></script> 
+<script>mktoMunchkin("563-XAN-459");</script>
+<!-- End Munchkin code -->
+
+<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type='text/javascript'>
+var _vwo_code=(function(){
+var account_id=20080,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+// DO NOT EDIT BELOW THIS LINE
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
+
+</head>
+ 
+ 
+<body  class="composite">
+ 
+ 
+ <div id="collabnet">
+ <div id="login"> 
+     <div>
+      <a href="http://www.tigris.org/servlets/Login?detour=http://argouml.tigris.org/wiki/PageHits">Login</a>
+      |    <a href="http://www.tigris.org/servlets/Join">Register</a>    </div>
+ </div>
+ <a href="http://www.collab.net" id="cnlogo">
+<span class="alt">CollabNet Enterprise Edition</span></a>
+</div>
+ 
+ 
+ 
+ 
+ <div id="banner">
+</div>
+ 
+ 
+ 
+ 
+ <div id="banner">
+ <table width="100%" id="bannertable" cellpadding="0" cellspacing="0">
+   <tr>
+    <td rowspan="2" style="width: 50px;">
+    <a href="http://www.tigris.org/" title="Tigris.org:Defect
+Tracking,Issue Tracking,Version Control,Software Configuration
+Management,SCM,CM,Revision Control,Unit Testing,Software
+Engineering,Document Templates,Outsourcing,Collaboration,Open
+Source,Development,Enterprise,Java,Web Services">
+<img src="../branding/images/logo.gif" alt="Tigris.org" id="tigrislogo" height="48" width="48" /></a>
+    </td>
+    <td style="min-width: 300px;" id="tigrisheading">
+     <div>Tigris.org</div>
+      <div class="smaller">Open Source Software Engineering Tools</div>
+    </td>
+    <td rowspan="2" style="width: 300px;" id="collabnote">
+      <table cellpadding="0" cellspacing="0">
+       <tr>
+        <td>
+        <a href="http://www.collab.net/products/teamforge/free-trial?cid=tigris" target="_blank"><img src="../branding/images/banners/teamforge81.png" alt="CollabNet TeamForge 8.1" width="170" height="60" border="0"></a>
+       </td>
+	   <td>
+        <a href="http://www.collab.net/downloads/giteye?CID=tigris" target="_blank"><img src="../branding/images/banners/GitEye-desktop.png" alt="GitEye Desktop" title="GitEye Desktop" width="170" height="60" border="0"></a>
+       </td>
+        <td>
+        <a href="http://www.open.collab.net/products/subversion" target="_blank"><img src="../branding/images/banners/get-svn-binaries.png" alt="Get Certified Subversion Binaries" title="Get Certified Subversion Binaries" width="175" height="60" border="0"></a>
+       </td>
+       <td>
+	 <a href="http://www.cliqr.com/app-store/#!/CollabNet%20SVN/4.0.5/" target="_blank"><img src="../branding/images/banners/svnedge-cliqr.png" alt="Git Download" title="Subversion Edge now available on Cliqr" width="170" height="60" border="0"></a>
+       </td>
+      </tr>
+     </table>  
+</td>
+</tr>
+</table>
+</div>
+<div id="toptabs">
+<table cellpadding="4" cellspacing="0" border="0"><tr>
+<td>   <a href="http://www.tigris.org/servlets/StartPage">My pages</a><td>
+<th>   <a href="http://www.tigris.org/servlets/ProjectList">Projects</a><th>
+  <td>   <a href="http://www.tigris.org/servlets/DomainHome">Community</a><td>
+		<td>   <a href="http://www.tigris.org/servlets/OpenCollabNet">openCollabNet</a><td>
+</tr></table>
+</div>
+  
+ 
+ <div id="breadcrumbs">
+   <a href="http://www.tigris.org/servlets/ProjectList?type=Projects">Projects</a>    >
+     
+
+   <strong>   <a href="http://argouml.tigris.org/"
+     >argouml</a>
+   </strong>  </div>
+ 
+ 
+ 
+ 
+<table border="0" cellspacing="0" cellpadding="4" width="100%" id="main">
+<tr>
+<td id="navcol">
+ 
+ 
+ 
+
+
+  
+             
+ 
+   
+ 
+ 
+                                                                       <dl id="projecttools" class="navgroup">
+   <dt>Project tools</dt>
+   <dd>
+    <ul>
+          <li>   <a href="http://argouml.tigris.org/servlets/ProjectHome">Project home</a></li>
+                               	</ul>
+       </dd>
+            <dd>
+   <!-- $Id: project_tools.html 19964 2019-07-10 07:55:56Z linus $ -->
+ <ul>
+<li><a href="http://argouml.tigris.org/servlets/ProjectNewsList">Project News</a>
+    <a href="http://argouml.tigris.org/servlets/WebFeed?artifact=news&amp;version=rss_2.0">
+      <img src="../images/feed-icon.gif" alt="RSS Feed" width="10" height="10"/>
+    </a>
+</li>
+<li>
+  <a href="http://argouml.tigris.org/wiki">Developer Wiki</a>
+  <a href="RecentChanges.html">RC</a>
+</li>
+<li><a href="http://argouml.tigris.org/project_bugs.html">Bugs and Issues</a>  </li>
+<li><a href="https://github.com/argouml-tigris-org">Source code</a>  </li>
+<li><a href="http://argouml.tigris.org/servlets/ProjectMemberList">Project Membership</a>  </li>
+<li>
+  <a href="http://argouml.tigris.org/ds/viewForums.do">Mailing lists</a>
+  <a href="http://argouml.markmail.org">MarkMail</a>
+</li>
+<li><a href="http://argouml.tigris.org/servlets/ProjectDocumentList">File Sharing</a>  </li>
+ </ul>
+</dd>
+
+<dt>Using ArgoUML</dt>
+<dd>
+ <ul>
+<li><a href="http://argouml.tigris.org/support.html">Support</a></li>
+<li><a href="http://argouml-stats.tigris.org/documentation/quickguide-0.32/">Quick guide 0.32</a></li>
+<li><a href="http://argouml-stats.tigris.org/documentation/manual-0.32/">User Manual 0.32</a></li>
+<li><a href="http://argouml.tigris.org/servlets/SummarizeList?listName=users">Users' mailing list</a></li>
+<li><a href="http://argouml.tigris.org/documentation/">Documentation</a></li>
+<li><a href="http://argouml.tigris.org/tours/">Tour</a></li>
+<li><a href="http://argouml-downloads.tigris.org/">Downloads</a></li>
+ </ul>
+
+<!-- The project_header and project_footer files don't seem to work -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-682460-2";
+urchinTracker();
+</script>
+
+   </dd> 
+    
+ </dl>
+ 
+
+
+
+
+<form action="http://argouml.tigris.org/servlets/Search" method="get">
+ <dl id="searchbox" class="navgroup">
+  
+      <dt>Search</dt>
+  <dd>
+   <div>
+       <select name="scope">
+           <option value="project" selected="selected">This project</option>
+               <option value="domain" >All projects</option>
+    </select>
+      </div>
+   <div>
+    <input type="hidden" name="resultsPerPage" value="40" /> 
+    <input type="text" name="query" size="10" maxlength="99" /> 
+    <input type="submit" name="Button" value="Go" />
+   </div>
+   <div>
+       <a href="http://argouml.tigris.org/servlets/Search?mode=advanced">Advanced search</a>   </div>
+  </dd>
+
+ </dl>
+</form>
+
+
+<div style="padding: 6px; padding-left: 20px;">
+ <a href="http://www.collab.net/special/clickpbc0502.html" onclick="return launch(this.href, 1)"><img src="../branding/images/poweredby.gif" alt="This site is Powered by CollabNet." id="poweredbycollabnet" width="102" height="38" /></a>
+</div>
+
+<dl id="helptext" class="navgroup">
+ <dt>How do I...</dt>
+ <dd>
+  <ul>
+      
+ 
+ <li>  <a href="http://www.tigris.org/scdocs/wiki" onclick="return launch(this.href, 1)" 
+ title="Note: link may open in new window" class="helplink">
+ 
+ Learn about project wikis?</a>
+</li>
+ 
+ 
+     
+   <li> <a href="http://www.collab.net/rn/" onclick="return launch(this.href, 1)" 
+ title="Note: link may open in new window" class="helplink">
+ 
+ Get release notes for CollabNet 5.3.0?</a>
+</li>
+
+   <li><a href="http://argouml.tigris.org/nonav/servlets/HelpTOC" onclick="return launch(this.href, 1)" 
+title="Note: link may open in new window" class="helplink">Get help?</a></li>
+  </ul>
+ </dd>
+</dl>
+
+<!-- Begin include NavColumn-bottom -->
+<div id="mainhighlights">        
+
+<table border="0" cellspacing="0" cellpadding="3"  width="100%">
+ <tr>
+  <th>Category</th>
+  <th>Featured projects</th>
+ </tr>
+ <tr>
+  <td><a href="http://scm.tigris.org/">scm</a></td>
+  <td><a href="http://subversion.tigris.org/" title="open source version control">Subversion</a>, 
+<a href="http://subclipse.tigris.org/" title="Subversion Eclipse integration">Subclipse</a>,
+<a href="http://tortoisesvn.tigris.org/" title="Subversion client">TortoiseSVN</a>,
+<a href="http://rapidsvn.tigris.org/" title="Subversion client">RapidSVN</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://issuetrack.tigris.org/">issuetrack</a></td>
+  <td><a href="http://scarab.tigris.org/" title="customizable software defect tracking system">Scarab</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://requirements.tigris.org/">requirements</a></td>
+  <td><a href="http://xmlbasedsrs.tigris.org/">xmlbasedsrs</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://design.tigris.org/">design</a></td>
+  <td><a href="http://argouml.tigris.org/" title="Free UML tool, use cases, uml tutorials">ArgoUML</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://techcomm.tigris.org/">techcomm</a></td>
+  <td><a href="http://subetha.tigris.org/" title="Mailing list manager">SubEtha</a>, 
+  <a href="http://eyebrowse.tigris.org/" title="Mailing list archive tool">eyebrowse</a>, 
+<a href="http://midgard.tigris.org/">midgard</a>,
+<a href="http://cowiki.tigris.org/">cowiki</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://construction.tigris.org/">construction</a></td>
+  <td><a href="http://antelope.tigris.org/" title="Ant GUI">antelope</a>,
+  <a href="http://scons.tigris.org/" title="cross-platform build tool">scons</a>,
+  <a href="http://frameworx.tigris.org/">frameworx</a>,
+  <a href="http://build-interceptor.tigris.org/">build-interceptor</a>,
+  <a href="http://propel.tigris.org/">propel</a>,
+  <a href="http://phing.tigris.org/">phing</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://testing.tigris.org/" title="tools for quality software">testing</a></td>
+  <td><a href="http://maxq.tigris.org/" title="record and playback web automated testing tool">maxq</a>, 
+<a href="http://aut.tigris.org/" title="advanced unit testing">aut</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://deployment.tigris.org/">deployment</a></td>
+  <td><a href="http://current.tigris.org/">current</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://process.tigris.org/" title="software development process, extreme programming">process</a></td>
+  <td><a href="http://readyset.tigris.org/" 
+title="Use case template, example test plans, software requirements specification templates, sample project plan template">ReadySET</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://libraries.tigris.org/" title="software reuse, web services">libraries</a></td>
+  <td><a href="http://gef.tigris.org/" title="Graphical diagram editing">GEF</a>, 
+<a href="http://axion.tigris.org/" title="Relational database">Axion</a>, 
+<a href="http://style.tigris.org/" title="Reusable CSS stylesheets">Style</a>,
+<a href="http://sstree.tigris.org/" title="Super-simple trees in HTML, CSS, and javascript">SSTree</a>
+ </td>
+ </tr>
+ <tr>
+  <td colspan="2" style="text-align:center">Over 500 <a style="text-decoration:underline;" 
+  href="http://www.tigris.org/servlets/ProjectList">more tools...</a></td>
+ </tr>
+</table>
+
+
+
+<table border="0" cellspacing="2" cellpadding="3"  width="100%" style="margin-top: 15px;">
+ <tr>
+  <th>Subversion and IDEs</th>
+ </tr>
+ <tr>
+ <td>
+ <a href="http://subclipse.tigris.org/">Eclipse</a>
+ </td>
+ </tr>
+  <tr>
+ <td>
+ <a href="http://www.oracle.com/technology/products/jdev/htdocs/partners/addins/exchange/subversion/subversion.html">JDeveloper</a>
+ </td>
+ </tr>
+  <tr>
+ <td>
+ <a href="http://subversion.netbeans.org/">NetBeans</a>
+ </td>
+ </tr>
+ <tr>
+  <td>
+ <a href="http://ankhsvn.open.collab.net/">Visual Studio</a>
+ </td>
+ </tr>
+ <tr>
+  <td>
+ <a
+ href="http://www.open.collab.net/cloud/?cid=tigriscodesion">Subversion Hosting</a>
+ </td>
+ </tr>
+ </table>
+ 
+<br/>
+ 
+<table border="0" cellspacing="2" cellpadding="3"  width="100%" style="margin-top: 15px;">
+  <tr>
+    <th>Tigris.org (Whole-Site) Admin Contacts</th>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Announcements mail list" target="_blank"
+      href="mailto:announce-subscribe@www.tigris.org">Announcements</a> mail list
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Blog" target="_blank"
+      href="http://tigrisdotorg.wordpress.com">Status Blog</a> at WordPress
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a title="Twitter" target="_blank" href="http://twitter.com/tigrisdotorg">@tigrisdotorg</a> on Twitter
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Problems" target="_blank"
+      href="mailto:feedback@tigris.org">Problem reports</a>
+      on the whole site
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Problems and suggestions about individual projects should
+  go to users@thatproject.tigris.org
+    </td>
+  </tr>
+  </table>
+</div>
+
+<!-- End include NavColumn-bottom -->
+
+
+
+ 
+ 
+<div class="strut">&nbsp;</div>
+</td>
+<td id="midcol">
+ 
+  <div id="bodycol">
+<div id="apphead">
+<h1><small>argouml</small><br />         Wiki: PageHits
+    </h1>
+</div>
+ 
+ 
+ 
+        
+                 
+                 
+           
+    
+  
+
+ 
+ 
+
+
+
+
+
+<div class="wiki">
+
+<p class="tasknav inline">
+<span class="disabled">Edit this page</span> | <a class="backlink" title="Click to do a full-text search for this title" href="http://argouml.tigris.org/wiki/PageHits?action=fullsearch&amp;value=linkto%3A%22PageHits%22&amp;context=180">Links to this page</a> | <a href="http://argouml.tigris.org/wiki/PageHits?action=info">Page information</a> | <a href="http://argouml.tigris.org/wiki/PageHits?action=AttachFile">Attachments</a> | <a href="PageHits.html">Refresh page</a>
+</p>
+&nbsp;
+
+<form class="actionsmenu inline" method="get" action="PageHits.html" style="display: inline;">
+<div class="inline">
+    <label></label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected>More Actions:</option>
+<option value="raw">Raw Text</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+    </select>
+    <noscript>
+    <input type="submit" value="Submit">
+    </noscript>
+</div>
+<script type="text/javascript">
+</script>
+</form>
+
+
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line874">This ranking shows how often a page was requested since logging began. It  <span class="anchor" id="line-8"></span>provides just a simple count of requests per page, each request being logged <span class="anchor" id="line-9"></span>as a single hit. <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line867"><ol><li><tt>186565 </tt><a href="FrontPage.html">FrontPage</a></li><li><tt>141972 </tt><a href="RecentChanges.html">RecentChanges</a></li><li><tt>128639 </tt><a href="TitleIndex.html">TitleIndex</a></li><li><tt>124228 </tt><a href="WordIndex.html">WordIndex</a></li><li><tt>106826 </tt><a href="PageHits.html">PageHits</a></li><li><tt>&nbsp;55843 </tt><a href="PageSize.html">PageSize</a></li><li><tt>&nbsp;27264 </tt><a href="FrontPage/Wiki.html">FrontPage/Wiki</a></li><li><tt>&nbsp;22035 </tt><a href="Setting_up_Eclipse_3.html">Setting up Eclipse 3</a></li><li><tt>&nbsp;20835 </tt><a href="Cookbook.html">Cookbook</a></li><li><tt>&nbsp;18287 </tt><a href="AbandonedPages.html">AbandonedPages</a></li><li><tt>&nbsp;17508 </tt><a href="ReleaseSchedule.html">ReleaseSchedule</a></li><li><tt>&nbsp;15590 </tt><a href="UML_2.x_support.html">UML 2.x support</a></li><li><tt>&nbsp;11793 </tt><a href="Building_from_source.html">Building from source</a></li><li><tt>&nbsp;11077 </tt><a href="FindPage.html">FindPage</a></li><li><tt>&nbsp;&nbsp;9606 </tt><a href="Changes_from_UML_1.x_to_UML_2.x.html">Changes from UML 1.x to UML 2.x</a></li><li><tt>&nbsp;&nbsp;9090 </tt><a href="Design.html">Design</a></li><li><tt>&nbsp;&nbsp;8695 </tt><a href="About_the_project.html">About the project</a></li><li><tt>&nbsp;&nbsp;8407 </tt><a href="CategoryFromCookbook.html">CategoryFromCookbook</a></li><li><tt>&nbsp;&nbsp;8001 </tt><a href="Team_Project_Set_Files_For_ArgoUML.html">Team Project Set Files For ArgoUML</a></li><li><tt>&nbsp;&nbsp;7564 </tt><a href="Extending_ArgoUML.html">Extending ArgoUML</a></li><li><tt>&nbsp;&nbsp;7444 </tt><a href="The_Basics.html">The Basics</a></li><li><tt>&nbsp;&nbsp;7229 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Diagrams.html">&lt;&lt;Subsystem&gt;&gt; Diagrams</a></li><li><tt>&nbsp;&nbsp;7105 </tt><a href="SystemPages.html">SystemPages</a></li><li><tt>&nbsp;&nbsp;6707 </tt><a href="CategoryFurtherDevelopment.html">CategoryFurtherDevelopment</a></li><li><tt>&nbsp;&nbsp;6625 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Profile.html">&lt;&lt;Subsystem&gt;&gt; Profile</a></li><li><tt>&nbsp;&nbsp;6529 </tt><a href="WikiSandBox.html">WikiSandBox</a></li><li><tt>&nbsp;&nbsp;6501 </tt><a href="How_to_contribute.html">How to contribute</a></li><li><tt>&nbsp;&nbsp;6387 </tt><a href="HelpOnMacros/MonthCalendar.html">HelpOnMacros/MonthCalendar</a></li><li><tt>&nbsp;&nbsp;6326 </tt><a href="Strategic_Planning.html">Strategic Planning</a></li><li><tt>&nbsp;&nbsp;6077 </tt><a href="HelpForBeginners.html">HelpForBeginners</a></li><li><tt>&nbsp;&nbsp;5604 </tt><a href="linus.html">linus</a></li><li><tt>&nbsp;&nbsp;5576 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Model.html">&lt;&lt;Subsystem&gt;&gt; Model</a></li><li><tt>&nbsp;&nbsp;5449 </tt><a href="Quick_Start.html">Quick Start</a></li><li><tt>&nbsp;&nbsp;5324 </tt><a href="ArgoUML_requirements.html">ArgoUML requirements</a></li><li><tt>&nbsp;&nbsp;5228 </tt><a href="Downloading_from_the_Subversion_repository.html">Downloading from the Subversion repository</a></li><li><tt>&nbsp;&nbsp;5088 </tt><a href="Definition_of_subsystem.html">Definition of subsystem</a></li><li><tt>&nbsp;&nbsp;4823 </tt><a href="Making_a_release.html">Making a release</a></li><li><tt>&nbsp;&nbsp;4788 </tt><a href="Processes_for_the_ArgoUML_project.html">Processes for the ArgoUML project</a></li><li><tt>&nbsp;&nbsp;4734 </tt><a href="Repository_Comparison_With_Model_Interface.html">Repository Comparison With Model Interface</a></li><li><tt>&nbsp;&nbsp;4630 </tt><a href="UML2,_Profiles_and_XMI.html">UML2, Profiles and XMI</a></li><li><tt>&nbsp;&nbsp;4503 </tt><a href="Undo.html">Undo</a></li><li><tt>&nbsp;&nbsp;4430 </tt><a href="HelpOnFormatting.html">HelpOnFormatting</a></li><li><tt>&nbsp;&nbsp;4416 </tt><a href="SiteNavigation.html">SiteNavigation</a></li><li><tt>&nbsp;&nbsp;4318 </tt><a href="FrontPage/Project.html">FrontPage/Project</a></li><li><tt>&nbsp;&nbsp;4311 </tt><a href="FrontPage/Documentation.html">FrontPage/Documentation</a></li><li><tt>&nbsp;&nbsp;4179 </tt><a href="Status_of_eUML.html">Status of eUML</a></li><li><tt>&nbsp;&nbsp;4138 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Code_Generation_Subsystem.html">&lt;&lt;Subsystem&gt;&gt; Code Generation Subsystem</a></li><li><tt>&nbsp;&nbsp;4085 </tt><a href="Tasks_for_UML_2.x_Support.html">Tasks for UML 2.x Support</a></li><li><tt>&nbsp;&nbsp;4009 </tt><a href="Build_Process.html">Build Process</a></li><li><tt>&nbsp;&nbsp;3932 </tt><a href="HelpOnMacros.html">HelpOnMacros</a></li><li><tt>&nbsp;&nbsp;3853 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Critics_and_other_cognitive_tools.html">&lt;&lt;Subsystem&gt;&gt; Critics and other cognitive tools</a></li><li><tt>&nbsp;&nbsp;3845 </tt><a href="Ideas_for_improving_code_generation.html">Ideas for improving code generation</a></li><li><tt>&nbsp;&nbsp;3830 </tt><a href="FrequentlyAskedQuestions.html">FrequentlyAskedQuestions</a></li><li><tt>&nbsp;&nbsp;3813 </tt><a href="Source_layout.html">Source layout</a></li><li><tt>&nbsp;&nbsp;3810 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Property_panels/Old_Implementation.html">&lt;&lt;Subsystem&gt;&gt; Property panels/Old Implementation</a></li><li><tt>&nbsp;&nbsp;3796 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Explorer.html">&lt;&lt;Subsystem&gt;&gt; Explorer</a></li><li><tt>&nbsp;&nbsp;3728 </tt><a href="ArgoUML_Design,_The_Big_Picture.html">ArgoUML Design, The Big Picture</a></li><li><tt>&nbsp;&nbsp;3708 </tt><a href="&lt;&lt;Layer&gt;&gt;_View_and_Control_subsystems.html">&lt;&lt;Layer&gt;&gt; View and Control subsystems</a></li><li><tt>&nbsp;&nbsp;3683 </tt><a href="XSD.html">XSD</a></li><li><tt>&nbsp;&nbsp;3651 </tt><a href="thn.html">thn</a></li><li><tt>&nbsp;&nbsp;3645 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Java_-_Code_Generation_and_Reverse_Engineering.html">&lt;&lt;Subsystem&gt;&gt; Java - Code Generation and Reverse Engineering</a></li><li><tt>&nbsp;&nbsp;3641 </tt><a href="Module_Development.html">Module Development</a></li><li><tt>&nbsp;&nbsp;3478 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Application.html">&lt;&lt;Subsystem&gt;&gt; Application</a></li><li><tt>&nbsp;&nbsp;3470 </tt><a href="Javadocs_index.html">Javadocs index</a></li><li><tt>&nbsp;&nbsp;3432 </tt><a href="&lt;&lt;Layer&gt;&gt;_Low-level_subsystems.html">&lt;&lt;Layer&gt;&gt; Low-level subsystems</a></li><li><tt>&nbsp;&nbsp;3415 </tt><a href="When_Writing_Java_Code.html">When Writing Java Code</a></li><li><tt>&nbsp;&nbsp;3411 </tt><a href="Working_with_the_Wiki.html">Working with the Wiki</a></li><li><tt>&nbsp;&nbsp;3358 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Module_loader.html">&lt;&lt;Subsystem&gt;&gt; Module loader</a></li><li><tt>&nbsp;&nbsp;3349 </tt><a href="Ideas_for_GSoC_2010.html">Ideas for GSoC 2010</a></li><li><tt>&nbsp;&nbsp;3329 </tt><a href="HelpIndex.html">HelpIndex</a></li><li><tt>&nbsp;&nbsp;3238 </tt><a href="eUML.html">eUML</a></li><li><tt>&nbsp;&nbsp;3238 </tt><a href="Preparations_for_building.html">Preparations for building</a></li><li><tt>&nbsp;&nbsp;3182 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_The_GUI.html">&lt;&lt;Subsystem&gt;&gt; The GUI</a></li><li><tt>&nbsp;&nbsp;3181 </tt><a href="XMLDiagramElements.html">XMLDiagramElements</a></li><li><tt>&nbsp;&nbsp;3142 </tt><a href="The_JUnit_test_cases.html">The JUnit test cases</a></li><li><tt>&nbsp;&nbsp;3112 </tt><a href="&lt;&lt;Layer&gt;&gt;_Loadable_subsystems.html">&lt;&lt;Layer&gt;&gt; Loadable subsystems</a></li><li><tt>&nbsp;&nbsp;3085 </tt><a href="FrontPage/SpecificPurposes.html">FrontPage/SpecificPurposes</a></li><li><tt>&nbsp;&nbsp;3026 </tt><a href="UML_2.x_Model_Interchange.html">UML 2.x Model Interchange</a></li><li><tt>&nbsp;&nbsp;3019 </tt><a href="FrontPage/CurrentDiscussions.html">FrontPage/CurrentDiscussions</a></li><li><tt>&nbsp;&nbsp;3002 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Internationalization.html">&lt;&lt;Subsystem&gt;&gt; Internationalization</a></li><li><tt>&nbsp;&nbsp;2892 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Other_source_languages_(C++,_Python,_etc).html">&lt;&lt;Subsystem&gt;&gt; Other source languages (C++, Python, etc)</a></li><li><tt>&nbsp;&nbsp;2878 </tt><a href="Generating_documentation.html">Generating documentation</a></li><li><tt>&nbsp;&nbsp;2876 </tt><a href="CategoryFix.html">CategoryFix</a></li><li><tt>&nbsp;&nbsp;2829 </tt><a href="FrontPage/StaticChecksResult.html">FrontPage/StaticChecksResult</a></li><li><tt>&nbsp;&nbsp;2823 </tt><a href="FrontPage/Members.html">FrontPage/Members</a></li><li><tt>&nbsp;&nbsp;2807 </tt><a href="FrontPage/Welcome.html">FrontPage/Welcome</a></li><li><tt>&nbsp;&nbsp;2787 </tt><a href="Using_Eclipse.html">Using Eclipse</a></li><li><tt>&nbsp;&nbsp;2753 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Notation.html">&lt;&lt;Subsystem&gt;&gt; Notation</a></li><li><tt>&nbsp;&nbsp;2747 </tt><a href="Demo_of_the_eUML_Subsystem.html">Demo of the eUML Subsystem</a></li><li><tt>&nbsp;&nbsp;2744 </tt><a href="The_ArgoUML_development_environment.html">The ArgoUML development environment</a></li><li><tt>&nbsp;&nbsp;2714 </tt><a href="FrontPage/Goals.html">FrontPage/Goals</a></li><li><tt>&nbsp;&nbsp;2700 </tt><a href="FrontPage/Status.html">FrontPage/Status</a></li><li><tt>&nbsp;&nbsp;2694 </tt><a href="Repository_Contents.html">Repository Contents</a></li><li><tt>&nbsp;&nbsp;2660 </tt><a href="SystemInfo.html">SystemInfo</a></li><li><tt>&nbsp;&nbsp;2645 </tt><a href="FrontPage/Research.html">FrontPage/Research</a></li><li><tt>&nbsp;&nbsp;2638 </tt><a href="Ideas_for_GSoC_2009.html">Ideas for GSoC 2009</a></li><li><tt>&nbsp;&nbsp;2636 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Property_panels.html">&lt;&lt;Subsystem&gt;&gt; Property panels</a></li><li><tt>&nbsp;&nbsp;2631 </tt><a href="&lt;&lt;Layer&gt;&gt;_Top_Level_subsystem.html">&lt;&lt;Layer&gt;&gt; Top Level subsystem</a></li><li><tt>&nbsp;&nbsp;2629 </tt><a href="Password_for_the_Source_Repository.html">Password for the Source Repository</a></li><li><tt>&nbsp;&nbsp;2618 </tt><a href="Relationship_of_the_subsystems.html">Relationship of the subsystems</a></li><li><tt>&nbsp;&nbsp;2612 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_OCL.html">&lt;&lt;Subsystem&gt;&gt; OCL</a></li><li><tt>&nbsp;&nbsp;2576 </tt><a href="SyntaxReference.html">SyntaxReference</a></li><li><tt>&nbsp;&nbsp;2571 </tt><a href="Templated_Code_Generation_Design.html">Templated Code Generation Design</a></li><li><tt>&nbsp;&nbsp;2544 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_To_Do_items.html">&lt;&lt;Subsystem&gt;&gt; To Do items</a></li><li><tt>&nbsp;&nbsp;2528 </tt><a href="Using_GIT_and_Gerrit.html">Using GIT and Gerrit</a></li><li><tt>&nbsp;&nbsp;2465 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Logging.html">&lt;&lt;Subsystem&gt;&gt; Logging</a></li><li><tt>&nbsp;&nbsp;2440 </tt><a href="ReleaseSchedule/Past_Releases_in_Detail.html">ReleaseSchedule/Past Releases in Detail</a></li><li><tt>&nbsp;&nbsp;2376 </tt><a href="CategoryDeveloper.html">CategoryDeveloper</a></li><li><tt>&nbsp;&nbsp;2375 </tt><a href="When_Considering_Dependencies.html">When Considering Dependencies</a></li><li><tt>&nbsp;&nbsp;2351 </tt><a href="Notation_Architecture.html">Notation Architecture</a></li><li><tt>&nbsp;&nbsp;2341 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Persistence.html">&lt;&lt;Subsystem&gt;&gt; Persistence</a></li><li><tt>&nbsp;&nbsp;2328 </tt><a href="linus/Todo.html">linus/Todo</a></li><li><tt>&nbsp;&nbsp;2322 </tt><a href="Fig_Events_Architecture.html">Fig Events Architecture</a></li><li><tt>&nbsp;&nbsp;2306 </tt><a href="mvw.html">mvw</a></li><li><tt>&nbsp;&nbsp;2283 </tt><a href="Attributes_of_an_issue.html">Attributes of an issue</a></li><li><tt>&nbsp;&nbsp;2279 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Help_System.html">&lt;&lt;Subsystem&gt;&gt; Help System</a></li><li><tt>&nbsp;&nbsp;2275 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Configuration.html">&lt;&lt;Subsystem&gt;&gt; Configuration</a></li><li><tt>&nbsp;&nbsp;2264 </tt><a href="Module_Architecture.html">Module Architecture</a></li><li><tt>&nbsp;&nbsp;2256 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_TaskManagement.html">&lt;&lt;Subsystem&gt;&gt; TaskManagement</a></li><li><tt>&nbsp;&nbsp;2252 </tt><a href="&lt;&lt;Subsystem&gt;&gt;_Reverse_Engineering_Subsystem.html">&lt;&lt;Subsystem&gt;&gt; Reverse Engineering Subsystem</a></li><li><tt>&nbsp;&nbsp;2235 </tt><a href="Organization_of_ArgoUML_documentation.html">Organization of ArgoUML documentation</a></li><li><tt>&nbsp;&nbsp;2214 </tt><a href="Ideas_for_GSoC_2011.html">Ideas for GSoC 2011</a></li><li><tt>&nbsp;&nbsp;2194 </tt><a href="License.html">License</a></li><li><tt>&nbsp;&nbsp;2168 </tt><a href="ArgoEclipse.html">ArgoEclipse</a></li><li><tt>&nbsp;&nbsp;2109 </tt><a href="External_subsystems.html">External subsystems</a></li><li><tt>&nbsp;&nbsp;2106 </tt><a href="Settings_for_NetBeans.html">Settings for NetBeans</a></li><li><tt>&nbsp;&nbsp;2096 </tt><a href="HelpOnEditing.html">HelpOnEditing</a></li><li><tt>&nbsp;&nbsp;2088 </tt><a href="Model_Interface_Criticisms.html">Model Interface Criticisms</a></li><li><tt>&nbsp;&nbsp;2082 </tt><a href="How_to_resolve_an_Issue.html">How to resolve an Issue</a></li><li><tt>&nbsp;&nbsp;2077 </tt><a href="Docbook_editing_For_Emacs_Users.html">Docbook editing For Emacs Users</a></li><li><tt>&nbsp;&nbsp;2073 </tt><a href="CategoryCategory.html">CategoryCategory</a></li><li><tt>&nbsp;&nbsp;2062 </tt><a href="Setting_up_Maven.html">Setting up Maven</a></li><li><tt>&nbsp;&nbsp;2020 </tt><a href="HelpOnLinking.html">HelpOnLinking</a></li><li><tt>&nbsp;&nbsp;2017 </tt><a href="WikiCourse/BasicIntroduction/060_How_do_I_navigate%3F.html">WikiCourse/BasicIntroduction/060 How do I navigate?</a></li><li><tt>&nbsp;&nbsp;1986 </tt><a href="Moderation_of_a_mailing_list.html">Moderation of a mailing list</a></li><li><tt>&nbsp;&nbsp;1982 </tt><a href="Writing_Documentation_in_the_ArgoUML_Project.html">Writing Documentation in the ArgoUML Project</a></li><li><tt>&nbsp;&nbsp;1956 </tt><a href="HelpContents.html">HelpContents</a></li><li><tt>&nbsp;&nbsp;1902 </tt><a href="WantedPages.html">WantedPages</a></li><li><tt>&nbsp;&nbsp;1901 </tt><a href="WikiCourse/BasicIntroduction.html">WikiCourse/BasicIntroduction</a></li><li><tt>&nbsp;&nbsp;1880 </tt><a href="Model_Interface_History.html">Model Interface History</a></li><li><tt>&nbsp;&nbsp;1879 </tt><a href="The_big_picture_for_Issues.html">The big picture for Issues</a></li><li><tt>&nbsp;&nbsp;1875 </tt><a href="Docbook_editing_For_Eclipse_Users.html">Docbook editing For Eclipse Users</a></li><li><tt>&nbsp;&nbsp;1858 </tt><a href="How_to_Create_a_Stable_Release.html">How to Create a Stable Release</a></li><li><tt>&nbsp;&nbsp;1845 </tt><a href="XSD/Primitive_Data_Types.html">XSD/Primitive Data Types</a></li><li><tt>&nbsp;&nbsp;1827 </tt><a href="XSD/Stereotypes.html">XSD/Stereotypes</a></li><li><tt>&nbsp;&nbsp;1808 </tt><a href="Martin_Skinners_Dissertation.html">Martin Skinners Dissertation</a></li><li><tt>&nbsp;&nbsp;1806 </tt><a href="Cut_and_Paste.html">Cut and Paste</a></li><li><tt>&nbsp;&nbsp;1800 </tt><a href="XSD/Multiplicity.html">XSD/Multiplicity</a></li><li><tt>&nbsp;&nbsp;1795 </tt><a href="DocBook_Conventions.html">DocBook Conventions</a></li><li><tt>&nbsp;&nbsp;1771 </tt><a href="HelpOnNavigation.html">HelpOnNavigation</a></li><li><tt>&nbsp;&nbsp;1732 </tt><a href="ReleaseSchedule/0.34_Development_Releases.html">ReleaseSchedule/0.34 Development Releases</a></li><li><tt>&nbsp;&nbsp;1700 </tt><a href="Roles_Of_The_Workers.html">Roles Of The Workers</a></li><li><tt>&nbsp;&nbsp;1695 </tt><a href="Using_Maven.html">Using Maven</a></li><li><tt>&nbsp;&nbsp;1689 </tt><a href="How_to_relate_issues_to_problems_in_dependencies.html">How to relate issues to problems in dependencies</a></li><li><tt>&nbsp;&nbsp;1684 </tt><a href="Making_a_release/Making_a_Stable_release.html">Making a release/Making a Stable release</a></li><li><tt>&nbsp;&nbsp;1682 </tt><a href="Ambitions_for_localization.html">Ambitions for localization</a></li><li><tt>&nbsp;&nbsp;1680 </tt><a href="Project_Members_with_Responsibilities.html">Project Members with Responsibilities</a></li><li><tt>&nbsp;&nbsp;1675 </tt><a href="Jason_Robbins_Dissertation.html">Jason Robbins Dissertation</a></li><li><tt>&nbsp;&nbsp;1669 </tt><a href="When_Committing_to_the_Repository.html">When Committing to the Repository</a></li><li><tt>&nbsp;&nbsp;1668 </tt><a href="ReleaseSchedule/0.32_Development_Releases.html">ReleaseSchedule/0.32 Development Releases</a></li><li><tt>&nbsp;&nbsp;1661 </tt><a href="User_Manual_Plans.html">User Manual Plans</a></li><li><tt>&nbsp;&nbsp;1643 </tt><a href="Jimi.html">Jimi</a></li><li><tt>&nbsp;&nbsp;1627 </tt><a href="Settings_for_Emacs.html">Settings for Emacs</a></li><li><tt>&nbsp;&nbsp;1622 </tt><a href="Facade.html">Facade</a></li><li><tt>&nbsp;&nbsp;1621 </tt><a href="Organizing_translators.html">Organizing translators</a></li><li><tt>&nbsp;&nbsp;1613 </tt><a href="ToDo.html">ToDo</a></li><li><tt>&nbsp;&nbsp;1601 </tt><a href="WikiConventions.html">WikiConventions</a></li><li><tt>&nbsp;&nbsp;1596 </tt><a href="Document_Conventions.html">Document Conventions</a></li><li><tt>&nbsp;&nbsp;1591 </tt><a href="HelpOnActions.html">HelpOnActions</a></li><li><tt>&nbsp;&nbsp;1589 </tt><a href="How_to_Close_an_Issue.html">How to Close an Issue</a></li><li><tt>&nbsp;&nbsp;1579 </tt><a href="RandomPage.html">RandomPage</a></li><li><tt>&nbsp;&nbsp;1549 </tt><a href="ReleaseSchedule/0.30_Development_Releases.html">ReleaseSchedule/0.30 Development Releases</a></li><li><tt>&nbsp;&nbsp;1543 </tt><a href="CategoryHomepage.html">CategoryHomepage</a></li><li><tt>&nbsp;&nbsp;1540 </tt><a href="Terminology.html">Terminology</a></li><li><tt>&nbsp;&nbsp;1518 </tt><a href="HelpOnParsers.html">HelpOnParsers</a></li><li><tt>&nbsp;&nbsp;1503 </tt><a href="HelpOnCategories.html">HelpOnCategories</a></li><li><tt>&nbsp;&nbsp;1503 </tt><a href="Branches_in_the_Repository.html">Branches in the Repository</a></li><li><tt>&nbsp;&nbsp;1498 </tt><a href="Terminology/Remove.html">Terminology/Remove</a></li><li><tt>&nbsp;&nbsp;1498 </tt><a href="./Stakeholder:_Developers_of_ArgoUML.html">Stakeholder: Developers of ArgoUML</a></li><li><tt>&nbsp;&nbsp;1481 </tt><a href="When_Working_with_the_Build_Process.html">When Working with the Build Process</a></li><li><tt>&nbsp;&nbsp;1467 </tt><a href="./Stakeholder:_User_of_ArgoUML.html">Stakeholder: User of ArgoUML</a></li><li><tt>&nbsp;&nbsp;1462 </tt><a href="HelpOnSlideShows.html">HelpOnSlideShows</a></li><li><tt>&nbsp;&nbsp;1457 </tt><a href="HelpOnSearching.html">HelpOnSearching</a></li><li><tt>&nbsp;&nbsp;1452 </tt><a href="Issue1048.html">Issue1048</a></li><li><tt>&nbsp;&nbsp;1451 </tt><a href="HelpOnActions/AttachFile.html">HelpOnActions/AttachFile</a></li><li><tt>&nbsp;&nbsp;1424 </tt><a href="WikiCourse/BasicIntroduction/210_Organisation_and_Structure.html">WikiCourse/BasicIntroduction/210 Organisation and Structure</a></li><li><tt>&nbsp;&nbsp;1422 </tt><a href="HelpOnParsers/ReStructuredText.html">HelpOnParsers/ReStructuredText</a></li><li><tt>&nbsp;&nbsp;1417 </tt><a href="WikiCourse/BasicIntroduction/900_Exercises.html">WikiCourse/BasicIntroduction/900 Exercises</a></li><li><tt>&nbsp;&nbsp;1413 </tt><a href="HelpOnAccessControlLists.html">HelpOnAccessControlLists</a></li><li><tt>&nbsp;&nbsp;1411 </tt><a href="DiagramPersistence.html">DiagramPersistence</a></li><li><tt>&nbsp;&nbsp;1407 </tt><a href="WikiCourse/BasicIntroduction/100_Text_markup.html">WikiCourse/BasicIntroduction/100 Text markup</a></li><li><tt>&nbsp;&nbsp;1402 </tt><a href="Strategic_Planning/0.30_Stable_Release.html">Strategic Planning/0.30 Stable Release</a></li><li><tt>&nbsp;&nbsp;1388 </tt><a href="WikiCourse/BasicIntroduction/090_The_Editor.html">WikiCourse/BasicIntroduction/090 The Editor</a></li><li><tt>&nbsp;&nbsp;1368 </tt><a href="ReleaseCriteria.html">ReleaseCriteria</a></li><li><tt>&nbsp;&nbsp;1368 </tt><a href="HelpOnPageCreation.html">HelpOnPageCreation</a></li><li><tt>&nbsp;&nbsp;1332 </tt><a href="penyaskito.html">penyaskito</a></li><li><tt>&nbsp;&nbsp;1332 </tt><a href="WikiCourse/BasicIntroductionHandOut.html">WikiCourse/BasicIntroductionHandOut</a></li><li><tt>&nbsp;&nbsp;1324 </tt><a href="Code_example_for_model_subsystem_usage.html">Code example for model subsystem usage</a></li><li><tt>&nbsp;&nbsp;1318 </tt><a href="OrphanedPages.html">OrphanedPages</a></li><li><tt>&nbsp;&nbsp;1316 </tt><a href="WikiWikiWeb.html">WikiWikiWeb</a></li><li><tt>&nbsp;&nbsp;1309 </tt><a href="Mailing_Lists.html">Mailing Lists</a></li><li><tt>&nbsp;&nbsp;1308 </tt><a href="XSD/Abstractions.html">XSD/Abstractions</a></li><li><tt>&nbsp;&nbsp;1308 </tt><a href="ReleaseSchedule/2010-02-14.html">ReleaseSchedule/2010-02-14</a></li><li><tt>&nbsp;&nbsp;1302 </tt><a href="XSD/Class_Associations.html">XSD/Class Associations</a></li><li><tt>&nbsp;&nbsp;1296 </tt><a href="ReleaseSchedule/2010-03-06.html">ReleaseSchedule/2010-03-06</a></li><li><tt>&nbsp;&nbsp;1292 </tt><a href="ReleaseSchedule/2009-12-01.html">ReleaseSchedule/2009-12-01</a></li><li><tt>&nbsp;&nbsp;1288 </tt><a href="./Responsibility:_Developer_role.html">Responsibility: Developer role</a></li><li><tt>&nbsp;&nbsp;1271 </tt><a href="ReleaseSchedule/2010-01-19.html">ReleaseSchedule/2010-01-19</a></li><li><tt>&nbsp;&nbsp;1266 </tt><a href="Test_Report_0.28.html">Test Report 0.28</a></li><li><tt>&nbsp;&nbsp;1263 </tt><a href="ReleaseSchedule/2010-02-19.html">ReleaseSchedule/2010-02-19</a></li><li><tt>&nbsp;&nbsp;1263 </tt><a href="HelpOnPageDeletion.html">HelpOnPageDeletion</a></li><li><tt>&nbsp;&nbsp;1256 </tt><a href="HelpOnEditing/SubPages.html">HelpOnEditing/SubPages</a></li><li><tt>&nbsp;&nbsp;1249 </tt><a href="WikiCourse/BasicIntroduction/050_First_Steps.html">WikiCourse/BasicIntroduction/050 First Steps</a></li><li><tt>&nbsp;&nbsp;1248 </tt><a href="ReleaseSchedule/2010-01-31.html">ReleaseSchedule/2010-01-31</a></li><li><tt>&nbsp;&nbsp;1233 </tt><a href="ReleaseSchedule/2010-02-06.html">ReleaseSchedule/2010-02-06</a></li><li><tt>&nbsp;&nbsp;1233 </tt><a href="HelpOnTables.html">HelpOnTables</a></li><li><tt>&nbsp;&nbsp;1230 </tt><a href="HelpOnSlideShows/000_Introduction.html">HelpOnSlideShows/000 Introduction</a></li><li><tt>&nbsp;&nbsp;1224 </tt><a href="ReleaseSchedule/2010-03-01.html">ReleaseSchedule/2010-03-01</a></li><li><tt>&nbsp;&nbsp;1220 </tt><a href="ReleaseSchedule/2010-02-20.html">ReleaseSchedule/2010-02-20</a></li><li><tt>&nbsp;&nbsp;1215 </tt><a href="HelpOnVariables.html">HelpOnVariables</a></li><li><tt>&nbsp;&nbsp;1213 </tt><a href="HelpOnSlideShows/900_Last_but_not_least:_Running_your_presentation..html">HelpOnSlideShows/900 Last but not least: Running your presentation.</a></li><li><tt>&nbsp;&nbsp;1213 </tt><a href="HelpOnSlideShows/100_Creating_the_slides.html">HelpOnSlideShows/100 Creating the slides</a></li><li><tt>&nbsp;&nbsp;1209 </tt><a href="HelpOnIcons.html">HelpOnIcons</a></li><li><tt>&nbsp;&nbsp;1206 </tt><a href="HelpOnLists.html">HelpOnLists</a></li><li><tt>&nbsp;&nbsp;1197 </tt><a href="ReleaseSchedule/2009-08-12.html">ReleaseSchedule/2009-08-12</a></li><li><tt>&nbsp;&nbsp;1181 </tt><a href="WikiHomePage.html">WikiHomePage</a></li><li><tt>&nbsp;&nbsp;1177 </tt><a href="ReleaseSchedule/2009-08-15.html">ReleaseSchedule/2009-08-15</a></li><li><tt>&nbsp;&nbsp;1175 </tt><a href="WikiSandBox/T11.html">WikiSandBox/T11</a></li><li><tt>&nbsp;&nbsp;1169 </tt><a href="ReleaseSchedule/2010-02-11.html">ReleaseSchedule/2010-02-11</a></li><li><tt>&nbsp;&nbsp;1169 </tt><a href="Expectation_for_all_roles_and_responsibilities.html">Expectation for all roles and responsibilities</a></li><li><tt>&nbsp;&nbsp;1166 </tt><a href="http://argouml.tigris.org/wiki/CategoryTemplate">CategoryTemplate</a></li><li><tt>&nbsp;&nbsp;1160 </tt><a href="WikiCourse/BasicIntroduction/195_Actions.html">WikiCourse/BasicIntroduction/195 Actions</a></li><li><tt>&nbsp;&nbsp;1160 </tt><a href="WikiCourse/BasicIntroduction/191_Creating_new_Pages.html">WikiCourse/BasicIntroduction/191 Creating new Pages</a></li><li><tt>&nbsp;&nbsp;1156 </tt><a href="HelpOnTemplates.html">HelpOnTemplates</a></li><li><tt>&nbsp;&nbsp;1149 </tt><a href="HelpOnEditLocks.html">HelpOnEditLocks</a></li><li><tt>&nbsp;&nbsp;1141 </tt><a href="HelpOnMacros/Include.html">HelpOnMacros/Include</a></li><li><tt>&nbsp;&nbsp;1140 </tt><a href="ReleaseSchedule/2009-10-08.html">ReleaseSchedule/2009-10-08</a></li><li><tt>&nbsp;&nbsp;1127 </tt><a href="ReleaseSchedule/2009-03-23.html">ReleaseSchedule/2009-03-23</a></li><li><tt>&nbsp;&nbsp;1126 </tt><a href="HelpOnRules.html">HelpOnRules</a></li><li><tt>&nbsp;&nbsp;1126 </tt><a href="FortuneCookies.html">FortuneCookies</a></li><li><tt>&nbsp;&nbsp;1124 </tt><a href="HelpOnHeadlines.html">HelpOnHeadlines</a></li><li><tt>&nbsp;&nbsp;1119 </tt><a href="HelpOnAdministration.html">HelpOnAdministration</a></li><li><tt>&nbsp;&nbsp;1116 </tt><a href="HelpOnMacros/ImageLink.html">HelpOnMacros/ImageLink</a></li><li><tt>&nbsp;&nbsp;1114 </tt><a href="WikiName.html">WikiName</a></li><li><tt>&nbsp;&nbsp;1112 </tt><a href="psf.html">psf</a></li><li><tt>&nbsp;&nbsp;1109 </tt><a href="WikiCourse.html">WikiCourse</a></li><li><tt>&nbsp;&nbsp;1102 </tt><a href="WikiCourse/BasicIntroduction/150_Tables.html">WikiCourse/BasicIntroduction/150 Tables</a></li><li><tt>&nbsp;&nbsp;1101 </tt><a href="WikiSandBox/T22.html">WikiSandBox/T22</a></li><li><tt>&nbsp;&nbsp;1091 </tt><a href="WikiSandBox/2009-03-15.html">WikiSandBox/2009-03-15</a></li><li><tt>&nbsp;&nbsp;1090 </tt><a href="WikiCourse/BasicIntroduction/130_Lists.html">WikiCourse/BasicIntroduction/130 Lists</a></li><li><tt>&nbsp;&nbsp;1088 </tt><a href="http://argouml.tigris.org/wiki/SubsystemTemplate">SubsystemTemplate</a></li><li><tt>&nbsp;&nbsp;1085 </tt><a href="WikiCourse/BasicIntroduction/110_Headlines_and_Paragraphs.html">WikiCourse/BasicIntroduction/110 Headlines and Paragraphs</a></li><li><tt>&nbsp;&nbsp;1083 </tt><a href="ReleaseSchedule/2009-11-17.html">ReleaseSchedule/2009-11-17</a></li><li><tt>&nbsp;&nbsp;1079 </tt><a href="WikiSandBox/T12.html">WikiSandBox/T12</a></li><li><tt>&nbsp;&nbsp;1072 </tt><a href="WikiSandBox/2009-03-12.html">WikiSandBox/2009-03-12</a></li><li><tt>&nbsp;&nbsp;1059 </tt><a href="InterWiki.html">InterWiki</a></li><li><tt>&nbsp;&nbsp;1050 </tt><a href="Terminology/Code_Generation_and_Reverse_Engineering.html">Terminology/Code Generation and Reverse Engineering</a></li><li><tt>&nbsp;&nbsp;1044 </tt><a href="WikiCourse/BasicIntroduction/180_Macros.html">WikiCourse/BasicIntroduction/180 Macros</a></li><li><tt>&nbsp;&nbsp;1033 </tt><a href="EventStats.html">EventStats</a></li><li><tt>&nbsp;&nbsp;1029 </tt><a href="WikiSandBox/T21.html">WikiSandBox/T21</a></li><li><tt>&nbsp;&nbsp;1025 </tt><a href="HelpOnParsers/ReStructuredText/RstPrimer.html">HelpOnParsers/ReStructuredText/RstPrimer</a></li><li><tt>&nbsp;&nbsp;1007 </tt><a href="XSD/Complex_Data_Types.html">XSD/Complex Data Types</a></li><li><tt>&nbsp;&nbsp;1006 </tt><a href="WikiCourse/BasicIntroduction/091_Tips_on_the_Editor.html">WikiCourse/BasicIntroduction/091 Tips on the Editor</a></li><li><tt>&nbsp;&nbsp;1002 </tt><a href="WikiCourse/BasicIntroduction/200_Wikiquette.html">WikiCourse/BasicIntroduction/200 Wikiquette</a></li><li><tt>&nbsp;&nbsp;&nbsp;994 </tt><a href="Terminology/Import.html">Terminology/Import</a></li><li><tt>&nbsp;&nbsp;&nbsp;968 </tt><a href="WikiCourse/BasicIntroduction/000_What_is_a_Wiki%3F.html">WikiCourse/BasicIntroduction/000 What is a Wiki?</a></li><li><tt>&nbsp;&nbsp;&nbsp;962 </tt><a href="XSD/Options.html">XSD/Options</a></li><li><tt>&nbsp;&nbsp;&nbsp;955 </tt><a href="EventStats/HitCounts.html">EventStats/HitCounts</a></li><li><tt>&nbsp;&nbsp;&nbsp;946 </tt><a href="Terminology/Add.html">Terminology/Add</a></li><li><tt>&nbsp;&nbsp;&nbsp;934 </tt><a href="HelpOnMacros/MailTo.html">HelpOnMacros/MailTo</a></li><li><tt>&nbsp;&nbsp;&nbsp;931 </tt><a href="Terminology/Dependency.html">Terminology/Dependency</a></li><li><tt>&nbsp;&nbsp;&nbsp;928 </tt><a href="EventStats/UserAgents.html">EventStats/UserAgents</a></li><li><tt>&nbsp;&nbsp;&nbsp;893 </tt><a href="Terminology/Todo_item.html">Terminology/Todo item</a></li><li><tt>&nbsp;&nbsp;&nbsp;893 </tt><a href="Terminology/Critique.html">Terminology/Critique</a></li><li><tt>&nbsp;&nbsp;&nbsp;888 </tt><a href="Terminology/New.html">Terminology/New</a></li><li><tt>&nbsp;&nbsp;&nbsp;887 </tt><a href="Terminology/Save.html">Terminology/Save</a></li><li><tt>&nbsp;&nbsp;&nbsp;884 </tt><a href="Terminology/Export.html">Terminology/Export</a></li><li><tt>&nbsp;&nbsp;&nbsp;876 </tt><a href="MissingPage.html">MissingPage</a></li><li><tt>&nbsp;&nbsp;&nbsp;867 </tt><a href="Terminology/Library.html">Terminology/Library</a></li><li><tt>&nbsp;&nbsp;&nbsp;866 </tt><a href="Terminology/Open.html">Terminology/Open</a></li><li><tt>&nbsp;&nbsp;&nbsp;863 </tt><a href="FigAssociation.html">FigAssociation</a></li><li><tt>&nbsp;&nbsp;&nbsp;859 </tt><a href="LocalBadContent.html">LocalBadContent</a></li><li><tt>&nbsp;&nbsp;&nbsp;857 </tt><a href="Terminology/Notation.html">Terminology/Notation</a></li><li><tt>&nbsp;&nbsp;&nbsp;857 </tt><a href="EditedSystemPages.html">EditedSystemPages</a></li><li><tt>&nbsp;&nbsp;&nbsp;854 </tt><a href="Terminology/Critic.html">Terminology/Critic</a></li><li><tt>&nbsp;&nbsp;&nbsp;842 </tt><a href="Terminology/Module.html">Terminology/Module</a></li><li><tt>&nbsp;&nbsp;&nbsp;788 </tt><a href="Terminology/Delete.html">Terminology/Delete</a></li><li><tt>&nbsp;&nbsp;&nbsp;697 </tt><a href="http://argouml.tigris.org/wiki/SlideShowTemplate">SlideShowTemplate</a></li><li><tt>&nbsp;&nbsp;&nbsp;602 </tt><a href="http://argouml.tigris.org/wiki/HomepageTemplate">HomepageTemplate</a></li><li><tt>&nbsp;&nbsp;&nbsp;549 </tt><a href="http://argouml.tigris.org/wiki/HelpTemplate">HelpTemplate</a></li><li><tt>&nbsp;&nbsp;&nbsp;433 </tt><a href="Github-based_development_environment.html">Github-based development environment</a></li><li><tt>&nbsp;&nbsp;&nbsp;384 </tt><a href="http://argouml.tigris.org/wiki/SlideTemplate">SlideTemplate</a></li><li><tt>&nbsp;&nbsp;&nbsp;350 </tt><a href="http://argouml.tigris.org/wiki/SlideShowHandOutTemplate">SlideShowHandOutTemplate</a></li><li><tt>&nbsp;&nbsp;&nbsp;&nbsp;54 </tt><a href="Working_with_git,_github,_gerrit,_gerrithub_and_repo.html">Working with git, github, gerrit, gerrithub and repo</a></li></ol> <span class="anchor" id="line-12"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">PageHits  (last modified 2008-12-02 07:43:20 -0700)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+
+</div>
+
+</div>
+</td>
+</tr>
+</table>
+ 
+ 
+ <div id="footer">
+    <a href="http://www.tigris.org/nonav/DomainFAQ"  onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Site FAQ</a> |
+<a href="http://www.tigris.org/nonav/DomainFeedback"  onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Feedback</a> |
+<a href="http://www.tigris.org/nonav/servlets/LegalNotices?type=TermsOfService" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Terms of service</a> | 
+<a href="http://www.tigris.org/nonav/servlets/LegalNotices?type=PrivacyPolicy" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Privacy policy</a> | 
+<a href="http://www.open.collab.net/cloud?cid=tigriscodesion" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Hosting</a> |
+<a href="http://www.collab.net/developers/tools/" onclick="return launch(this.href, 1)" title="Note: link may open in new window">Developer tools</a> 
+   
+   
+			   
+   <p>&#169; 2001 - 2009 CollabNet. CollabNet is a registered trademark of CollabNet, Inc.</p>
+
+   
+<div>
+<script type="text/javascript">
+// crazy egg code
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName('script')[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/6318.js";
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+// End crazy egg code
+</script>
+</div>
+
+ </div>
+ 
+ 
+</body>
+</html>

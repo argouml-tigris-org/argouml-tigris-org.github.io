@@ -1,0 +1,725 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+                 
+ 
+ <head>
+ <style type="text/css"> /* <![CDATA[ */
+ @import "../../branding/css/tigris.css";
+ @import "../../branding/css/inst.css";
+ /* ]]> */</style>
+ <link rel="stylesheet" type="text/css" href="../../branding/css/print.css" media="print" />
+ <script src="../../branding/scripts/tigris.js" type="text/javascript"></script>
+ <script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+  
+             
+ 
+  <script src="../../branding/scripts/alm.js" type="text/javascript"></script>
+  <style type="text/css">
+     /* <![CDATA[ */
+     @import "../../branding/css/alm.css";
+         /* ]]> */
+  </style>
+
+  
+ 
+               
+ 
+  
+ 
+               
+ 
+ 
+ <script src="../../branding/scripts/wiki.js" type="text/javascript"></script>
+
+    
+ <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../branding/css/wiki/cee/css/common.css" />
+ <link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../branding/css/wiki/cee/css/screen.css" />
+
+  
+ <link rel="Start" href="http://argouml.tigris.org/wiki/%3C%3CSubsystem%3E%3E_Property_panels/FrontPage" />
+ <link rel="Alternate" title="Wiki Markup" href="http://argouml.tigris.org/wiki/%3c%3cSubsystem%3e%3e_Property_panels/Old_Implementation?action=raw" />
+ <link rel="Alternate" media="print" title="Print View" href="http://argouml.tigris.org/wiki/%3c%3cSubsystem%3e%3e_Property_panels/Old_Implementation?action=print" />
+ <link rel="Search" href="http://argouml.tigris.org/wiki/%3C%3CSubsystem%3E%3E_Property_panels/FindPage" />
+ <link rel="Index" href="http://argouml.tigris.org/wiki/%3C%3CSubsystem%3E%3E_Property_panels/TitleIndex" />
+ <link rel="Glossary" href="http://argouml.tigris.org/wiki/%3C%3CSubsystem%3E%3E_Property_panels/WordIndex" />
+ <link rel="Help" href="http://argouml.tigris.org/wiki/%3C%3CSubsystem%3E%3E_Property_panels/HelpOnFormatting" />
+ 
+ 
+                                                 <title>
+        argouml:        Wiki: &lt;&lt;Subsystem&gt;&gt; Property panels/Old Implementation
+    </title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <meta http-equiv="Content-Style-Type" content="text/css" />
+ <meta name="version" content="5.3.0.167.5" />
+ <meta name="google-site-verification" content="FRRR8-RLGasBA76ejzXypMklVl0cwg9sna2rgSS4iHk" />
+ <meta name="keywords" content="Defect Tracking, Issue Tracking, Version Control, Configuration Management, Software Configuration Management, SCM, CM, Revision Control, Software Engineering, Unit Testing, Outsourcing, Collaboration, Open Source, Software Development, Collaborative Software Development, Enterprise, Java, Web Services" />   
+<meta name="description" content="CollabNet, Facilitating Collaborative Software Development" /> <meta name="description" content="Open source software engineering" />
+
+ 
+
+<meta name="robots" content="index,nofollow">
+
+
+<script type="text/javascript" src="../../branding/css/wiki/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--// common functions
+
+// We keep here the state of the search box
+searchIsDisabled = false;
+
+function searchChange(e) {
+    // Update search buttons status according to search box content.
+    // Ignore empty or whitespace search term.
+    var value = e.value.replace(/\s+/, '');
+    if (value == '' || searchIsDisabled) { 
+        searchSetDisabled(true);
+    } else {
+        searchSetDisabled(false);
+    }
+}
+
+function searchSetDisabled(flag) {
+    // Enable or disable search
+    document.getElementById('fullsearch').disabled = flag;
+    document.getElementById('titlesearch').disabled = flag;
+}
+
+function searchFocus(e) {
+    // Update search input content on focus
+    if (e.value == 'Search') {
+        e.value = '';
+        e.className = '';
+        searchIsDisabled = false;
+    }
+}
+
+function searchBlur(e) {
+    // Update search input content on blur
+    if (e.value == '') {
+        e.value = 'Search';
+        e.className = 'disabled';
+        searchIsDisabled = true;
+    }
+}
+
+function actionsMenuInit(title) {
+    // Initialize action menu
+    for (i = 0; i < document.forms.length; i++) {
+        var form = document.forms[i];
+        if (form.className == 'actionsmenu') {
+            // Check if this form needs update
+            var div = form.getElementsByTagName('div')[0];
+            var label = div.getElementsByTagName('label')[0];
+            if (label) {
+                // This is the first time: remove label and do buton.
+                div.removeChild(label);
+                var dobutton = div.getElementsByTagName('input')[0];
+                div.removeChild(dobutton);
+                // and add menu title
+                var select = div.getElementsByTagName('select')[0];
+                var item = document.createElement('option');
+                item.appendChild(document.createTextNode(title));
+                item.value = 'show';
+                select.insertBefore(item, select.options[0]);
+                select.selectedIndex = 0;
+            }
+        }
+    }
+}
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../branding/css/wiki/cee/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../branding/css/wiki/cee/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="http://argouml.tigris.org/branding/css/wiki/cee/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="http://argouml.tigris.org/branding/css/wiki/cee/css/projection.css">
+
+<!-- css only for MSIE browsers -->
+<!--[if IE]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/branding/css/wiki/cee/css/msie.css">
+<![endif]-->
+
+
+
+<link rel="Start" href="../FrontPage.html">
+<link rel="Up" href="../&lt;&lt;Subsystem&gt;&gt;_Property_panels.html">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+
+ 
+  <!--   Single pic border tables -->
+ <style type="text/css">
+/* <![CDATA[ */
+
+table.sborder, table.sborder td
+{
+	border-color: #A9A9A9;
+	border-style: solid;
+}
+
+table.sborder
+{
+	border-width: 0 0 1px 1px;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+table.sborder td
+{
+	margin: 0;
+	padding: 4px;
+	border-width: 1px 1px 0 0;
+	background-color: #FFFFFF;
+}
+
+/* ]]> */
+</style>
+ 
+ <!--   Tigris Script to load random images -->
+ <SCRIPT LANGUAGE="JavaScript">
+var theImages = new Array()
+//Random-loading images
+theImages[0] = 'http://www.tigris.org/branding/images/banners/svn15support.gif' 
+theImages[1] = 'http://www.tigris.org/branding/images/banners/mergeclient.gif' 
+var p = theImages.length;
+
+var preBuffer = new Array()
+for (i = 0; i < p; i++){
+preBuffer[i] = new Image()
+preBuffer[i].src = theImages[i]
+}
+
+var whichImage = Math.round(Math.random()*(p-1));
+function showImage(){
+
+if(whichImage==0){
+document.write('<a href ="http://www.collab.net/services/subversion"><img src="http://argouml.tigris.org/wiki/%3C%3CSubsystem%3E%3E_Property_panels/'+theImages[whichImage]+'" border=0 width=175 height=60></a>');
+}
+else if(whichImage==1){
+document.write('<a href ="http://www.collab.net/subversion15-tigris"><img src="http://argouml.tigris.org/wiki/%3C%3CSubsystem%3E%3E_Property_panels/'+theImages[whichImage]+'" border=0 width=175 height=60></a>');
+}
+}
+</script>
+<!-- Google Aanalytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48365716-1', 'tigris.org');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Tracking code -->
+
+<!-- Sstart Muchkin code -->
+<script src="http://munchkin.marketo.net/munchkin.js" type="text/javascript"></script> 
+<script>mktoMunchkin("563-XAN-459");</script>
+<!-- End Munchkin code -->
+
+<!-- Start Visual Website Optimizer Asynchronous Code -->
+<script type='text/javascript'>
+var _vwo_code=(function(){
+var account_id=20080,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+// DO NOT EDIT BELOW THIS LINE
+f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+</script>
+<!-- End Visual Website Optimizer Asynchronous Code -->
+
+</head>
+ 
+ 
+<body  class="composite">
+ 
+ 
+ <div id="collabnet">
+ <div id="login"> 
+     <div>
+      <a href="http://www.tigris.org/servlets/Login?detour=http://argouml.tigris.org/wiki/%3c%3cSubsystem%3e%3e_Property_panels/Old_Implementation">Login</a>
+      |    <a href="http://www.tigris.org/servlets/Join">Register</a>    </div>
+ </div>
+ <a href="http://www.collab.net" id="cnlogo">
+<span class="alt">CollabNet Enterprise Edition</span></a>
+</div>
+ 
+ 
+ 
+ 
+ <div id="banner">
+</div>
+ 
+ 
+ 
+ 
+ <div id="banner">
+ <table width="100%" id="bannertable" cellpadding="0" cellspacing="0">
+   <tr>
+    <td rowspan="2" style="width: 50px;">
+    <a href="http://www.tigris.org/" title="Tigris.org:Defect
+Tracking,Issue Tracking,Version Control,Software Configuration
+Management,SCM,CM,Revision Control,Unit Testing,Software
+Engineering,Document Templates,Outsourcing,Collaboration,Open
+Source,Development,Enterprise,Java,Web Services">
+<img src="../../branding/images/logo.gif" alt="Tigris.org" id="tigrislogo" height="48" width="48" /></a>
+    </td>
+    <td style="min-width: 300px;" id="tigrisheading">
+     <div>Tigris.org</div>
+      <div class="smaller">Open Source Software Engineering Tools</div>
+    </td>
+    <td rowspan="2" style="width: 300px;" id="collabnote">
+      <table cellpadding="0" cellspacing="0">
+       <tr>
+        <td>
+        <a href="http://www.collab.net/products/teamforge/free-trial?cid=tigris" target="_blank"><img src="../../branding/images/banners/teamforge81.png" alt="CollabNet TeamForge 8.1" width="170" height="60" border="0"></a>
+       </td>
+	   <td>
+        <a href="http://www.collab.net/downloads/giteye?CID=tigris" target="_blank"><img src="../../branding/images/banners/GitEye-desktop.png" alt="GitEye Desktop" title="GitEye Desktop" width="170" height="60" border="0"></a>
+       </td>
+        <td>
+        <a href="http://www.open.collab.net/products/subversion" target="_blank"><img src="../../branding/images/banners/get-svn-binaries.png" alt="Get Certified Subversion Binaries" title="Get Certified Subversion Binaries" width="175" height="60" border="0"></a>
+       </td>
+       <td>
+	 <a href="http://www.cliqr.com/app-store/#!/CollabNet%20SVN/4.0.5/" target="_blank"><img src="../../branding/images/banners/svnedge-cliqr.png" alt="Git Download" title="Subversion Edge now available on Cliqr" width="170" height="60" border="0"></a>
+       </td>
+      </tr>
+     </table>  
+</td>
+</tr>
+</table>
+</div>
+<div id="toptabs">
+<table cellpadding="4" cellspacing="0" border="0"><tr>
+<td>   <a href="http://www.tigris.org/servlets/StartPage">My pages</a><td>
+<th>   <a href="http://www.tigris.org/servlets/ProjectList">Projects</a><th>
+  <td>   <a href="http://www.tigris.org/servlets/DomainHome">Community</a><td>
+		<td>   <a href="http://www.tigris.org/servlets/OpenCollabNet">openCollabNet</a><td>
+</tr></table>
+</div>
+  
+ 
+ <div id="breadcrumbs">
+   <a href="http://www.tigris.org/servlets/ProjectList?type=Projects">Projects</a>    >
+     
+
+   <strong>   <a href="http://argouml.tigris.org/"
+     >argouml</a>
+   </strong>  </div>
+ 
+ 
+ 
+ 
+<table border="0" cellspacing="0" cellpadding="4" width="100%" id="main">
+<tr>
+<td id="navcol">
+ 
+ 
+ 
+
+
+  
+             
+ 
+   
+ 
+ 
+                                                                       <dl id="projecttools" class="navgroup">
+   <dt>Project tools</dt>
+   <dd>
+    <ul>
+          <li>   <a href="http://argouml.tigris.org/servlets/ProjectHome">Project home</a></li>
+                               	</ul>
+       </dd>
+            <dd>
+   <!-- $Id: project_tools.html 19964 2019-07-10 07:55:56Z linus $ -->
+ <ul>
+<li><a href="http://argouml.tigris.org/servlets/ProjectNewsList">Project News</a>
+    <a href="http://argouml.tigris.org/servlets/WebFeed?artifact=news&amp;version=rss_2.0">
+      <img src="../../images/feed-icon.gif" alt="RSS Feed" width="10" height="10"/>
+    </a>
+</li>
+<li>
+  <a href="http://argouml.tigris.org/wiki">Developer Wiki</a>
+  <a href="../RecentChanges.html">RC</a>
+</li>
+<li><a href="http://argouml.tigris.org/project_bugs.html">Bugs and Issues</a>  </li>
+<li><a href="https://github.com/argouml-tigris-org">Source code</a>  </li>
+<li><a href="http://argouml.tigris.org/servlets/ProjectMemberList">Project Membership</a>  </li>
+<li>
+  <a href="http://argouml.tigris.org/ds/viewForums.do">Mailing lists</a>
+  <a href="http://argouml.markmail.org">MarkMail</a>
+</li>
+<li><a href="http://argouml.tigris.org/servlets/ProjectDocumentList">File Sharing</a>  </li>
+ </ul>
+</dd>
+
+<dt>Using ArgoUML</dt>
+<dd>
+ <ul>
+<li><a href="http://argouml.tigris.org/support.html">Support</a></li>
+<li><a href="http://argouml-stats.tigris.org/documentation/quickguide-0.32/">Quick guide 0.32</a></li>
+<li><a href="http://argouml-stats.tigris.org/documentation/manual-0.32/">User Manual 0.32</a></li>
+<li><a href="http://argouml.tigris.org/servlets/SummarizeList?listName=users">Users' mailing list</a></li>
+<li><a href="http://argouml.tigris.org/documentation/">Documentation</a></li>
+<li><a href="http://argouml.tigris.org/tours/">Tour</a></li>
+<li><a href="http://argouml-downloads.tigris.org/">Downloads</a></li>
+ </ul>
+
+<!-- The project_header and project_footer files don't seem to work -->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-682460-2";
+urchinTracker();
+</script>
+
+   </dd> 
+    
+ </dl>
+ 
+
+
+
+
+<form action="http://argouml.tigris.org/servlets/Search" method="get">
+ <dl id="searchbox" class="navgroup">
+  
+      <dt>Search</dt>
+  <dd>
+   <div>
+       <select name="scope">
+           <option value="project" selected="selected">This project</option>
+               <option value="domain" >All projects</option>
+    </select>
+      </div>
+   <div>
+    <input type="hidden" name="resultsPerPage" value="40" /> 
+    <input type="text" name="query" size="10" maxlength="99" /> 
+    <input type="submit" name="Button" value="Go" />
+   </div>
+   <div>
+       <a href="http://argouml.tigris.org/servlets/Search?mode=advanced">Advanced search</a>   </div>
+  </dd>
+
+ </dl>
+</form>
+
+
+<div style="padding: 6px; padding-left: 20px;">
+ <a href="http://www.collab.net/special/clickpbc0502.html" onclick="return launch(this.href, 1)"><img src="../../branding/images/poweredby.gif" alt="This site is Powered by CollabNet." id="poweredbycollabnet" width="102" height="38" /></a>
+</div>
+
+<dl id="helptext" class="navgroup">
+ <dt>How do I...</dt>
+ <dd>
+  <ul>
+      
+ 
+ <li>  <a href="http://www.tigris.org/scdocs/wiki" onclick="return launch(this.href, 1)" 
+ title="Note: link may open in new window" class="helplink">
+ 
+ Learn about project wikis?</a>
+</li>
+ 
+ 
+     
+   <li> <a href="http://www.collab.net/rn/" onclick="return launch(this.href, 1)" 
+ title="Note: link may open in new window" class="helplink">
+ 
+ Get release notes for CollabNet 5.3.0?</a>
+</li>
+
+   <li><a href="http://argouml.tigris.org/nonav/servlets/HelpTOC" onclick="return launch(this.href, 1)" 
+title="Note: link may open in new window" class="helplink">Get help?</a></li>
+  </ul>
+ </dd>
+</dl>
+
+<!-- Begin include NavColumn-bottom -->
+<div id="mainhighlights">        
+
+<table border="0" cellspacing="0" cellpadding="3"  width="100%">
+ <tr>
+  <th>Category</th>
+  <th>Featured projects</th>
+ </tr>
+ <tr>
+  <td><a href="http://scm.tigris.org/">scm</a></td>
+  <td><a href="http://subversion.tigris.org/" title="open source version control">Subversion</a>, 
+<a href="http://subclipse.tigris.org/" title="Subversion Eclipse integration">Subclipse</a>,
+<a href="http://tortoisesvn.tigris.org/" title="Subversion client">TortoiseSVN</a>,
+<a href="http://rapidsvn.tigris.org/" title="Subversion client">RapidSVN</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://issuetrack.tigris.org/">issuetrack</a></td>
+  <td><a href="http://scarab.tigris.org/" title="customizable software defect tracking system">Scarab</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://requirements.tigris.org/">requirements</a></td>
+  <td><a href="http://xmlbasedsrs.tigris.org/">xmlbasedsrs</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://design.tigris.org/">design</a></td>
+  <td><a href="http://argouml.tigris.org/" title="Free UML tool, use cases, uml tutorials">ArgoUML</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://techcomm.tigris.org/">techcomm</a></td>
+  <td><a href="http://subetha.tigris.org/" title="Mailing list manager">SubEtha</a>, 
+  <a href="http://eyebrowse.tigris.org/" title="Mailing list archive tool">eyebrowse</a>, 
+<a href="http://midgard.tigris.org/">midgard</a>,
+<a href="http://cowiki.tigris.org/">cowiki</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://construction.tigris.org/">construction</a></td>
+  <td><a href="http://antelope.tigris.org/" title="Ant GUI">antelope</a>,
+  <a href="http://scons.tigris.org/" title="cross-platform build tool">scons</a>,
+  <a href="http://frameworx.tigris.org/">frameworx</a>,
+  <a href="http://build-interceptor.tigris.org/">build-interceptor</a>,
+  <a href="http://propel.tigris.org/">propel</a>,
+  <a href="http://phing.tigris.org/">phing</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://testing.tigris.org/" title="tools for quality software">testing</a></td>
+  <td><a href="http://maxq.tigris.org/" title="record and playback web automated testing tool">maxq</a>, 
+<a href="http://aut.tigris.org/" title="advanced unit testing">aut</a>
+  </td>
+ </tr>
+ <tr>
+  <td><a href="http://deployment.tigris.org/">deployment</a></td>
+  <td><a href="http://current.tigris.org/">current</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://process.tigris.org/" title="software development process, extreme programming">process</a></td>
+  <td><a href="http://readyset.tigris.org/" 
+title="Use case template, example test plans, software requirements specification templates, sample project plan template">ReadySET</a></td>
+ </tr>
+ <tr>
+  <td><a href="http://libraries.tigris.org/" title="software reuse, web services">libraries</a></td>
+  <td><a href="http://gef.tigris.org/" title="Graphical diagram editing">GEF</a>, 
+<a href="http://axion.tigris.org/" title="Relational database">Axion</a>, 
+<a href="http://style.tigris.org/" title="Reusable CSS stylesheets">Style</a>,
+<a href="http://sstree.tigris.org/" title="Super-simple trees in HTML, CSS, and javascript">SSTree</a>
+ </td>
+ </tr>
+ <tr>
+  <td colspan="2" style="text-align:center">Over 500 <a style="text-decoration:underline;" 
+  href="http://www.tigris.org/servlets/ProjectList">more tools...</a></td>
+ </tr>
+</table>
+
+
+
+<table border="0" cellspacing="2" cellpadding="3"  width="100%" style="margin-top: 15px;">
+ <tr>
+  <th>Subversion and IDEs</th>
+ </tr>
+ <tr>
+ <td>
+ <a href="http://subclipse.tigris.org/">Eclipse</a>
+ </td>
+ </tr>
+  <tr>
+ <td>
+ <a href="http://www.oracle.com/technology/products/jdev/htdocs/partners/addins/exchange/subversion/subversion.html">JDeveloper</a>
+ </td>
+ </tr>
+  <tr>
+ <td>
+ <a href="http://subversion.netbeans.org/">NetBeans</a>
+ </td>
+ </tr>
+ <tr>
+  <td>
+ <a href="http://ankhsvn.open.collab.net/">Visual Studio</a>
+ </td>
+ </tr>
+ <tr>
+  <td>
+ <a
+ href="http://www.open.collab.net/cloud/?cid=tigriscodesion">Subversion Hosting</a>
+ </td>
+ </tr>
+ </table>
+ 
+<br/>
+ 
+<table border="0" cellspacing="2" cellpadding="3"  width="100%" style="margin-top: 15px;">
+  <tr>
+    <th>Tigris.org (Whole-Site) Admin Contacts</th>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Announcements mail list" target="_blank"
+      href="mailto:announce-subscribe@www.tigris.org">Announcements</a> mail list
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Blog" target="_blank"
+      href="http://tigrisdotorg.wordpress.com">Status Blog</a> at WordPress
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a title="Twitter" target="_blank" href="http://twitter.com/tigrisdotorg">@tigrisdotorg</a> on Twitter
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a style="color: blue;" title="Problems" target="_blank"
+      href="mailto:feedback@tigris.org">Problem reports</a>
+      on the whole site
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Problems and suggestions about individual projects should
+  go to users@thatproject.tigris.org
+    </td>
+  </tr>
+  </table>
+</div>
+
+<!-- End include NavColumn-bottom -->
+
+
+
+ 
+ 
+<div class="strut">&nbsp;</div>
+</td>
+<td id="midcol">
+ 
+  <div id="bodycol">
+<div id="apphead">
+<h1><small>argouml</small><br />         Wiki: &lt;&lt;Subsystem&gt;&gt; Property panels/Old Implementation
+    </h1>
+</div>
+ 
+ 
+ 
+        
+                 
+                 
+           
+    
+  
+
+ 
+ 
+
+
+
+
+
+<div class="wiki">
+
+<p class="tasknav inline">
+<span class="disabled">Edit this page</span> | <a href="../&lt;&lt;Subsystem&gt;&gt;_Property_panels.html">&lt;&lt;Subsystem&gt;&gt; Property panels</a> | <a class="backlink" title="Click to do a full-text search for this title" href="http://argouml.tigris.org/wiki/%3C%3CSubsystem%3E%3E_Property_panels/Old_Implementation?action=fullsearch&amp;value=linkto%3A%22%3C%3CSubsystem%3E%3E+Property+panels/Old+Implementation%22&amp;context=180">Links to this page</a> | <a href="http://argouml.tigris.org/wiki/%3C%3CSubsystem%3E%3E_Property_panels/Old_Implementation?action=info">Page information</a> | <a href="http://argouml.tigris.org/wiki/%3C%3CSubsystem%3E%3E_Property_panels/Old_Implementation?action=AttachFile">Attachments</a> | <a href="Old_Implementation.html">Refresh page</a>
+</p>
+&nbsp;
+
+<form class="actionsmenu inline" method="get" action="Old_Implementation.html" style="display: inline;">
+<div class="inline">
+    <label></label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected>More Actions:</option>
+<option value="raw">Raw Text</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled class="disabled">------------</option>
+<option value="RenamePage" disabled class="disabled">Rename page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+    </select>
+    <noscript>
+    <input type="submit" value="Submit">
+    </noscript>
+</div>
+<script type="text/javascript">
+</script>
+</form>
+
+
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h2 id="head-09a5b14a21dca083c4ab3aea098c09695ff1f637">Description of the old implementation of the Property Panels</h2>
+<span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h3 id="head-9ba6a29c55a18a62034de010794a1209fd1b7028">Public API</h3>
+<span class="anchor" id="line-4"></span><p class="line862">The <tt>PropPanel</tt>s for the diagrams are in <tt>org.argouml.uml.diagram.ui</tt> and the property panels for UML objects are in <tt>org.argouml.uml.ui.UML</tt> path. <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line867">
+<h3 id="head-3fb5ec0803bfbe0844f9edfdd3f18740adaa1bbe">Receiving target change and modification events</h3>
+<span class="anchor" id="line-7"></span><p class="line874">Proppanels are created when their UML object becomes the target for the first time. <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line874">Whenever the target changes to another type of UML object, another proppanel is <span class="anchor" id="line-10"></span>activated, which redraws itself according the target modelelement. <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line874">Whenever the target changes to another instance of the same kind of <span class="anchor" id="line-13"></span>modelelement, the (current) proppanel updates its rendering based on this new target. <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><p class="line874">Whenever the model changes for the current target, without this invoking a <span class="anchor" id="line-16"></span>target change, the proppanel updates. <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><p class="line874">Whenever the model changes for another modelelement than the current target, <span class="anchor" id="line-19"></span>usually nothing should happen - especially not for proppanels that are not the <span class="anchor" id="line-20"></span>current one - since they do not know which will be their next target anyhow. <span class="anchor" id="line-21"></span>Unless e.g. the name of the namespace of the current class changes, since this <span class="anchor" id="line-22"></span>namespace is shown on the current proppanel. In such case, the proppanel of a class is <span class="anchor" id="line-23"></span>listening to modelchange events from more than only the class itself. <span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><p class="line867">
+<h3 id="head-02da2fc8006d8d09ed222aebde72ad3d09b4860e">Adding the property panel</h3>
+<span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><p class="line862">Property Panels for UML model elements are found as class <strong><a class="nonexistent" href="http://argouml.tigris.org/wiki/PropPanel">?</a>PropPanel<em>XXX</em>.java</strong>, where <em><strong>XXX</strong></em> is the UML meta-class. They are in sub-packages of <tt>org.argouml.uml.ui</tt> corresponding to the UML package which contains the  <tt>''XXX''</tt> metaclass in the UML specification. <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p class="line862">So for our example we create a new class <tt>PropPanelExtend</tt> in package <tt>org.argouml.uml.ui.behavior.use_cases</tt>. <span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><p class="line862">Any associated classes that do not fall into the UML classification are provided in <tt>org.argouml.uml.ui</tt>. <span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><p class="line862">Typically the constructor for the new proppanel class invokes the parent constructor, and then builds the fields required on the property tab. The parent constructor may need an icon. If you need a new icon, a call to <tt>lookupIcon()</tt> should be made (note that this is a utility method of the parent <tt>PropPanel</tt> class). For our example we had to add <strong>Extend.gif</strong>. <span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><p class="line862">You will need to make an icon, in <strong>.gif</strong> format, 16 X 16 pixels, with the transparent background color set to white. Place this file in the <tt>org.argouml.Images</tt> directory (it must be named like <strong>Name.gif</strong>). This icon will automatically be used in the toolbar and in the Navigation pane. <span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><p class="line862">Finally the property panel must be added to the list of property panels in the <tt>run()</tt> method of the <a class="nonexistent" href="http://argouml.tigris.org/wiki/TabProps">?</a>TabProps class, with a new call of <tt>panels.put()</tt>. If you don't do this, navigation listeners won't know about it! <span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><p class="line874">The content of the property panel is created as a grid with columns (1 column if there are only a few fields, 2 or 3 if there are more). Each row of each column contains a caption (i.e. label) and its corresponding field. <span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><p class="line862">A caption and its field may be added with one of a small number of utility methods which shield you from the layout stuff: <tt>addField()</tt> and <tt>addSeperator()</tt>. <span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><p class="line862">A button may be added to the toolbar with the utility method <tt>addButton()</tt>. <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><p class="line874">Every field is built from Java Swing components. However these are extended by ArgoUML to help in the provision of action methods for fields in the property tab. Several fields involve lists, and these require in addition list models to compute the members of the list. <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><p class="line874">The fields that you might add to a property panel include: <span class="anchor" id="line-49"></span><ul><li><p class="line862">Simple editable text. For example the Name field. Supported through the <tt>UMLTextField2</tt> class. <span class="anchor" id="line-50"></span></li><li><p class="line862">A drop down box (aka combobox) of options that can be selected. Supported by the <tt>UMLComboBox2</tt> class. Used e.g. for the type of a parameter. <span class="anchor" id="line-51"></span></li><li><p class="line862">A check box. This one does not use a seperate model class, thanks to the simplicity of the represented boolean value. Supported by the <tt>UMLCheckBox2</tt> class. Used e.g. for the concurrency checkbox on a composite state. <span class="anchor" id="line-52"></span></li><li><p class="line862">A radio button. These always come in a group. Supported by the <tt>UMLRadioButtonPanel</tt> class. Used e.g. for selecting the visibility on the properties panel of a class. <span class="anchor" id="line-53"></span></li><li><p class="line862">A list. Used e.g. for the Generalizations field on the proppanel of a class. The non-editable list is supported by the <tt>UMLList2</tt> class and its child <tt>UMLLinkedList</tt>. The latter also exists in the form of <tt>UMLMutableLinkedList</tt>, which allows adding, creation and deleting elements by popup menu. Used e.g. for the subvertex list for a composite state. <span class="anchor" id="line-54"></span></li><li style="list-style-type:none"><p class="line862">The list model is usually provided by a sub-class of <tt>UMLModelElementListModel2</tt>. There is a variant <tt>UMLModelElementOrderedListModel2</tt> intended for ordered links, which adds a few items to the pop-up menu, allowing sorting. This latter model is used e.g. for attributes of a class. <span class="anchor" id="line-55"></span></li><li>A drop down box of options that can be selected. This one exists in several versions, each having different possibilities. The most simple version is the UMLComboBox2. <span class="anchor" id="line-56"></span></li><li style="list-style-type:none"><p class="line862">The <tt>UMLEditableComboBox</tt> allows editing the selected item. <span class="anchor" id="line-57"></span></li><li style="list-style-type:none"><p class="line862">The <tt>UMLSearchableComboBox</tt> allows editing the selected item. See e.g. the Operation combobox on the callevent properties panel. <span class="anchor" id="line-58"></span></li><li style="list-style-type:none"><p class="line862">Then there is a variant with a seperate button for navigation to the property panel for the currently selected item. This is supported by the <tt>UMLComboBoxNavigator</tt> class. Used e.g. for the stereotype field. <span class="anchor" id="line-59"></span></li><li><p class="line862">An editable multiline text area. Supported by the <tt>UMLTextArea2</tt> class. Used e.g. for the text field of a UML Comment. <span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span></li></ul><p class="line874">Examples of these fields in more detail follow below. <span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><p class="line867">
+<h4 id="head-f523970b58f96128c31d681f5835b518eb5b14c1">Adding a simple list field</h4>
+<span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><p class="line874">For example we need to add a field to the use case property panel for the extends relationships that derive from this use case. <span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><p class="line862">This field consists of a label and a scrollable pane (<tt>JScrollPane</tt>) containing the list (<tt>JList</tt>), which may be empty, or contain extend relationships from this use case. <span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><p class="line862">Rather than a straight <tt>JList</tt>, we use its child, <tt>UMLLinkedList</tt>, which adds several features to the standard <tt>JList</tt> specifically for ArgoUML's properties panels. <span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><p class="line862">The constructor for <tt>UMLLinkedList</tt> requires two arguments, a list model and a flag to indicate whether to show an icon. <span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><p class="line862">The list model should be a subclass of <tt>UMLModelElementListModel2</tt>, a subclass of the Swing <tt>DefaultListModel</tt> which implements <tt>AbstractListModel</tt>. The <tt>UMLModelElementListModel2</tt> implements two interfaces: one that listens to target changes, and one that listens to UML model changes. <span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><p class="line867">
+<h5 id="head-65a4e40326c2e0ba213d25af279d2b01d0d14bf7">The list model</h5>
+<span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><p class="line862">In our example we create <tt>UMLUseCaseExtendListModel</tt>. Its constructor takes no arguments. However, we need to provide the parent class with a Model subsystem event name by invoking the constructor of the parent class, with the event name as parameter. <span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><p class="line862">A string naming a <a href="../&lt;&lt;Subsystem&gt;&gt;_Model.html">&lt;&lt;Subsystem&gt;&gt; Model</a> subsystem event that should force a refresh of the list model. A null value will cause all events to trigger a refresh. The name of the event is the same as the name of the associated attribute or association end from the UML 1.4 metamodel. <span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><p class="line874">This list model should then be provided with a number of methods. The following are mandatory, since they are declared abstract in the parent. <span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><p class="line867"><tt>protected&nbsp;void&nbsp;buildModelList()</tt> <span class="anchor" id="line-84"></span><ul><li style="list-style-type:none"><p class="line862">(Re)Builds the list of elements. Called from <tt>targetChanged</tt> every time the target of the proppanel is changed. <span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><p class="line891"><tt>protected&nbsp;boolean&nbsp;isValidElement(Object/*MBase*/&nbsp;o)</tt> <span class="anchor" id="line-87"></span>Returns true if the given element is valid, i.e. it may be added to the list of elements. This function is called for many UML elements, to determine if it fits in the list. Remark: The indication /*MBase*/ is a remainder from the time that ArgoUML included direct references to the NSUML model all over the code. Now it is a practical reminder of what we are dealing with. <span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><p class="line891"><img alt="/!\" height="15" src="../../branding/css/wiki/cee/img/alert.png" title="/!\" width="15" /> <a href="../CategoryFix.html">CategoryFix</a>: The following description is old and the property panels have undergone some fundamental changes since it was written. It would be good if someone that knows how it works now could write a description on how it works now. <span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span></li></ul><p class="line874">The following are sometimes provided as an override of the parent, although for many uses the default is fine. <span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><p class="line867"><tt>public&nbsp;void&nbsp;open(int&nbsp;index)</tt> <span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><ul><li style="list-style-type:none">Perform the action associated with the “open” pop-up menu on the element at the given index. The default provided in the parent just navigates to that element. <span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span></li></ul><p class="line867"><tt>public&nbsp;boolean&nbsp;buildPopup(JPopupMenu&nbsp;popup,&nbsp;int&nbsp;index)</tt> <span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><ul><li style="list-style-type:none">Build a pop-up menu for the list and return whether it should be displayed. Any actions will be associated with the item at the given index in the list. This is built using UMLListMenuItem, which can record the index, rather than plain JListItem. The default provides open, add, delete, move up and move down, with add disabled if there are already as many elements as the upper bound (if any) for the list, open and delete disabled if there are no elements and move up and move down disabled if they cannot be invoked on the given element. The default implementation always returns true. <span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span></li></ul><p class="line874">The following should be declared as needed to support particular pop-up functions. <span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><p class="line867"><tt>public&nbsp;void&nbsp;add(int&nbsp;index)</tt> <span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><ul><li style="list-style-type:none"><p class="line862">Perform the actions associated with the “add” pop-up menu on the element at the given index. There is no default provided, so this must be given if the “add” operation is supported. The <tt>addAtUtil()</tt> method (see below) may prove helpful. <span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span>In this routine you may create a new Model subsytem entity. The best way to do this is using a buildXXX method from the appropriate factory so that the appropriate initialization gets done, but you can also use a createXXX method and set it up (don't forget e.g namespace etc) yourself. Remember also to change anything that references the newly created entity. <span class="anchor" id="line-108"></span><p class="line891"><img alt="/!\" height="15" src="../../branding/css/wiki/cee/img/alert.png" title="/!\" width="15" /> NOTE: The following was written regarding NSUML. It may be generally true for the <a href="../&lt;&lt;Subsystem&gt;&gt;_Model.html">&lt;&lt;Subsystem&gt;&gt; Model</a> subsystem, but this hasn't been verified. <a href="../CategoryFix.html">CategoryFix</a>: Verify this. <span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span>NSUML routines generally set up the “other” end of a relationship automatically if you set up one end. If you try to do both (on a NxM relationship) you will probably end up doing it twice. If you do encounter this, the rule of thumb is to explicitly set the ordered end (if you do it the other way round, NSUML will assume you mean the "other" end to be at the end of its ordered list). <span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span></li></ul><p class="line867"><tt>public&nbsp;void&nbsp;delete(int&nbsp;index)</tt> <span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><ul><li style="list-style-type:none">Perform the actions associated with the “delete” pop-up menu on the element at the given index. There is no default provided, so this must be given if the “delete” operation is supported. <span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span></li></ul><p class="line867"><tt>public&nbsp;void&nbsp;moveUp(int&nbsp;index)</tt> <span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><ul><li style="list-style-type:none">Perform the actions associated with the “move up” pop-up menu on the element at the given index. There is no default provided, so this must be given if the “move up” operation is supported. <span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span></li></ul><p class="line867"><tt>public&nbsp;void&nbsp;moveDown(int&nbsp;index)</tt> <span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><ul><li style="list-style-type:none">Perform the actions associated with the “move down” pop-up menu on the element at the given index. There is no default provided, so this must be given if the “move down” operation is supported. <span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span></li></ul><p class="line874">The following normally use the default method, but may be declared to override methods in the parent <span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><p class="line867"><tt>public&nbsp;void&nbsp;resetSize()</tt> <span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><ul><li style="list-style-type:none"><p class="line862">Called when an external event may have changed the size of the list. The default just sets a flag, which will ensure <tt>recalcModelElementSize</tt> (see above) is invoked as needed. <span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span></li></ul><p class="line867"><tt>public&nbsp;Object&nbsp;formatElement(MModelElement&nbsp;element)</tt> <span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><ul><li style="list-style-type:none">Return an object (invariably a String) that represents an element. The default provided in the parent defers this to the container, which in turn defers it to the current profile. This is usually perfectly satisfactory. <span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span></li></ul><p class="line867"><tt>public&nbsp;void&nbsp;targetChanged()</tt> <span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><ul><li style="list-style-type:none">Called when the number of elements in the displayed list (including “none”) may have changed. Default invokes the necessary Swing operations to advise of a change in list size. <span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span></li></ul><p class="line867"><tt>public&nbsp;void&nbsp;targetReasserted()</tt> <span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><ul><li style="list-style-type:none">Called when the navigation history has been changed (and navigation buttons may need changing). Not clear why anything is needed, but default recomputes the list size, and invokes the necessary Swing operations. <span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span></li></ul><p class="line867"><tt>public&nbsp;void&nbsp;roleAdded(final&nbsp;MElementEvent&nbsp;event)</tt> <span class="anchor" id="line-143"></span><ul><li style="list-style-type:none"><p class="line891"><img alt="/!\" height="15" src="../../branding/css/wiki/cee/img/alert.png" title="/!\" width="15" /> This describes the old event interface. <a href="../CategoryFix.html">CategoryFix</a>: It needs to be updated. <span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><p class="line862">part of the NSUML <a class="nonexistent" href="http://argouml.tigris.org/wiki/EventListener">?</a>EventListener interface. Called when an add event happens, i.e. some Model subsystem object has been added. The default provided looks to see if the event is the role name we declared, or we are listening to all events, and if so looks to see if it relates to an element in our list. If so Swing is notified that the element has been added. <span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span></li></ul><p class="line867"><tt>public&nbsp;void&nbsp;roleRemoved(final&nbsp;MElementEvent&nbsp;event)</tt> <span class="anchor" id="line-148"></span><ul><li style="list-style-type:none"><p class="line891"><img alt="/!\" height="15" src="../../branding/css/wiki/cee/img/alert.png" title="/!\" width="15" /> This describes the old event interface. <a href="../CategoryFix.html">CategoryFix</a>: It needs to be updated. <span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><p class="line862">part of the NSUML <a class="nonexistent" href="http://argouml.tigris.org/wiki/EventListener">?</a>EventListener interface. Called when a remove event happens, i.e. some Model subsystem object has been removed. The default provided looks to see if the event is the role name we declared, or we are listening to all events, and if so looks to see if it relates to an element in our list. If so Swing is notified that the element has been removed. <span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span></li></ul><p class="line867"><tt>public&nbsp;void&nbsp;recovered(final&nbsp;MElementEvent&nbsp;p1)</tt>, <tt>public&nbsp;void&nbsp;listRoleItemSet(final&nbsp;MElementEvent&nbsp;p1)</tt>, <tt>public&nbsp;void&nbsp;removed(final&nbsp;MElementEvent&nbsp;p1)</tt>, and  <span class="anchor" id="line-153"></span><tt>public&nbsp;void&nbsp;propertySet(final&nbsp;MElementEvent&nbsp;p1)</tt> <span class="anchor" id="line-154"></span><ul><li style="list-style-type:none"><p class="line891"><img alt="/!\" height="15" src="../../branding/css/wiki/cee/img/alert.png" title="/!\" width="15" /> This describes the old event interface. <a href="../CategoryFix.html">CategoryFix</a>: It needs to be updated. <span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><p class="line862">these are all required as part of the NSUML <a class="nonexistent" href="http://argouml.tigris.org/wiki/EventListener">?</a>EventListener interface, which is not well documented. In each case the default implementation recomputes the size, and advises Swing that the entire list has changed. Needs more investigation. <span class="anchor" id="line-157"></span></li></ul><p class="line874">public void navigateTo(MModelElement modelElement) <span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><ul><li style="list-style-type:none"><p class="line862">a request to navigate to the specified object as part of the <a class="nonexistent" href="http://argouml.tigris.org/wiki/NavigationListener">?</a>NavigationListener interface. The default in the parent just invokes navigateTo() on the container (ultimately <a class="nonexistent" href="http://argouml.tigris.org/wiki/PropPanel">?</a>PropPanel). <span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span></li></ul><p class="line874">The following utility routines are also provided in the parent. They are not normally overridden. <span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><p class="line867"><tt>public&nbsp;int&nbsp;getUpperBound()</tt> <span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><ul><li style="list-style-type:none">get any upper bound (-1 is used if there is none). <span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span></li></ul><p class="line867"><tt>public&nbsp;void&nbsp;setUpperBound(int&nbsp;newBound)</tt> <span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><ul><li style="list-style-type:none">set the upper bound (-1 is used if there is none). <span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span></li></ul><p class="line867"><tt>public&nbsp;final&nbsp;String&nbsp;getProperty()</tt> <span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><ul><li style="list-style-type:none">returns the Model subsystem event name being monitored (null if all are being monitored). <span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span></li></ul><p class="line867"><tt>protected&nbsp;final&nbsp;int&nbsp;getModelElementSize()</tt> <span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><ul><li style="list-style-type:none"><p class="line862">returns the number of elements in the list. Invokes <tt>recalcModelElementSize()</tt> (see above) if necessary. <span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span></li></ul><p class="line867"><tt>final&nbsp;Object&nbsp;getTarget()</tt> <span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><ul><li style="list-style-type:none"><p class="line862">returns the Model subsystem object associated with the container (some child of <a class="nonexistent" href="http://argouml.tigris.org/wiki/PropPanel">?</a>PropPanel usually) that holds this list model. <span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span></li></ul><p class="line867"><tt>final&nbsp;UMLUserInterfaceContainer&nbsp;getContainer()</tt> <span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><ul><li style="list-style-type:none"><p class="line862">returns the the container (some child of <a class="nonexistent" href="http://argouml.tigris.org/wiki/PropPanel">?</a>PropPanel usually) that holds this list model. <span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span></li></ul><p class="line867"><tt>public&nbsp;int&nbsp;getSize()</tt> <span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><ul><li style="list-style-type:none">returns the size of the list. Including if there are no elements in the model, but the list has a default text when empty. <span class="anchor" id="line-190"></span><span class="anchor" id="line-191"></span></li></ul><p class="line867"><tt>public&nbsp;Object&nbsp;getElementAt(int&nbsp;index)</tt> <span class="anchor" id="line-192"></span><span class="anchor" id="line-193"></span><ul><li style="list-style-type:none">returns the element at the given index in the list. <span class="anchor" id="line-194"></span><span class="anchor" id="line-195"></span></li></ul><p class="line867"><tt>static&nbsp;protected&nbsp;Collection&nbsp;addAtUtil(Collection&nbsp;oldCollection,&nbsp;MModelElement&nbsp;newItem,&nbsp;int&nbsp;index)</tt> <span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><ul><li style="list-style-type:none">helps in writing the “add” function. newItem is added at the specified index in the given oldCollection. <span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span></li></ul><p class="line867"><tt>static&nbsp;protected&nbsp;java.util.List&nbsp;moveUpUtil(Collection&nbsp;oldCollection,&nbsp;int&nbsp;index)</tt> <span class="anchor" id="line-200"></span><span class="anchor" id="line-201"></span><ul><li style="list-style-type:none">helps in writing the “move up” function. Swaps the elements at offsets index and index-1. Not clear why it doesn't return a Collection. <span class="anchor" id="line-202"></span><span class="anchor" id="line-203"></span></li></ul><p class="line867"><tt>static&nbsp;protected&nbsp;java.util.List&nbsp;moveDownUtil(Collection&nbsp;oldCollection,&nbsp;int&nbsp;index)</tt> <span class="anchor" id="line-204"></span><span class="anchor" id="line-205"></span><ul><li style="list-style-type:none">helps in writing the “move down” function. Swaps the elements at offsets index and index-1. Not clear why it doesn't return a Collection. <span class="anchor" id="line-206"></span><span class="anchor" id="line-207"></span></li></ul><p class="line867"><tt>static&nbsp;protected&nbsp;MModelElement&nbsp;elementAtUtil(Collection&nbsp;collection,&nbsp;int&nbsp;index,&nbsp;Class&nbsp;requiredClass)</tt> <span class="anchor" id="line-208"></span><span class="anchor" id="line-209"></span><ul><li style="list-style-type:none">helps in writing the getElementAt(). Finds the element at a specific index. The last argument is ignored! <span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span></li></ul><p class="line867">
+<h4 id="head-5132dd732f10cf252df64c6cf8c2ab3361e646ea">Building the field</h4>
+<span class="anchor" id="line-212"></span><span class="anchor" id="line-213"></span><p class="line862">By convention the background of the list is set to the same as the background of the <tt>PropPanel</tt> and the foreground to <tt>Color.blue</tt>. <span class="anchor" id="line-214"></span><span class="anchor" id="line-215"></span><p class="line862">The list is then added to a <tt>JScrollPane</tt>. Although ArgoUML has historically not used scrollbars (<tt>JScrollPane.VERTICAL_SCROLLBAR_NEVER</tt> and <tt>JScrollPane.HORIZONTAL_SCROLLBAR_NEVER</tt>), it is more helpful to permit at least a vertical scrollbar where needed (<tt>JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED</tt> and <tt>JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED</tt>). <span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span><p class="line862">Finally the inherited method <tt>addCaption()</tt> is used to add the label for the field and <tt>addField()</tt> to add the associated scroll pane. <span class="anchor" id="line-218"></span><span class="anchor" id="line-219"></span><p class="line874">The second argument of each of these identifies the index of the caption/field pair in the vertical column of the grid for this property panel. The third argument identifies the column index. The final argument is a vertical weighting to expand the field if there is room in the property tab. This is usually set to the same non-zero value for all fields and corresponding captions that can have multiple entries, so they expand equally. If none of the fields should expand, the caption only of the last field in each column should be given a non-zero value. <span class="anchor" id="line-220"></span><span class="anchor" id="line-221"></span><p class="line867">
+<h4 id="head-c466c4035466698cae79b770a0cbf098f0f7da1a">Adding Property Tab Tool-bar Buttons</h4>
+<span class="anchor" id="line-222"></span><span class="anchor" id="line-223"></span><p class="line862">These are added by creating new instances of <tt>PropPanelButton</tt> (you don't need to assign them to anything - just creating will do). This has six arguments. <span class="anchor" id="line-224"></span><ul><li>The container, i.e this property panel (usually just use this). <span class="anchor" id="line-225"></span></li><li><p class="line862">The panel for the buttons. Use <tt>buttonPanel</tt> which is inherited from <tt>PropPanel</tt>. <span class="anchor" id="line-226"></span></li><li><p class="line862">The icon. Lots of these are already defined in <tt>PropPanel</tt>. <span class="anchor" id="line-227"></span></li><li><p class="line862">The advisory text for the button. Use <tt>localize(string)</tt> to ensure international portability. <span class="anchor" id="line-228"></span></li><li>The name of the method to invoke when this button is used. Some of the standard ones (e.g for navigation) are provided, but you will need to write any specials. <span class="anchor" id="line-229"></span></li><li>The name of the method (if any) to invoke to see if this button should be enabled. Use null if the button should always be enabled. <span class="anchor" id="line-230"></span><span class="anchor" id="line-231"></span></li></ul><p class="line862">In our example, the extend property panel has a “add extension point” button, with a method <tt>newExtensionPoint</tt> that we provide to create a new use case. <span class="anchor" id="line-232"></span><span class="anchor" id="line-233"></span><p class="line867">
+<h4 id="head-45da12d1221d478fe8bb802365654eb059717c19">Support for stereotypes</h4>
+<span class="anchor" id="line-234"></span><span class="anchor" id="line-235"></span><p class="line862">The <tt>PropPanel</tt> should override the following (note the spelling of the method name). <span class="anchor" id="line-236"></span><span class="anchor" id="line-237"></span><p class="line867"><tt>protected&nbsp;boolean&nbsp;isAcceptibleBaseMetaClass(String&nbsp;baseClass)</tt> <span class="anchor" id="line-238"></span><ul><li style="list-style-type:none"><p class="line862">Returns true if the given base class is a class of the target in the <a class="nonexistent" href="http://argouml.tigris.org/wiki/PropPanel">?</a>PropPanel. <span class="anchor" id="line-239"></span><span class="anchor" id="line-240"></span>This is used to determine what stereotypes may be shown for this property panel. <span class="anchor" id="line-241"></span><span class="anchor" id="line-242"></span></li></ul><p class="line867">
+<h4 id="head-92b0591a384db4dca9f6b06135037ec5f29dc49d">Other sorts of fields</h4>
+<span class="anchor" id="line-243"></span><span class="anchor" id="line-244"></span><p class="line862">Another sort of field that may be useful is the <tt>ComboBox</tt>. This is useful to allow users to select from a pre-defined list of alongside a navigation arrow to go to the selected entry. <span class="anchor" id="line-245"></span><span class="anchor" id="line-246"></span><p class="line862">For example this is used to provide drop-down lists for the base and extension use cases of an Extend relationship in <tt>PropPanelExtend</tt>. <span class="anchor" id="line-247"></span><span class="anchor" id="line-248"></span><p class="line862">The model behind the drop down is created by using <tt>UMLComboBoxModel</tt>: <tt>UMLComboBoxModel(container,&nbsp;predicate,&nbsp;event,&nbsp;getter,&nbsp;setter,&nbsp;allowVoid,&nbsp;baseClass,&nbsp;useModel)</tt>. <span class="anchor" id="line-249"></span><span class="anchor" id="line-250"></span><p class="line862">The container is the <tt>PropPanel</tt> where we are setting up this <a class="nonexistent" href="http://argouml.tigris.org/wiki/ComboBox">?</a>ComboBox, the predicate is the name of a public method in that <tt>PropPanel</tt> that, given a model element, determines if it should be in the drop down, the event is the Model subsystem event name we are looking for (see earlier for the list), getter is the name of a public method in the <tt>PropPanel</tt> that yields the current entry in the combo Box (of type baseClass), setter (with a single argument of type baseClass) sets that entry, allowVoid if true will allow an empty entry for the box, baseClass is the UML metaclass from which all entries must descend, useModel is true to consider all the elements in the standard profile model for inclusion (so the Java types, standard stereotypes etc.). <span class="anchor" id="line-251"></span><span class="anchor" id="line-252"></span><p class="line862">For our <a class="nonexistent" href="http://argouml.tigris.org/wiki/PropPanelExtend">?</a>PropPanelExtend, we provide a predicate routine the call for the “base” field is: <span class="anchor" id="line-253"></span><span class="anchor" id="line-254"></span><p class="line867"><tt>UMLComboBoxModel(this,&nbsp;"isAcceptableUseCase",&nbsp;"base",&nbsp;"getBase",&nbsp;"setBase",&nbsp;true,&nbsp;MUseCase.class,&nbsp;true);</tt> <span class="anchor" id="line-255"></span><span class="anchor" id="line-256"></span><p class="line862">and we define the methods <tt>isAcceptableUseCase</tt>, <tt>getBase</tt> and <tt>setBase</tt> in <tt>PropPanelExtend</tt>. <span class="anchor" id="line-257"></span><span class="anchor" id="line-258"></span><p class="line867">
+<h4 id="head-41c5ad2ba0f387d5ccfd3572ef4974a9e5312a14">How UMLTextField works</h4>
+<span class="anchor" id="line-259"></span><span class="anchor" id="line-260"></span><p class="line874">This information is provided by Jaap Branderhorst (September 2002). <span class="anchor" id="line-261"></span><span class="anchor" id="line-262"></span><p class="line867"><tt>UMLTextField</tt> implements several kinds of event listeners: <span class="anchor" id="line-263"></span><ul><li><p class="line891"><tt>MMelementListener</tt> <span class="anchor" id="line-264"></span></li><li><p class="line891"><tt>DocumentListener</tt> <span class="anchor" id="line-265"></span></li><li><p class="line891"><tt>FocusListener</tt> <span class="anchor" id="line-266"></span><span class="anchor" id="line-267"></span></li></ul><p class="line862">Furthermore it is a <tt>UMLUserInterfaceComponent</tt>. <span class="anchor" id="line-268"></span><span class="anchor" id="line-269"></span><p class="line862">Since it is an <tt>UMLUserInterfaceComponent</tt> it must implement <tt>targetChanged</tt> and <tt>targetReasserted</tt>. <tt>TargetChanged</tt> is called every time the <tt>UMLTextField</tt> is selected. <tt>targetReasserted</tt> is of no interest for <tt>UMLTextField</tt>. It plays a role in keeping history but since history is not really implemented at the moment in ArgoUML it is of no interest. <tt>targetChanged</tt> does two things: <span class="anchor" id="line-270"></span><ul><li><p class="line862">It calls the <tt>targetChanged</tt> method of the <tt>UMLTextProperty</tt> this <tt>UMLTextfield</tt> is showing. <span class="anchor" id="line-271"></span></li><li>It calls the update method. The update method is described further on. <span class="anchor" id="line-272"></span><span class="anchor" id="line-273"></span></li></ul><p class="line862">Besides <tt>UMLUserInterfaceComponent</tt> there are several other interfaces of interest. One of them is <tt>MMElementListener</tt>. <span class="anchor" id="line-274"></span><span class="anchor" id="line-275"></span><p class="line862">Every time a <tt>MModelElement</tt> is changed this will fire an <tt>MEvent</tt> to <tt>UMLChangeDispatch</tt>. <tt>UMLChangeDispatch</tt> will dispatch these events to all containers implementing <tt>UMLUserInterfaceComponents</tt> interested in this event, including <tt>UMLTextField</tt>. It will also dispatch the event to all children of an interested container implementing <tt>UMLUserInterfaceComponent</tt>. By this it is only necessary to register a <tt>PropPanel</tt> which holds an <tt>UMLTextField</tt> at <tt>UMLChangeDispatch</tt> to dispatch the event to the <tt>UMLTextField</tt> too. MMelementListener knows several methods of which only one is of interest to <tt>UMLTextField</tt>s: <span class="anchor" id="line-276"></span><ul><li><p class="line891"><tt>propertySet</tt> <span class="anchor" id="line-277"></span><span class="anchor" id="line-278"></span><ul><li style="list-style-type:none"><p class="line862">Called every time a property in a <tt>MModelElement</tt> is set. This method calls update too if the <tt>UMLTextProperty</tt> really is affected. <span class="anchor" id="line-279"></span><span class="anchor" id="line-280"></span></li></ul></li></ul><p class="line862">Furthermore <tt>UMLTextField</tt> implements <tt>DocumentListener</tt>. This is very typical for <tt>UMLTextField</tt>. At the moment it is not possible to change the style of the text in the <tt>UMLTextField</tt>. Therefore the method <tt>changedUpdate</tt> does not have a body. This method is only called when a <tt>DocumentEvent</tt> occurs that changes the style/layout of the text. The methods <tt>insertUpdate</tt> and <tt>removeUpdate</tt> are respectively called when a character is added to the document <tt>UMLTextField</tt> contains or removed. Since both methods are called when there is true user input and when the contents of the document are changed programmatically, the methods distinguish between them. <tt>insertUpdate</tt> and <tt>removeUpdate</tt> are both handled via the protected method handleEvent. <tt>handleEvent</tt> updates the property in <tt>UMLTextProperty</tt> if it is really changed. If the update comes via user input, it is checked if it is valid input. If it is not, a JOptionPane is shown with a warning and the change is not committed into the model. If it is not via user input, the input is not checked and the property is set. If the property is set, the <tt>update</tt> method is called. <span class="anchor" id="line-281"></span><span class="anchor" id="line-282"></span><p class="line862">The implementation of <tt>FocusListener</tt> makes sure that the checking of user input only happens when focus is lost. Otherwise, it would not be possible to enter 'intermediate' values that are not legal. For instance, say the value class is not legal. Without the implementation of <tt>FocusListener</tt>, it would not be possible to enter class diagram since handleEvent would pop-up a warning message box. <span class="anchor" id="line-283"></span><span class="anchor" id="line-284"></span><p class="line862">The method update updates both the actual <tt>JTextfield</tt> as the diagram as soon as some property is set. The updating of the diagram is done by calling the damage method of the figs that represent the property on the diagram. <span class="anchor" id="line-285"></span><hr /><p class="line874"> <span class="anchor" id="line-286"></span><a href="../CategoryFromCookbook.html">CategoryFromCookbook</a> <span class="anchor" id="line-287"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">&lt;&lt;Subsystem&gt;&gt; Property panels/Old Implementation  (last edited 2010-02-17 06:06:53 -0700 by <span title="Linus Tolke @ localhost[127.0.0.1]"><a href="../linus.html" title="Linus Tolke @ localhost[127.0.0.1]">linus</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+
+</div>
+
+</div>
+</td>
+</tr>
+</table>
+ 
+ 
+ <div id="footer">
+    <a href="http://www.tigris.org/nonav/DomainFAQ"  onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Site FAQ</a> |
+<a href="http://www.tigris.org/nonav/DomainFeedback"  onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Feedback</a> |
+<a href="http://www.tigris.org/nonav/servlets/LegalNotices?type=TermsOfService" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Terms of service</a> | 
+<a href="http://www.tigris.org/nonav/servlets/LegalNotices?type=PrivacyPolicy" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Privacy policy</a> | 
+<a href="http://www.open.collab.net/cloud?cid=tigriscodesion" onclick="return launch(this.href, 1)" title="Note: link may open in new window" class="helplink">Hosting</a> |
+<a href="http://www.collab.net/developers/tools/" onclick="return launch(this.href, 1)" title="Note: link may open in new window">Developer tools</a> 
+   
+   
+			   
+   <p>&#169; 2001 - 2009 CollabNet. CollabNet is a registered trademark of CollabNet, Inc.</p>
+
+   
+<div>
+<script type="text/javascript">
+// crazy egg code
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName('script')[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0011/6318.js";
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+// End crazy egg code
+</script>
+</div>
+
+ </div>
+ 
+ 
+</body>
+</html>
