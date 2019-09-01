@@ -1,0 +1,427 @@
+
+This pages explains how profiles are persisted with eclipse UML2 and EMF. A sample 
+profile and a model are developed to demonstrate how the XMI representation evolves. The key topic of this article is the work with changing profiles and how the model uses them. Everything here can be done using ArgoUML 0.32 or higher in UML2 mode (in fact lot's of development is done along the writing of this article).
+
+== Profile creation ==
+
+In UML 2.x, a profile is a separate metamodel element. Both metamodel elements "Model" and "Profile" are packages. In ArgoUML, they are top level packages. You can see this in the XMI files created by ArgoUML: a model begins with a {{{<uml:Model ...>}}} node, while a profile begins with a {{{<uml:Profile ...>}}} node (after the XMI header).
+
+Such a profile object is created in ArgoUML via the "New Profile" functionality. It is then displayed in the explorer pane, and elements like stereotypes or datatypes can be added to it. Since ArgoUML saves this in a project file (.zargo), even diagrams can be added to the profile project.
+
+Elements in a profile can only be applied to model elements, when the profile is "deployed" as an XMI file. This is performed via the "Deploy" menu item when you right-click on a profile in the explorer, which then does three things:
+ 1. In eUML, a method {{{define()}}} is called on the profile package, which adds (nonstandard) Ecore extensions to it.
+ 1. Export the defined profile as a (to be chosen) XMI file.
+ 1. Load it as a read-only profile so that it's available in the "Profile Configuration".
+
+Let's create a sample profile with one stereotype 'myStereotype', which can be
+applied to a class. The XMI representation is (xmi:id values made more readable, some parts omitted):
+
+{{{<uml:Profile ... xmi:id="ID_myProfile" name="myProfile" metaclassReference="ID_ElementImport">
+  <elementImport xmi:type="uml:ElementImport" xmi:id="ID_ElementImport" importingNamespace="ID_myProfile">
+    <importedElement xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="ID_myStereotype" name="myStereotype">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="ID_base_Class" name="base_Class" association="ID_Extension">
+      <type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="ID_Extension" name="Class_myStereotype"
+      memberEnd="ID_ExtensionEnd ID_base_Class">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="ID_ExtensionEnd" name="extension_myStereotype"
+        type="ID_myStereotype" aggregation="composite" owningAssociation="ID_Extension"
+        association="ID_Extension"/>
+  </packagedElement>
+</uml:Profile>}}}
+
+This cannot be applied to a model, because in eclipse UML2 the profile needs to
+be "defined" first. This step introduces an Ecore package in the profile, that
+represents the whole profile. (Without that Ecore package, ArgoUML cannot use any
+profile element of the profile!) In XMI, only that Ecore package is added in
+comparison to the previous listing:
+
+{{{<uml:Profile ... xmi:id="ID_myProfile" name="myProfile" metaclassReference="ID_ElementImport">
+  <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0X4jIPNCEd-9Y50SrfMS2A" ...>
+      <contents xmi:type="ecore:EPackage" xmi:id="_0X4jIfNCEd-9Y50SrfMS2A" name="myProfile" ...>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_0X4jIvNCEd-9Y50SrfMS2A" name="myStereotype">
+          <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0X4jI_NCEd-9Y50SrfMS2A" ...
+                references="ID_myStereotype"/>
+          </xmi:Extension>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_0X4jJPNCEd-9Y50SrfMS2A" name="base_Class"
+              ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" .../>
+          </eStructuralFeatures>
+          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_0X4jJvNCEd-9Y50SrfMS2A" name="myProperty"
+              ordered="false" lowerBound="1"/>
+        </eClassifiers>
+      </contents>
+    </eAnnotations>
+  </xmi:Extension>
+<-------------- from here it's exactly the same as in the previous listing}}}
+
+Such a defined profile can then be used, which is presented next.
+
+== Profile application ==
+
+In ArgoUML, a profile is applied via the "Profile Configuration". Applying a profile basically means referring it in the model. As an example, we create a very simple model with just one minimalistic class, here are it's main XMI parts (simplyfied again):
+
+{{{<uml:Model ... xmi:id="ID_myModel" name="myModel">
+  <packagedElement xmi:type="uml:Class" xmi:id="ID_myClass" name="myClass"/>
+</uml:Model>}}}
+
+Applying the profile and stereotyping the class with myStereotype yields the following:
+
+{{{<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI ...>
+  <uml:Model xmi:id="ID_myModel" name="myModel">
+    <packagedElement xmi:type="uml:Class" xmi:id="ID_myClass" name="myClass"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="ID_profileApplication" applyingPackage="ID_myModel">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k-TQ8PO5Ed-p9Nu3qLl7Zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://argouml.org/user-profiles/myProfile.xmi#_vOqHcPOuEd-ZR_t966HNrQ"/>
+        </eAnnotations>
+      </xmi:Extension>
+      <appliedProfile xmi:type="uml:Profile" href="http://argouml.org/user-profiles/myProfile.xmi#ID_myProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <myProfile:myStereotype xmi:id="_phd6IPO5Ed-p9Nu3qLl7Zw" base_Class="ID_myClass"/>
+</xmi:XMI>}}}
+
+While the model references the profile with the <profileApplication ...> tag,
+the stereotyped class myClass itself has no knowledge about myStereotype.
+Instead, there is a myStereotype instance defined *outside* of the model, that
+references myClass.
+
+Note that the <references ...> tag contains the reference to the Ecore package
+in the profile, we will soon comment on that.
+
+== Modifying the profile ==
+
+Now let's modify the profile by adding another stereotype myOtherStereotype.
+In myProfile.xmi, the following lines are added/changed:
+
+{{{<uml:Profile xmi:version="2.1" ...
+    name="myProfile" metaclassReference="ID_ElementImport ID_OtherElementImport">
+  ...
+  <elementImport xmi:type="uml:ElementImport" xmi:id="ID_OtherElementImport" importingNamespace="ID_myProfile">
+    <importedElement xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+  </elementImport>
+  ...
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="ID_myOtherStereotype" name="myOtherStereotype">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="ID_other_base_Class" name="base_Class" association="ID_OtherExtension">
+      <type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="ID_OtherExtension" name="Class_myOtherStereotype"
+      memberEnd="ID_OtherExtensionEnd ID_other_base_Class">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="ID_OtherExtensionEnd" name="extension_myOtherStereotype"
+        type="ID_myOtherStereotype" aggregation="composite" owningAssociation="ID_OtherExtension"
+        association="ID_OtherExtension"/>
+  </packagedElement>
+</uml:Profile>}}}
+
+The Ecore package is not changed, because we didn't define the profile again.
+As a consequence, the profile works, but only myStereotype is functional. So
+we'll going to define the profile a second time, which adds the following lines
+to myProfile.xmi:
+
+{{{      <contents xmi:type="ecore:EPackage" xmi:id="_2q7_IAavEeCTnu3LMa6_rg" name="myProfile" nsURI="http:///schemas/myProfile/_2qyOIAavEeCTnu3LMa6_rg/1"
+          nsPrefix="myProfile">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_2q7_IQavEeCTnu3LMa6_rg" name="myStereotype">
+          <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2q7_IgavEeCTnu3LMa6_rg" source="http://www.eclipse.org/uml2/2.0.0/UML"
+                references="ID_myStereotype"/>
+          </xmi:Extension>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_2q7_IwavEeCTnu3LMa6_rg" name="base_Class"
+              ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_2q7_JQavEeCTnu3LMa6_rg" name="myOtherStereotype">
+          <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2q7_JgavEeCTnu3LMa6_rg" source="http://www.eclipse.org/uml2/2.0.0/UML"
+                references="ID_myOtherStereotype"/>
+          </xmi:Extension>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_2q7_JwavEeCTnu3LMa6_rg" name="base_Class"
+              ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+      </contents>}}}
+
+By defining the profile a second time, a new Ecore package is created which
+contains the data required to apply the new stereotype myOtherStereotype, as
+expected. But this new Ecore package also contains a section for the old
+myStereotype, like in the first Ecore package, so by now we have two such
+sections for myStereotype.
+
+If you recall the profile application in our model, where a concrete Ecore
+packages was referenced, then it becomes clear that our model still references
+the old Ecore package. That's OK, because the profile provides both the old and
+the new Ecore package, so the XMI of the model gets parsed without problems.
+
+When loading our model, something really strange happens (at least in ArgoUML):
+the references to the old Ecore package are automatically changed, so the
+model suddenly references the new Ecore package after loading the XMI. So,
+the model gets its profile references refreshed in every load/save cycle, which
+is quite handy.
+
+To summarize this: modifying (and redefining) a profile is no problem, as long
+as no objects (with an xmi:id attribute) are removed.
+
+== Deleting objects in a profile ==
+
+But what could happen to models if we delete elements in a profile?
+
+Let's try and remove a stereotype in our profile. That's not that easy, because
+the Ecore packages contain references to a profile element, when it existed at
+define time. So, this would violate the profile, and indeed ArgoUML refuses to
+save the profile in this case.
+
+Of course it is possible to manually modify the XMI of the profile. But then
+a model that applies a removed stereotype causes a problem. Luckily, it
+doesn't get invalid, only the stereotype applications will not function
+anymore: they become useless "AnyType" objects polluting the model. Not really
+a problem, but undesirable unless the model can be cleaned up. The same happens
+when deleting an old Ecore container.
+
+So we get an important rule: never delete profile elements when models exist
+that use the profile!
+
+== Conclusion ==
+
+Maintaining a profile means to add or change elements, this is well supported
+by the profile mechanism of UML2/EMF. Keep in mind that the profile grows by
+introducing a new Ecore package with all profile elements in it, so avoid to
+define the profile too often.
+
+
+APPENDIX
+
+Listing 1: myProfile.xmi
+
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1"
+    xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:uml="http://schema.omg.org/spec/UML/2.2" xsi:schemaLocation="http://schema.omg.org/spec/UML/2.2 http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="ID_myProfile"
+    name="myProfile" metaclassReference="ID_ElementImport">
+  <elementImport xmi:type="uml:ElementImport" xmi:id="ID_ElementImport" importingNamespace="ID_myProfile">
+    <importedElement xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="ID_myStereotype" name="myStereotype">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="ID_base_Class" name="base_Class" association="ID_Extension">
+      <type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="ID_myProperty" name="myProperty"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="ID_Extension" name="Class_myStereotype"
+      memberEnd="ID_ExtensionEnd ID_base_Class">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="ID_ExtensionEnd" name="extension_myStereotype"
+        type="ID_myStereotype" aggregation="composite" owningAssociation="ID_Extension"
+        association="ID_Extension"/>
+  </packagedElement>
+</uml:Profile>
+
+
+Listing 2: myProfile.xmi (after being defined)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1"
+    xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://schema.omg.org/spec/UML/2.2"
+    xsi:schemaLocation="http://schema.omg.org/spec/UML/2.2 http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="ID_myProfile"
+    name="myProfile" metaclassReference="ID_ElementImport">
+  <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vOWlcPOuEd-ZR_t966HNrQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <contents xmi:type="ecore:EPackage" xmi:id="_vOqHcPOuEd-ZR_t966HNrQ" name="myProfile" nsURI="http:///schemas/myProfile/_vONbgPOuEd-ZR_t966HNrQ/0"
+          nsPrefix="myProfile">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_vOqHcfOuEd-ZR_t966HNrQ" name="myStereotype">
+          <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vOqHcvOuEd-ZR_t966HNrQ" source="http://www.eclipse.org/uml2/2.0.0/UML"
+                references="ID_myStereotype"/>
+          </xmi:Extension>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_vOqHc_OuEd-ZR_t966HNrQ" name="base_Class"
+              ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+      </contents>
+    </eAnnotations>
+  </xmi:Extension>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="ID_ElementImport" importingNamespace="ID_myProfile">
+    <importedElement xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="ID_myStereotype" name="myStereotype">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="ID_base_Class" name="base_Class" association="ID_Extension">
+      <type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="ID_Extension" name="Class_myStereotype" memberEnd="ID_ExtensionEnd ID_base_Class">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="ID_ExtensionEnd" name="extension_myStereotype" type="ID_myStereotype"
+        aggregation="composite" owningAssociation="ID_Extension" association="ID_Extension"/>
+  </packagedElement>
+</uml:Profile>
+
+
+Listing 3: myModel.xmi
+
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1"
+    xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:uml="http://schema.omg.org/spec/UML/2.2" xsi:schemaLocation="http://schema.omg.org/spec/UML/2.2 http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="ID_myModel"
+    name="myModel">
+  <packagedElement xmi:type="uml:Class" xmi:id="ID_myClass" name="myClass"/>
+</uml:Model>
+
+
+Listing 4: myModel_using_myProfile.xmi
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1"
+    xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:myProfile="http:///schemas/myProfile/_vONbgPOuEd-ZR_t966HNrQ/0"
+    xmlns:uml="http://schema.omg.org/spec/UML/2.2" xsi:schemaLocation="http:///schemas/myProfile/_vONbgPOuEd-ZR_t966HNrQ/0 http://argouml.org/user-profiles/myProfile.xmi#_vOqHcPOuEd-ZR_t966HNrQ http://schema.omg.org/spec/UML/2.2 http://www.eclipse.org/uml2/3.0.0/UML">
+  <uml:Model xmi:id="ID_myModel" name="myModel">
+    <packagedElement xmi:type="uml:Class" xmi:id="ID_myClass" name="myClass"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="ID_profileApplication" applyingPackage="ID_myModel">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_k-TQ8PO5Ed-p9Nu3qLl7Zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://argouml.org/user-profiles/myProfile.xmi#_vOqHcPOuEd-ZR_t966HNrQ"/>
+        </eAnnotations>
+      </xmi:Extension>
+      <appliedProfile xmi:type="uml:Profile" href="http://argouml.org/user-profiles/myProfile.xmi#ID_myProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <myProfile:myStereotype xmi:id="_phd6IPO5Ed-p9Nu3qLl7Zw" base_Class="ID_myClass"/>
+</xmi:XMI>
+
+
+Listing 5: myprofile.xmi (defined, modified afterwards)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1"
+    xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://schema.omg.org/spec/UML/2.2"
+    xsi:schemaLocation="http://schema.omg.org/spec/UML/2.2 http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="ID_myProfile"
+    name="myProfile" metaclassReference="ID_ElementImport ID_OtherElementImport">
+  <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vOWlcPOuEd-ZR_t966HNrQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <contents xmi:type="ecore:EPackage" xmi:id="_vOqHcPOuEd-ZR_t966HNrQ" name="myProfile" nsURI="http:///schemas/myProfile/_vONbgPOuEd-ZR_t966HNrQ/0"
+          nsPrefix="myProfile">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_vOqHcfOuEd-ZR_t966HNrQ" name="myStereotype">
+          <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vOqHcvOuEd-ZR_t966HNrQ" source="http://www.eclipse.org/uml2/2.0.0/UML"
+                references="ID_myStereotype"/>
+          </xmi:Extension>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_vOqHc_OuEd-ZR_t966HNrQ" name="base_Class"
+              ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+      </contents>
+    </eAnnotations>
+  </xmi:Extension>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="ID_ElementImport" importingNamespace="ID_myProfile">
+    <importedElement xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="ID_OtherElementImport" importingNamespace="ID_myProfile">
+    <importedElement xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="ID_myStereotype" name="myStereotype">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="ID_base_Class" name="base_Class" association="ID_Extension">
+      <type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="ID_Extension" name="Class_myStereotype" memberEnd="ID_ExtensionEnd ID_base_Class">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="ID_ExtensionEnd" name="extension_myStereotype" type="ID_myStereotype"
+        aggregation="composite" owningAssociation="ID_Extension" association="ID_Extension"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="ID_myOtherStereotype" name="myOtherStereotype">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="ID_other_base_Class" name="base_Class" association="ID_OtherExtension">
+      <type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="ID_OtherExtension" name="Class_myOtherStereotype"
+      memberEnd="ID_OtherExtensionEnd ID_other_base_Class">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="ID_OtherExtensionEnd" name="extension_myOtherStereotype"
+        type="ID_myOtherStereotype" aggregation="composite" owningAssociation="ID_OtherExtension"
+        association="ID_OtherExtension"/>
+  </packagedElement>
+</uml:Profile>
+
+
+Listing 6: myprofile.xmi (defined a second time)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1"
+    xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://schema.omg.org/spec/UML/2.2"
+    xsi:schemaLocation="http://schema.omg.org/spec/UML/2.2 http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="ID_myProfile"
+    name="myProfile" metaclassReference="ID_ElementImport ID_OtherElementImport">
+  <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vOWlcPOuEd-ZR_t966HNrQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <contents xmi:type="ecore:EPackage" xmi:id="_2q7_IAavEeCTnu3LMa6_rg" name="myProfile" nsURI="http:///schemas/myProfile/_2qyOIAavEeCTnu3LMa6_rg/1"
+          nsPrefix="myProfile">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_2q7_IQavEeCTnu3LMa6_rg" name="myStereotype">
+          <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2q7_IgavEeCTnu3LMa6_rg" source="http://www.eclipse.org/uml2/2.0.0/UML"
+                references="ID_myStereotype"/>
+          </xmi:Extension>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_2q7_IwavEeCTnu3LMa6_rg" name="base_Class"
+              ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_2q7_JQavEeCTnu3LMa6_rg" name="myOtherStereotype">
+          <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2q7_JgavEeCTnu3LMa6_rg" source="http://www.eclipse.org/uml2/2.0.0/UML"
+                references="ID_myOtherStereotype"/>
+          </xmi:Extension>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_2q7_JwavEeCTnu3LMa6_rg" name="base_Class"
+              ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+      </contents>
+      <contents xmi:type="ecore:EPackage" xmi:id="_vOqHcPOuEd-ZR_t966HNrQ" name="myProfile" nsURI="http:///schemas/myProfile/_vONbgPOuEd-ZR_t966HNrQ/0"
+          nsPrefix="myProfile">
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_vOqHcfOuEd-ZR_t966HNrQ" name="myStereotype">
+          <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vOqHcvOuEd-ZR_t966HNrQ" source="http://www.eclipse.org/uml2/2.0.0/UML"
+                references="ID_myStereotype"/>
+          </xmi:Extension>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_vOqHc_OuEd-ZR_t966HNrQ" name="base_Class"
+              ordered="false" lowerBound="1">
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+          </eStructuralFeatures>
+        </eClassifiers>
+      </contents>
+    </eAnnotations>
+  </xmi:Extension>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="ID_ElementImport" importingNamespace="ID_myProfile">
+    <importedElement xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="ID_OtherElementImport" importingNamespace="ID_myProfile">
+    <importedElement xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="ID_myStereotype" name="myStereotype">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="ID_base_Class" name="base_Class" association="ID_Extension">
+      <type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="ID_Extension" name="Class_myStereotype" memberEnd="ID_ExtensionEnd ID_base_Class">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="ID_ExtensionEnd" name="extension_myStereotype" type="ID_myStereotype"
+        aggregation="composite" owningAssociation="ID_Extension" association="ID_Extension"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="ID_myOtherStereotype" name="myOtherStereotype">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="ID_other_base_Class" name="base_Class" association="ID_OtherExtension">
+      <type xmi:type="uml:Class" href="http://schema.omg.org/spec/UML/2.2/uml.xml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="ID_OtherExtension" name="Class_myOtherStereotype"
+      memberEnd="ID_OtherExtensionEnd ID_other_base_Class">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="ID_OtherExtensionEnd" name="extension_myOtherStereotype"
+        type="ID_myOtherStereotype" aggregation="composite" owningAssociation="ID_OtherExtension" association="ID_OtherExtension"/>
+  </packagedElement>
+</uml:Profile>
