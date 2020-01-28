@@ -2,3 +2,4 @@ theme: jekyll-theme-minimal
 description: ArgoUML resources provided by Github. Created from copies of the information at Tigris.
 google_analytics: UA-682460-2
 markdown: kramdown
+logo: /tigris/argouml/images/argologo200x190.png
