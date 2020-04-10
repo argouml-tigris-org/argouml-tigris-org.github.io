@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.argouml</groupId>
+  <artifactId>parentpom</artifactId>
+  <version>0.35.3</version>
+  <versioning>
+    <versions>
+      <version>0.6</version>
+      <version>0.35.1</version>
+      <version>0.35.2</version>
+      <version>0.35.3</version>
+      <version>0.35.4</version>
+    </versions>
+    <lastUpdated>20121230184519</lastUpdated>
+  </versioning>
+</metadata>

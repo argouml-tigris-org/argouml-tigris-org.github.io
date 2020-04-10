@@ -1,0 +1,6 @@
+<project>
+<groupId>org.tigris.swidgets</groupId>
+<artifactId>swidgets</artifactId>
+<version>0.1.4</version>
+<modelVersion>4.0.0</modelVersion>
+</project>

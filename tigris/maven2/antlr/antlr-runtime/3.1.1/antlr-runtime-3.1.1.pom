@@ -1,0 +1,6 @@
+<project>
+<groupId>antlr</groupId>
+<artifactId>antlr-runtime</artifactId>
+<version>3.1.1</version>
+<modelVersion>4.0.0</modelVersion>
+</project>

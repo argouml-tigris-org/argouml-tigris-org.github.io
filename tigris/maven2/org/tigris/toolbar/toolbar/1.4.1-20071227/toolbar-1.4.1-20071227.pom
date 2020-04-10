@@ -1,0 +1,6 @@
+<project>
+<groupId>org.tigris.toolbar</groupId>
+<artifactId>toolbar</artifactId>
+<version>1.4.1-20071227</version>
+<modelVersion>4.0.0</modelVersion>
+</project>

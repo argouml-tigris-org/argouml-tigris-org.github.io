@@ -1,0 +1,6 @@
+<project>
+<groupId>org.apache.log</groupId>
+<artifactId>avalon-logkit</artifactId>
+<version>2.1</version>
+<modelVersion>4.0.0</modelVersion>
+</project>

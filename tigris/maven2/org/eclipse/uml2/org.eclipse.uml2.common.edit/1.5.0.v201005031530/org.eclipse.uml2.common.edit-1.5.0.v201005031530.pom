@@ -1,0 +1,6 @@
+<project>
+<groupId>org.eclipse.uml2</groupId>
+<artifactId>org.eclipse.uml2.common.edit</artifactId>
+<version>1.5.0.v201005031530</version>
+<modelVersion>4.0.0</modelVersion>
+</project>

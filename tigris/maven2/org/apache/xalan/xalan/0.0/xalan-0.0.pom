@@ -1,0 +1,6 @@
+<project>
+<groupId>org.apache.xalan</groupId>
+<artifactId>xalan</artifactId>
+<version>0.0</version>
+<modelVersion>4.0.0</modelVersion>
+</project>

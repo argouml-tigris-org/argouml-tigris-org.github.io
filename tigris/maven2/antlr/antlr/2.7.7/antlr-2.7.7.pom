@@ -1,0 +1,6 @@
+<project>
+<groupId>antlr</groupId>
+<artifactId>antlr</artifactId>
+<version>2.7.7</version>
+<modelVersion>4.0.0</modelVersion>
+</project>
