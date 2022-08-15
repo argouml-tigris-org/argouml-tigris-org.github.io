@@ -3,9 +3,12 @@ layout: default
 ---
 # Maven sites for the ArgoUML repositories
 
+These sites are built by the maven site plugin against the master
+branch in each of the repos.
+
 The sites for each repository:
 
-[//]: # "They are not in this file tree (the"
+[//]: # "These sites are not in this file tree (the"
 [//]: # "argouml-tigris-org.tigris.org git repository) but in the"
 [//]: # "gh-pages branch of each of the repositories that is overlayed"
 [//]: # "thanks to some github.io magic."
@@ -43,3 +46,4 @@ The sites for each repository:
 * [argopdf](argopdf)
 * [parentpom](parentpom)
 * [test-i18n-properties](test-i18n-properties)
+* [tools](tools)

@@ -6,10 +6,9 @@ permalink: /
 # Website for the ArgoUML work
 
 Main pages for the project:
-* [Organization on github](https://github.com/argouml-tigris-org)
-* [Maven sites](sites.html)
 * [Github Wiki](https://github.com/argouml-tigris-org/argouml/wiki)
-* [Old site](http://argouml.tigris.org/)
+* [Organization on github](https://github.com/argouml-tigris-org)
+* [Maven sites](sites.html) - updated by maven job
 
 The old sites from Tigris saved on GitHub Pages:
 * [old argouml wiki](tigris/wiki-argouml/wiki)
@@ -44,3 +43,6 @@ The old sites from Tigris saved on GitHub Pages:
 * [argouml-xsd](tigris/argouml-xsd)
 * [argouml-xtuml](tigris/argouml-xtuml)
 * [argopdf](tigris/argopdf)
+
+No longer working links:
+* [argouml at Tigris](http://argouml.tigris.org/)
