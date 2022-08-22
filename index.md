@@ -9,6 +9,7 @@ Main pages for the project:
 * [Github Wiki](https://github.com/argouml-tigris-org/argouml/wiki)
 * [Organization on github](https://github.com/argouml-tigris-org)
 * [Maven sites](sites.html) - updated by maven job
+* [Releases](https://github.com/argouml-tigris-org/argouml/releases) - the existing releases are old, moved from the tigris web site
 
 The old sites from Tigris saved on GitHub Pages:
 * [old argouml wiki](tigris/wiki-argouml/wiki)
